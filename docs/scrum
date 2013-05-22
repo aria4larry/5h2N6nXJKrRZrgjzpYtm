@@ -1,0 +1,7 @@
+Milestones:
+   * no ui, get a Q&A from stackoverflow, log out~
+   * cache mechanism.
+   * recommand algorithm
+
+Small packages:
+    * using Network/Json/StackAPI to get a Q&A from stackoverflow.

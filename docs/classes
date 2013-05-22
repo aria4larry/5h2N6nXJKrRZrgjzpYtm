@@ -1,0 +1,7 @@
+package : com.droidcat.stackranger
+    com.droidcat.stackranger.ui: Activities,Fragments.
+    com.droidcat.stackranger.fencher: Data fencher, fench Q&As from the internet or from the cache~
+    com.droidcat.stackranger.network: fench data from the internet.
+    com.droidcat.stackranger.cache: cache data for further use.
+    com.droidcat.stackranger.model: data model.
+    com.droidcat.stackranger.util: tools.

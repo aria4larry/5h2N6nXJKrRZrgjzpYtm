@@ -1,0 +1,16 @@
+Stack Ranger function sepc v0.1
+mtk54039 chuan.li@mediatek.com 
+2013-05-06 10:53:23 
+This file discribes the main function spec of Stack Ranger.
+
+Stack Ranger is a mobile application that you can use to view quesions and answers in stack exchage sites. It will give you experence the mobile site can not give you by using Native APIs on your mobile platform. Plus, it will recommand best questions for you to read as a digest and learn new knowledge. We've develop a suit of algorithm to recommand questions or searching for results.
+We'll provide wonderful User Interface to you.
+
+spec. 0.1
+    1. View,Answer,Ask,Search,Like questions. 
+    2. Download for offline view.
+    3. Recommand, personlized recommand, random questions.
+    4. All site under Stack exchange is avaliable.
+    5. recommand algorithm.
+    6. User informantion.
+    7. Avaliable both on phone and tablet

@@ -1,0 +1,1235 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ACCEPTED	entities/PostTimeline.java	/^        QUESTION("question"), ANSWER("answer"), COMMENT("comment"), REVISION("revision"), VOTES("votes"), ACCEPTED("accepted"), UNACCEPTED("unaccepted");$/;"	e	enum:PostTimeline.Type	file:
+ACCEPTED	entities/UserTimeline.java	/^        ACCEPTED("accepted"), ASKORANSWERED("askoranswered"), BADGE("badge"), COMMENT("comment"), REVISION("revision");$/;"	e	enum:UserTimeline.Type	file:
+ANSWER	entities/PostTimeline.java	/^        QUESTION("question"), ANSWER("answer"), COMMENT("comment"), REVISION("revision"), VOTES("votes"), ACCEPTED("accepted"), UNACCEPTED("unaccepted");$/;"	e	enum:PostTimeline.Type	file:
+ANSWER	entities/UserTimeline.java	/^        QUESTION("question"), ANSWER("answer");$/;"	e	enum:UserTimeline.PostType	file:
+API_URL	StackWrapper.java	/^	protected String API_URL;$/;"	f	class:StackWrapper
+ASC	enums/Order.java	/^    ASC("asc"), DESC("desc");$/;"	e	enum:Order	file:
+ASKORANSWERED	entities/UserTimeline.java	/^        ACCEPTED("accepted"), ASKORANSWERED("askoranswered"), BADGE("badge"), COMMENT("comment"), REVISION("revision");$/;"	e	enum:UserTimeline.Type	file:
+Account	stackauth/entities/Account.java	/^    public Account(JSONObject jA) throws JSONException {$/;"	m	class:Account
+Account	stackauth/entities/Account.java	/^public class Account {$/;"	c
+Answer	entities/Answer.java	/^    Answer(final JSONObject jA, final StackWrapper originator) throws JSONException {$/;"	m	class:Answer
+Answer	entities/Answer.java	/^    Answer(final String json, final StackWrapper originator) throws JSONException {$/;"	m	class:Answer
+Answer	entities/Answer.java	/^    Answer(final String json, final StackWrapper originator, final Question parentPost) throws JSONException {$/;"	m	class:Answer
+Answer	entities/Answer.java	/^public class Answer extends MajorPost {$/;"	c
+AnswerFromIdList	datastructures/AnswerFromIdList.java	/^    public AnswerFromIdList(StackWrapper sw, AnswerQuery query) {$/;"	m	class:AnswerFromIdList
+AnswerFromIdList	datastructures/AnswerFromIdList.java	/^public class AnswerFromIdList extends AutoFetchList<Answer> {$/;"	c
+AnswerFromQuestionList	datastructures/AnswerFromQuestionList.java	/^    public AnswerFromQuestionList(StackWrapper sw, AnswerQuery query) {$/;"	m	class:AnswerFromQuestionList
+AnswerFromQuestionList	datastructures/AnswerFromQuestionList.java	/^public class AnswerFromQuestionList extends AutoFetchList<Answer> {$/;"	c
+AnswerFromUserList	datastructures/AnswerFromUserList.java	/^    public AnswerFromUserList(StackWrapper sw, AnswerQuery query) {$/;"	m	class:AnswerFromUserList
+AnswerFromUserList	datastructures/AnswerFromUserList.java	/^public class AnswerFromUserList extends AutoFetchList<Answer> {$/;"	c
+AnswerQuery	query/AnswerQuery.java	/^	public AnswerQuery(){$/;"	m	class:AnswerQuery
+AnswerQuery	query/AnswerQuery.java	/^public class AnswerQuery extends PageQuery {$/;"	c
+ApiRequest	http/HttpClient.java	/^		public ApiRequest(String baseURL, String versionString, String extendedURL,$/;"	m	class:HttpClient.ApiRequest
+ApiRequest	http/HttpClient.java	/^	public static class ApiRequest {$/;"	c	class:HttpClient
+ApiRequestQueue	http/ApiRequestQueue.java	/^	public ApiRequestQueue() {$/;"	m	class:ApiRequestQueue
+ApiRequestQueue	http/ApiRequestQueue.java	/^public class ApiRequestQueue extends Thread {$/;"	c
+ApiVersion	entities/Stats.java	/^    class ApiVersion {$/;"	c	class:Stats
+AutoFetchList	datastructures/AutoFetchList.java	/^    public AutoFetchList(StackWrapper sw, PageQuery query) {$/;"	m	class:AutoFetchList
+AutoFetchList	datastructures/AutoFetchList.java	/^public abstract class AutoFetchList<E extends StackObjBase> implements List<E> {$/;"	c
+BADGE	entities/UserTimeline.java	/^        ACCEPTED("accepted"), ASKORANSWERED("askoranswered"), BADGE("badge"), COMMENT("comment"), REVISION("revision");$/;"	e	enum:UserTimeline.Type	file:
+BASE_URL	stackauth/StackAuth.java	/^    private static final String BASE_URL = "http:\/\/stackauth.com\/";$/;"	f	class:StackAuth	file:
+Badge	entities/Badge.java	/^    Badge(final JSONObject jsonObject, final StackWrapper originator) throws JSONException {$/;"	m	class:Badge
+Badge	entities/Badge.java	/^    Badge(final String json, final StackWrapper originator) throws JSONException {$/;"	m	class:Badge
+Badge	entities/Badge.java	/^public class Badge extends StackObjBase {$/;"	c
+BadgeCounts	entities/User.java	/^		public BadgeCounts(final JSONObject jB, final StackWrapper originator) {$/;"	m	class:User.BadgeCounts
+BadgeCounts	entities/User.java	/^	public static class BadgeCounts extends StackObjBase {$/;"	c	class:User
+BadgeCounts	entities/User.java	/^    	protected BadgeCounts(final StackWrapper originator) {$/;"	m	class:User.BadgeCounts
+BadgeQuery	query/BadgeQuery.java	/^    public BadgeQuery() {$/;"	m	class:BadgeQuery
+BadgeQuery	query/BadgeQuery.java	/^public class BadgeQuery extends PageQuery {$/;"	c
+BaseQuery	query/BaseQuery.java	/^	protected BaseQuery(final ISort defaultSort) {$/;"	m	class:BaseQuery
+BaseQuery	query/BaseQuery.java	/^public abstract class BaseQuery implements Serializable {$/;"	c
+BaseRoute	routes/BaseRoute.java	/^public abstract class BaseRoute {$/;"	c
+BaseSort	query/sort/BaseSort.java	/^    protected BaseSort(String name, Object defaultMin, Object defaultMax) {$/;"	m	class:BaseSort
+BaseSort	query/sort/BaseSort.java	/^public abstract class BaseSort implements ISort, Serializable {$/;"	c
+COMMENT	entities/PostTimeline.java	/^        QUESTION("question"), ANSWER("answer"), COMMENT("comment"), REVISION("revision"), VOTES("votes"), ACCEPTED("accepted"), UNACCEPTED("unaccepted");$/;"	e	enum:PostTimeline.Type	file:
+COMMENT	entities/UserTimeline.java	/^        ACCEPTED("accepted"), ASKORANSWERED("askoranswered"), BADGE("badge"), COMMENT("comment"), REVISION("revision");$/;"	e	enum:UserTimeline.Type	file:
+Comment	entities/Comment.java	/^    Comment(final JSONObject object, final StackWrapper originator) throws JSONException {$/;"	m	class:Comment
+Comment	entities/Comment.java	/^    Comment(final String json, final StackWrapper originator) throws JSONException {$/;"	m	class:Comment
+Comment	entities/Comment.java	/^public class Comment extends Post {$/;"	c
+CommentFromAnswerIdList	datastructures/CommentFromAnswerIdList.java	/^    public CommentFromAnswerIdList(StackWrapper sw, CommentQuery query) {$/;"	m	class:CommentFromAnswerIdList
+CommentFromAnswerIdList	datastructures/CommentFromAnswerIdList.java	/^public class CommentFromAnswerIdList extends AutoFetchList<Comment> {$/;"	c
+CommentQuery	query/CommentQuery.java	/^    public CommentQuery() {$/;"	m	class:CommentQuery
+CommentQuery	query/CommentQuery.java	/^public class CommentQuery extends PageQuery {$/;"	c
+CommentsByIdList	datastructures/CommentsByIdList.java	/^    public CommentsByIdList(StackWrapper sw, CommentQuery query) {$/;"	m	class:CommentsByIdList
+CommentsByIdList	datastructures/CommentsByIdList.java	/^public class CommentsByIdList extends AutoFetchList<Comment> {$/;"	c
+CommentsFromPostList	datastructures/CommentsFromPostList.java	/^	public CommentsFromPostList(StackWrapper sw, CommentQuery query) {$/;"	m	class:CommentsFromPostList
+CommentsFromPostList	datastructures/CommentsFromPostList.java	/^public class CommentsFromPostList extends AutoFetchList<Comment> {$/;"	c
+DEFAULT_ANSWERS	entities/Question.java	/^    public static final boolean DEFAULT_ANSWERS = true;$/;"	f	class:Question
+DEFAULT_BODY	entities/Answer.java	/^    public static final boolean DEFAULT_BODY = false;$/;"	f	class:Answer
+DEFAULT_BODY	entities/Question.java	/^    public static final boolean DEFAULT_BODY = false;$/;"	f	class:Question
+DEFAULT_COMMENTS	entities/Answer.java	/^    public static final boolean DEFAULT_COMMENTS = false;$/;"	f	class:Answer
+DEFAULT_COMMENTS	entities/Question.java	/^    public static final boolean DEFAULT_COMMENTS = false;$/;"	f	class:Question
+DEFAULT_FILTER	entities/Tag.java	/^    public static final String DEFAULT_FILTER = "";$/;"	f	class:Tag
+DEFAULT_FILTER	entities/User.java	/^    public static final String DEFAULT_FILTER = null;$/;"	f	class:User
+DEFAULT_FROM_DATE	entities/Answer.java	/^    public static final long DEFAULT_FROM_DATE = 0L;$/;"	f	class:Answer
+DEFAULT_FROM_DATE	entities/Comment.java	/^    public static final long DEFAULT_FROM_DATE = 0L;$/;"	f	class:Comment
+DEFAULT_FROM_DATE	entities/Question.java	/^    public static final long DEFAULT_FROM_DATE = 1L;$/;"	f	class:Question
+DEFAULT_FROM_DATE	entities/Reputation.java	/^    public static final long DEFAULT_FROM_DATE = 0L;$/;"	f	class:Reputation
+DEFAULT_FROM_DATE	entities/Tag.java	/^    public static final long DEFAULT_FROM_DATE = 1;$/;"	f	class:Tag
+DEFAULT_FROM_DATE	query/QuestionQuery.java	/^	private static final long DEFAULT_FROM_DATE = 0L;$/;"	f	class:QuestionQuery	file:
+DEFAULT_IN_TITLE	entities/Question.java	/^    public static final String DEFAULT_IN_TITLE = null;$/;"	f	class:Question
+DEFAULT_NAME_MAX	query/TagQuery.java	/^        public final static String DEFAULT_NAME_MAX = "" + mv + mv + mv + mv + mv;$/;"	f	class:TagQuery.Sort
+DEFAULT_NAME_MAX	query/UserQuery.java	/^        public final static String DEFAULT_NAME_MAX = "" + mv + mv + mv + mv + mv + mv;$/;"	f	class:UserQuery.Sort
+DEFAULT_NOT_TAGGED	entities/Question.java	/^    public static final String DEFAULT_NOT_TAGGED = null;$/;"	f	class:Question
+DEFAULT_ORDER	entities/Answer.java	/^    public static final Order DEFAULT_ORDER = Order.ASC;$/;"	f	class:Answer
+DEFAULT_ORDER	entities/Comment.java	/^    public static final Order DEFAULT_ORDER = Order.ASC;$/;"	f	class:Comment
+DEFAULT_ORDER	entities/Question.java	/^    public static final Order DEFAULT_ORDER = Order.ASC;$/;"	f	class:Question
+DEFAULT_ORDER	entities/Tag.java	/^    public static final Order DEFAULT_ORDER = Order.DESC;$/;"	f	class:Tag
+DEFAULT_PAGE	entities/Answer.java	/^    public static final int DEFAULT_PAGE = 1;$/;"	f	class:Answer
+DEFAULT_PAGE	entities/Comment.java	/^    public static final int DEFAULT_PAGE = 1;$/;"	f	class:Comment
+DEFAULT_PAGE	entities/Question.java	/^    public static final int DEFAULT_PAGE = 1;$/;"	f	class:Question
+DEFAULT_PAGE	entities/Reputation.java	/^	public static final int DEFAULT_PAGE = 1;$/;"	f	class:Reputation
+DEFAULT_PAGE	entities/Tag.java	/^    public static final int DEFAULT_PAGE = 1;$/;"	f	class:Tag
+DEFAULT_PAGE	entities/User.java	/^	public static final int DEFAULT_PAGE = 1;$/;"	f	class:User
+DEFAULT_PAGE_SIZE	entities/Answer.java	/^    public static final int DEFAULT_PAGE_SIZE = 30;$/;"	f	class:Answer
+DEFAULT_PAGE_SIZE	entities/Comment.java	/^    public static final int DEFAULT_PAGE_SIZE = 30;$/;"	f	class:Comment
+DEFAULT_PAGE_SIZE	entities/Question.java	/^    public static final int DEFAULT_PAGE_SIZE = 30;$/;"	f	class:Question
+DEFAULT_PAGE_SIZE	entities/Reputation.java	/^    public static final int DEFAULT_PAGE_SIZE = 30;$/;"	f	class:Reputation
+DEFAULT_PAGE_SIZE	entities/Tag.java	/^    public static final int DEFAULT_PAGE_SIZE = 70;$/;"	f	class:Tag
+DEFAULT_PAGE_SIZE	entities/User.java	/^    public static final int DEFAULT_PAGE_SIZE = 35;$/;"	f	class:User
+DEFAULT_SEARCH_MAX	entities/Question.java	/^    public static final int DEFAULT_SEARCH_MAX = Integer.MAX_VALUE;$/;"	f	class:Question
+DEFAULT_SEARCH_MIN	entities/Question.java	/^    public static final int DEFAULT_SEARCH_MIN = Integer.MIN_VALUE;$/;"	f	class:Question
+DEFAULT_TAGGED	entities/Question.java	/^    public static final String DEFAULT_TAGGED = null;$/;"	f	class:Question
+DEFAULT_TO_DATE	entities/Answer.java	/^    public static final long DEFAULT_TO_DATE = Long.MAX_VALUE;$/;"	f	class:Answer
+DEFAULT_TO_DATE	entities/Comment.java	/^    public static final long DEFAULT_TO_DATE = 253402300799L;$/;"	f	class:Comment
+DEFAULT_TO_DATE	entities/Question.java	/^    public static final long DEFAULT_TO_DATE = Long.MAX_VALUE;$/;"	f	class:Question
+DEFAULT_TO_DATE	entities/Reputation.java	/^    public static final long DEFAULT_TO_DATE = 253402300799L;$/;"	f	class:Reputation
+DEFAULT_TO_DATE	entities/Tag.java	/^    public static final long DEFAULT_TO_DATE = 9223372036854775807L;$/;"	f	class:Tag
+DEFAULT_TO_DATE	query/QuestionQuery.java	/^	private static final long DEFAULT_TO_DATE = 253402300799L;$/;"	f	class:QuestionQuery	file:
+DESC	enums/Order.java	/^    ASC("asc"), DESC("desc");$/;"	e	enum:Order	file:
+Error	entities/Error.java	/^    public Error(final JSONObject jE, final StackWrapper originator) throws JSONException {$/;"	m	class:Error
+Error	entities/Error.java	/^    public Error(final String json, final StackWrapper originator) throws JSONException {$/;"	m	class:Error
+Error	entities/Error.java	/^public class Error extends StackObjBase {$/;"	c
+FavoriteQuery	query/FavoriteQuery.java	/^    public FavoriteQuery(){$/;"	m	class:FavoriteQuery
+FavoriteQuery	query/FavoriteQuery.java	/^public class FavoriteQuery extends QuestionQuery {$/;"	c
+Future	http/ApiRequestQueue.java	/^		public Future(HttpClient.ApiRequest req) {$/;"	m	class:ApiRequestQueue.Future
+Future	http/ApiRequestQueue.java	/^	public static class Future {$/;"	c	class:ApiRequestQueue
+HttpClient	http/HttpClient.java	/^	public HttpClient(){$/;"	m	class:HttpClient
+HttpClient	http/HttpClient.java	/^public class HttpClient {$/;"	c
+ISort	query/sort/ISort.java	/^public interface ISort {$/;"	i
+JSONArray	json/JSONArray.java	/^    public JSONArray() {$/;"	m	class:JSONArray
+JSONArray	json/JSONArray.java	/^    public JSONArray(Collection collection) {$/;"	m	class:JSONArray
+JSONArray	json/JSONArray.java	/^    public JSONArray(JSONTokener x) throws JSONException {$/;"	m	class:JSONArray
+JSONArray	json/JSONArray.java	/^    public JSONArray(Object array) throws JSONException {$/;"	m	class:JSONArray
+JSONArray	json/JSONArray.java	/^    public JSONArray(String source) throws JSONException {$/;"	m	class:JSONArray
+JSONArray	json/JSONArray.java	/^public class JSONArray {$/;"	c
+JSONException	json/JSONException.java	/^    public JSONException(String message) {$/;"	m	class:JSONException
+JSONException	json/JSONException.java	/^    public JSONException(Throwable t) {$/;"	m	class:JSONException
+JSONException	json/JSONException.java	/^public class JSONException extends Exception {$/;"	c
+JSONObject	json/JSONObject.java	/^    public JSONObject() {$/;"	m	class:JSONObject
+JSONObject	json/JSONObject.java	/^    public JSONObject(JSONObject jo, String[] names) {$/;"	m	class:JSONObject
+JSONObject	json/JSONObject.java	/^    public JSONObject(JSONTokener x) throws JSONException {$/;"	m	class:JSONObject
+JSONObject	json/JSONObject.java	/^    public JSONObject(Map map) {$/;"	m	class:JSONObject
+JSONObject	json/JSONObject.java	/^    public JSONObject(Object bean) {$/;"	m	class:JSONObject
+JSONObject	json/JSONObject.java	/^    public JSONObject(Object object, String names[]) {$/;"	m	class:JSONObject
+JSONObject	json/JSONObject.java	/^    public JSONObject(String source) throws JSONException {$/;"	m	class:JSONObject
+JSONObject	json/JSONObject.java	/^public class JSONObject {$/;"	c
+JSONString	json/JSONString.java	/^interface JSONString {$/;"	i
+JSONTokener	json/JSONTokener.java	/^    public JSONTokener(Reader reader) {$/;"	m	class:JSONTokener
+JSONTokener	json/JSONTokener.java	/^    public JSONTokener(String s) {$/;"	m	class:JSONTokener
+JSONTokener	json/JSONTokener.java	/^class JSONTokener {$/;"	c
+MAX_PAGE_SIZE	query/PageQuery.java	/^    public static final int MAX_PAGE_SIZE = 100;$/;"	f	class:PageQuery
+MIN_PAGE_SIZE	query/PageQuery.java	/^    public static final int MIN_PAGE_SIZE = 0;$/;"	f	class:PageQuery
+MajorPost	entities/MajorPost.java	/^    MajorPost(final JSONObject jP, final StackWrapper originator) throws JSONException {$/;"	m	class:MajorPost
+MajorPost	entities/MajorPost.java	/^public abstract class MajorPost extends Post {$/;"	c
+Meta	Meta.java	/^    public Meta() {$/;"	m	class:Meta
+Meta	Meta.java	/^    public Meta(final String apiKey) {$/;"	m	class:Meta
+Meta	Meta.java	/^public class Meta extends StackWrapper {$/;"	c
+MetadataList	datastructures/MetadataList.java	/^    public MetadataList(String json, List<E> objects) throws JSONException {$/;"	m	class:MetadataList
+MetadataList	datastructures/MetadataList.java	/^public class MetadataList<E extends StackObjBase> extends ArrayList<E> {$/;"	c
+NONE	http/Throttle.java	/^    NONE, THREADED, NON_THREADED;$/;"	e	enum:Throttle	file:
+NON_THREADED	http/Throttle.java	/^    NONE, THREADED, NON_THREADED;$/;"	e	enum:Throttle	file:
+NULL	json/JSONObject.java	/^    public static final Object NULL = new Null();$/;"	f	class:JSONObject
+Null	json/JSONObject.java	/^     private static final class Null {$/;"	c	class:JSONObject
+Order	enums/Order.java	/^    private Order(final String name) {$/;"	m	class:Order	file:
+Order	enums/Order.java	/^public enum Order {$/;"	g
+PAGE_KEY	query/PageQuery.java	/^    public static final String PAGE_KEY = "page";$/;"	f	class:PageQuery
+PageQuery	query/PageQuery.java	/^    protected PageQuery(ISort defaultSort){$/;"	m	class:PageQuery
+PageQuery	query/PageQuery.java	/^public abstract class PageQuery extends BaseQuery {$/;"	c
+ParameterNotSetException	exceptions/ParameterNotSetException.java	/^    public ParameterNotSetException(final String message) {$/;"	m	class:ParameterNotSetException
+ParameterNotSetException	exceptions/ParameterNotSetException.java	/^public class ParameterNotSetException extends Exception {$/;"	c
+PoliteJSONObject	json/PoliteJSONObject.java	/^    public PoliteJSONObject(JSONObject obj) {$/;"	m	class:PoliteJSONObject
+PoliteJSONObject	json/PoliteJSONObject.java	/^public class PoliteJSONObject {$/;"	c
+Post	entities/Post.java	/^    Post(final JSONObject jP, final StackWrapper originator) throws JSONException {$/;"	m	class:Post
+Post	entities/Post.java	/^public class Post extends StackObjBase {$/;"	c
+PostTimeline	entities/PostTimeline.java	/^    PostTimeline(final JSONObject jPT, final StackWrapper originator) throws JSONException {$/;"	m	class:PostTimeline
+PostTimeline	entities/PostTimeline.java	/^    PostTimeline(final String json, final StackWrapper originator) throws JSONException {$/;"	m	class:PostTimeline
+PostTimeline	entities/PostTimeline.java	/^public class PostTimeline extends Timeline {$/;"	c
+PostType	entities/UserTimeline.java	/^	public static enum PostType {$/;"	g	class:UserTimeline
+PostType	entities/UserTimeline.java	/^        private PostType(final String desc) {$/;"	m	class:UserTimeline.PostType	file:
+QUESTION	entities/PostTimeline.java	/^        QUESTION("question"), ANSWER("answer"), COMMENT("comment"), REVISION("revision"), VOTES("votes"), ACCEPTED("accepted"), UNACCEPTED("unaccepted");$/;"	e	enum:PostTimeline.Type	file:
+QUESTION	entities/UserTimeline.java	/^        QUESTION("question"), ANSWER("answer");$/;"	e	enum:UserTimeline.PostType	file:
+Question	entities/Question.java	/^    Question(final JSONObject jQ, final StackWrapper originator) throws JSONException {$/;"	m	class:Question
+Question	entities/Question.java	/^    Question(final String json, final StackWrapper originator) throws JSONException {$/;"	m	class:Question
+Question	entities/Question.java	/^public class Question extends MajorPost {$/;"	c
+QuestionQuery	query/QuestionQuery.java	/^	public QuestionQuery(){$/;"	m	class:QuestionQuery
+QuestionQuery	query/QuestionQuery.java	/^	public QuestionQuery(ISort defaultSort){$/;"	m	class:QuestionQuery
+QuestionQuery	query/QuestionQuery.java	/^public class QuestionQuery extends TaggedQuery {$/;"	c
+REVISION	entities/PostTimeline.java	/^        QUESTION("question"), ANSWER("answer"), COMMENT("comment"), REVISION("revision"), VOTES("votes"), ACCEPTED("accepted"), UNACCEPTED("unaccepted");$/;"	e	enum:PostTimeline.Type	file:
+REVISION	entities/UserTimeline.java	/^        ACCEPTED("accepted"), ASKORANSWERED("askoranswered"), BADGE("badge"), COMMENT("comment"), REVISION("revision");$/;"	e	enum:UserTimeline.Type	file:
+Reputation	entities/Reputation.java	/^    Reputation(final JSONObject repObj, final StackWrapper originator) throws JSONException {$/;"	m	class:Reputation
+Reputation	entities/Reputation.java	/^    Reputation(final String json, final StackWrapper originator) throws JSONException {$/;"	m	class:Reputation
+Reputation	entities/Reputation.java	/^public class Reputation extends StackObjBase {$/;"	c
+ReputationByUserList	datastructures/ReputationByUserList.java	/^	public ReputationByUserList(StackWrapper sw, ReputationQuery query) {$/;"	m	class:ReputationByUserList
+ReputationByUserList	datastructures/ReputationByUserList.java	/^public class ReputationByUserList extends AutoFetchList<Reputation> {$/;"	c
+ReputationQuery	query/ReputationQuery.java	/^    public ReputationQuery() {$/;"	m	class:ReputationQuery
+ReputationQuery	query/ReputationQuery.java	/^public class ReputationQuery extends PageQuery {$/;"	c
+Revision	entities/Revision.java	/^    Revision(final JSONObject jsonObj, final StackWrapper originator) throws JSONException {$/;"	m	class:Revision
+Revision	entities/Revision.java	/^    Revision(final String json, final StackWrapper originator) throws JSONException {$/;"	m	class:Revision
+Revision	entities/Revision.java	/^public class Revision extends StackObjBase {$/;"	c
+RevisionQuery	query/RevisionQuery.java	/^	public RevisionQuery() {$/;"	m	class:RevisionQuery
+RevisionQuery	query/RevisionQuery.java	/^public class RevisionQuery extends BaseQuery {$/;"	c
+SINGLE_USER	entities/Revision.java	/^        SINGLE_USER("single_user"), VOTE_BASED("vote_based");$/;"	e	enum:Revision.Type	file:
+SLEEP_TIME	http/ApiRequestQueue.java	/^	private static final long SLEEP_TIME = 1700;$/;"	f	class:ApiRequestQueue	file:
+SearchQuery	query/SearchQuery.java	/^	public SearchQuery(){$/;"	m	class:SearchQuery
+SearchQuery	query/SearchQuery.java	/^public class SearchQuery extends TaggedQuery {$/;"	c
+ServerFault	ServerFault.java	/^    public ServerFault() {$/;"	m	class:ServerFault
+ServerFault	ServerFault.java	/^    public ServerFault(final String apiKey) {$/;"	m	class:ServerFault
+ServerFault	ServerFault.java	/^public class ServerFault extends StackWrapper {$/;"	c
+Site	stackauth/entities/Site.java	/^    public Site(JSONObject jS) throws JSONException {$/;"	m	class:Site
+Site	stackauth/entities/Site.java	/^public class Site {$/;"	c
+Sort	query/AnswerQuery.java	/^        protected Sort(String name, Object defaultMin, Object defaultMax) {$/;"	m	class:AnswerQuery.Sort
+Sort	query/AnswerQuery.java	/^    public static class Sort extends BaseSort {$/;"	c	class:AnswerQuery
+Sort	query/CommentQuery.java	/^        protected Sort(String name, Object defaultMin, Object defaultMax) {$/;"	m	class:CommentQuery.Sort
+Sort	query/CommentQuery.java	/^    public static class Sort extends BaseSort {$/;"	c	class:CommentQuery
+Sort	query/FavoriteQuery.java	/^        protected Sort(String name, Object defaultMin, Object defaultMax) {$/;"	m	class:FavoriteQuery.Sort
+Sort	query/FavoriteQuery.java	/^    public static class Sort extends BaseSort {$/;"	c	class:FavoriteQuery
+Sort	query/QuestionQuery.java	/^        protected Sort(String name, Object defaultMin, Object defaultMax) {$/;"	m	class:QuestionQuery.Sort
+Sort	query/QuestionQuery.java	/^    public static class Sort extends BaseSort {$/;"	c	class:QuestionQuery
+Sort	query/SearchQuery.java	/^	public static class Sort extends BaseSort {$/;"	c	class:SearchQuery
+Sort	query/SearchQuery.java	/^    	protected Sort(String name, Object defaultMin, Object defaultMax) {$/;"	m	class:SearchQuery.Sort
+Sort	query/TagQuery.java	/^		protected Sort(String name, Object defaultMin, Object defaultMax) {$/;"	m	class:TagQuery.Sort
+Sort	query/TagQuery.java	/^	public static class Sort extends BaseSort {$/;"	c	class:TagQuery
+Sort	query/UnansweredQuery.java	/^        protected Sort(String name, Object defaultMin, Object defaultMax) {$/;"	m	class:UnansweredQuery.Sort
+Sort	query/UnansweredQuery.java	/^    public static class Sort extends BaseSort {$/;"	c	class:UnansweredQuery
+Sort	query/UserQuery.java	/^        protected Sort(String name, Object defaultMin, Object defaultMax) {$/;"	m	class:UserQuery.Sort
+Sort	query/UserQuery.java	/^    public static class Sort extends BaseSort {$/;"	c	class:UserQuery
+Sort	query/UserQuestionQuery.java	/^        protected Sort(String name, Object defaultMin, Object defaultMax) {$/;"	m	class:UserQuestionQuery.Sort
+Sort	query/UserQuestionQuery.java	/^    public static class Sort extends BaseSort {$/;"	c	class:UserQuestionQuery
+StackAuth	stackauth/StackAuth.java	/^    private StackAuth() {$/;"	m	class:StackAuth	file:
+StackAuth	stackauth/StackAuth.java	/^public class StackAuth {$/;"	c
+StackObjBase	entities/StackObjBase.java	/^    StackObjBase(final StackWrapper originator) {$/;"	m	class:StackObjBase
+StackObjBase	entities/StackObjBase.java	/^public abstract class StackObjBase implements Serializable {$/;"	c
+StackOverflow	StackOverflow.java	/^	public StackOverflow() {$/;"	m	class:StackOverflow
+StackOverflow	StackOverflow.java	/^    public StackOverflow(final String apiKey) {$/;"	m	class:StackOverflow
+StackOverflow	StackOverflow.java	/^public class StackOverflow extends StackWrapper {$/;"	c
+StackUtils	utils/StackUtils.java	/^public class StackUtils {$/;"	c
+StackWrapper	StackWrapper.java	/^    public StackWrapper(String url) {$/;"	m	class:StackWrapper
+StackWrapper	StackWrapper.java	/^    public StackWrapper(String url, String apiKey) {$/;"	m	class:StackWrapper
+StackWrapper	StackWrapper.java	/^public class StackWrapper implements Serializable {$/;"	c
+Stats	entities/Stats.java	/^    Stats(final String json, final StackWrapper originator) throws JSONException {$/;"	m	class:Stats
+Stats	entities/Stats.java	/^public class Stats extends StackObjBase {$/;"	c
+Styling	stackauth/entities/Styling.java	/^    protected Styling(JSONObject jS) throws JSONException{$/;"	m	class:Styling
+Styling	stackauth/entities/Styling.java	/^public class Styling {$/;"	c
+SuperUser	SuperUser.java	/^    public SuperUser() {$/;"	m	class:SuperUser
+SuperUser	SuperUser.java	/^    public SuperUser(final String apiKey) {$/;"	m	class:SuperUser
+SuperUser	SuperUser.java	/^public class SuperUser extends StackWrapper {$/;"	c
+THREADED	http/Throttle.java	/^    NONE, THREADED, NON_THREADED;$/;"	e	enum:Throttle	file:
+Tag	entities/Tag.java	/^    Tag(final JSONObject jT, final StackWrapper originator) throws JSONException {$/;"	m	class:Tag
+Tag	entities/Tag.java	/^    Tag(final String json, final StackWrapper originator) throws JSONException {$/;"	m	class:Tag
+Tag	entities/Tag.java	/^public class Tag extends StackObjBase {$/;"	c
+TagQuery	query/TagQuery.java	/^    public TagQuery() {$/;"	m	class:TagQuery
+TagQuery	query/TagQuery.java	/^public class TagQuery extends PageQuery {$/;"	c
+TaggedQuery	query/TaggedQuery.java	/^    protected TaggedQuery(ISort defaultSort) {$/;"	m	class:TaggedQuery
+TaggedQuery	query/TaggedQuery.java	/^public abstract class TaggedQuery extends PageQuery {$/;"	c
+Throttle	http/Throttle.java	/^public enum Throttle {$/;"	g
+Timeline	entities/Timeline.java	/^	Timeline(final JSONObject jT, final StackWrapper originator) throws JSONException {$/;"	m	class:Timeline
+Timeline	entities/Timeline.java	/^public class Timeline extends StackObjBase {$/;"	c
+TimelineQuery	query/TimelineQuery.java	/^    public TimelineQuery() {$/;"	m	class:TimelineQuery
+TimelineQuery	query/TimelineQuery.java	/^public class TimelineQuery extends PageQuery {$/;"	c
+Type	entities/PostTimeline.java	/^        private Type(final String desc) {$/;"	m	class:PostTimeline.Type	file:
+Type	entities/PostTimeline.java	/^    public static enum Type {$/;"	g	class:PostTimeline
+Type	entities/Revision.java	/^	public static enum Type {$/;"	g	class:Revision
+Type	entities/Revision.java	/^        private Type(final String desc) {$/;"	m	class:Revision.Type	file:
+Type	entities/UserTimeline.java	/^	public static enum Type {$/;"	g	class:UserTimeline
+Type	entities/UserTimeline.java	/^        private Type(final String desc) {$/;"	m	class:UserTimeline.Type	file:
+UNACCEPTED	entities/PostTimeline.java	/^        QUESTION("question"), ANSWER("answer"), COMMENT("comment"), REVISION("revision"), VOTES("votes"), ACCEPTED("accepted"), UNACCEPTED("unaccepted");$/;"	e	enum:PostTimeline.Type	file:
+UnansweredQuery	query/UnansweredQuery.java	/^    public UnansweredQuery(){$/;"	m	class:UnansweredQuery
+UnansweredQuery	query/UnansweredQuery.java	/^public class UnansweredQuery extends QuestionQuery {$/;"	c
+User	entities/User.java	/^    User(final JSONObject jU, final StackWrapper originator) throws JSONException {$/;"	m	class:User
+User	entities/User.java	/^    User(final String jsonString, final StackWrapper originator) throws JSONException {$/;"	m	class:User
+User	entities/User.java	/^public class User extends StackObjBase {$/;"	c
+UserFromBadgeList	datastructures/UserFromBadgeList.java	/^    public UserFromBadgeList(StackWrapper sw, BadgeQuery query) {$/;"	m	class:UserFromBadgeList
+UserFromBadgeList	datastructures/UserFromBadgeList.java	/^public class UserFromBadgeList extends AutoFetchList<User> {$/;"	c
+UserQuery	query/UserQuery.java	/^	public UserQuery(){$/;"	m	class:UserQuery
+UserQuery	query/UserQuery.java	/^public class UserQuery extends PageQuery {$/;"	c
+UserQuestionQuery	query/UserQuestionQuery.java	/^	public UserQuestionQuery(){$/;"	m	class:UserQuestionQuery
+UserQuestionQuery	query/UserQuestionQuery.java	/^public class UserQuestionQuery extends PageQuery {$/;"	c
+UserTimeline	entities/UserTimeline.java	/^	UserTimeline(final JSONObject jUT, final StackWrapper originator) throws JSONException {$/;"	m	class:UserTimeline
+UserTimeline	entities/UserTimeline.java	/^	UserTimeline(final String json, final StackWrapper originator) throws JSONException {$/;"	m	class:UserTimeline
+UserTimeline	entities/UserTimeline.java	/^public class UserTimeline extends Timeline {$/;"	c
+UsersByIdList	datastructures/UsersByIdList.java	/^    public UsersByIdList(StackWrapper sw, UserQuery query) {$/;"	m	class:UsersByIdList
+UsersByIdList	datastructures/UsersByIdList.java	/^public class UsersByIdList extends AutoFetchList<User> {$/;"	c
+UsersList	datastructures/UsersList.java	/^    public UsersList(StackWrapper sw, UserQuery query) {$/;"	m	class:UsersList
+UsersList	datastructures/UsersList.java	/^public class UsersList extends AutoFetchList<User> {$/;"	c
+VERSION	StackWrapper.java	/^    protected final String VERSION = "1.0\/";$/;"	f	class:StackWrapper
+VERSION	stackauth/StackAuth.java	/^    private static final String VERSION = "1.0\/";$/;"	f	class:StackAuth	file:
+VOTES	entities/PostTimeline.java	/^        QUESTION("question"), ANSWER("answer"), COMMENT("comment"), REVISION("revision"), VOTES("votes"), ACCEPTED("accepted"), UNACCEPTED("unaccepted");$/;"	e	enum:PostTimeline.Type	file:
+VOTE_BASED	entities/Revision.java	/^        SINGLE_USER("single_user"), VOTE_BASED("vote_based");$/;"	e	enum:Revision.Type	file:
+WAIT_TIME	http/ApiRequestQueue.java	/^	private static final long WAIT_TIME = 170;$/;"	f	class:ApiRequestQueue	file:
+WAIT_TIME	http/HttpClient.java	/^	private static final long WAIT_TIME = 170;$/;"	f	class:HttpClient	file:
+aboutMe	entities/User.java	/^    private String aboutMe = "";$/;"	f	class:User	file:
+acceptRate	entities/User.java	/^    private int acceptRate;$/;"	f	class:User	file:
+acceptedAnswerId	entities/Question.java	/^    private int acceptedAnswerId;$/;"	f	class:Question	file:
+accumulate	json/JSONObject.java	/^    public JSONObject accumulate(String key, Object value)$/;"	m	class:JSONObject
+action	entities/Timeline.java	/^	private String action;$/;"	f	class:Timeline	file:
+activity	query/AnswerQuery.java	/^    	public static final Sort activity() {$/;"	m	class:AnswerQuery.Sort
+activity	query/FavoriteQuery.java	/^        public static final Sort activity() {$/;"	m	class:FavoriteQuery.Sort
+activity	query/QuestionQuery.java	/^    	public static final Sort activity() {$/;"	m	class:QuestionQuery.Sort
+activity	query/SearchQuery.java	/^    	public static final Sort activity() {$/;"	m	class:SearchQuery.Sort
+activity	query/TagQuery.java	/^		public static final Sort activity() {$/;"	m	class:TagQuery.Sort
+activity	query/UserQuestionQuery.java	/^    	public static final Sort activity() {$/;"	m	class:UserQuestionQuery.Sort
+add	datastructures/AutoFetchList.java	/^    public boolean add(E arg0) {$/;"	m	class:AutoFetchList
+add	datastructures/AutoFetchList.java	/^    public void add(int arg0, E arg1) {$/;"	m	class:AutoFetchList
+addAll	datastructures/AutoFetchList.java	/^    public boolean addAll(Collection<? extends E> arg0) {$/;"	m	class:AutoFetchList
+addAll	datastructures/AutoFetchList.java	/^    public boolean addAll(int arg0, Collection<? extends E> arg1) {$/;"	m	class:AutoFetchList
+addId	query/BaseQuery.java	/^	public void addId(final int... id) {$/;"	m	class:BaseQuery
+addParameter	query/BaseQuery.java	/^	private static String addParameter(final String urlParameters, final String name, final String value) {$/;"	m	class:BaseQuery	file:
+addParameter	query/TaggedQuery.java	/^    private static String addParameter(String urlParameters, String name, String value) {$/;"	m	class:TaggedQuery	file:
+addSortParams	query/BaseQuery.java	/^	private String addSortParams(final String urlParameters, final ISort sortParams) {$/;"	m	class:BaseQuery	file:
+addTag	query/TaggedQuery.java	/^    public TaggedQuery addTag(String tag){$/;"	m	class:TaggedQuery
+addTaggedParam	query/TaggedQuery.java	/^    private String addTaggedParam(String urlParameters){$/;"	m	class:TaggedQuery	file:
+added	query/FavoriteQuery.java	/^        public static final Sort added() {$/;"	m	class:FavoriteQuery.Sort
+age	entities/User.java	/^    private int age;$/;"	f	class:User	file:
+answerClient	StackWrapper.java	/^    private final HttpClient answerClient = new HttpClient();$/;"	f	class:StackWrapper	file:
+answerCount	entities/Question.java	/^    private int answerCount;$/;"	f	class:Question	file:
+answerCount	entities/User.java	/^    private int answerCount;$/;"	f	class:User	file:
+answers	entities/Question.java	/^    private List<Answer> answers;$/;"	f	class:Question	file:
+answers	query/QuestionQuery.java	/^	private final boolean answers = false;$/;"	f	class:QuestionQuery	file:
+answers	query/UserQuestionQuery.java	/^    private static final boolean answers = false;$/;"	f	class:UserQuestionQuery	file:
+answersPerMinute	entities/Stats.java	/^    private double answersPerMinute;$/;"	f	class:Stats	file:
+apiEndpoint	stackauth/entities/Site.java	/^    private String apiEndpoint;$/;"	f	class:Site	file:
+apiVersion	entities/Stats.java	/^    private ApiVersion apiVersion = new ApiVersion();$/;"	f	class:Stats	file:
+append	json/JSONObject.java	/^    public JSONObject append(String key, Object value) throws JSONException {$/;"	m	class:JSONObject
+associationId	entities/User.java	/^    private String associationId;$/;"	f	class:User	file:
+autoIncrement	query/PageQuery.java	/^    private boolean autoIncrement = false;$/;"	f	class:PageQuery	file:
+awardCount	entities/Badge.java	/^    private int awardCount;$/;"	f	class:Badge	file:
+back	json/JSONTokener.java	/^    public void back() throws JSONException {$/;"	m	class:JSONTokener
+badgeClient	StackWrapper.java	/^    private final HttpClient badgeClient = new HttpClient();$/;"	f	class:StackWrapper	file:
+badgeCounts	entities/User.java	/^    private BadgeCounts badgeCounts;$/;"	f	class:User	file:
+badgesPerMinute	entities/Stats.java	/^    private double badgesPerMinute;$/;"	f	class:Stats	file:
+body	entities/Post.java	/^    protected String body = null;$/;"	f	class:Post
+body	entities/Revision.java	/^	private String body;$/;"	f	class:Revision	file:
+body	query/AnswerQuery.java	/^	private static final boolean body = false;$/;"	f	class:AnswerQuery	file:
+body	query/QuestionQuery.java	/^	private static final boolean body = false;$/;"	f	class:QuestionQuery	file:
+body	query/UserQuestionQuery.java	/^    private static final boolean body = false;$/;"	f	class:UserQuestionQuery	file:
+bountyAmount	entities/Question.java	/^    private int bountyAmount;$/;"	f	class:Question	file:
+bountyClosesDate	entities/Question.java	/^    private long bountyClosesDate;$/;"	f	class:Question	file:
+bronze	entities/User.java	/^    	public final int bronze, silver, gold;$/;"	f	class:User.BadgeCounts
+buildVectorizedList	StackWrapper.java	/^    private static String buildVectorizedList(int... id) {$/;"	m	class:StackWrapper	file:
+buildVectorizedList	query/BaseQuery.java	/^	protected static String buildVectorizedList(final int... id) {$/;"	m	class:BaseQuery
+cause	json/JSONException.java	/^	private Throwable cause;$/;"	f	class:JSONException	file:
+character	json/JSONTokener.java	/^    private int 	character;$/;"	f	class:JSONTokener	file:
+clear	datastructures/AutoFetchList.java	/^    public void clear() {$/;"	m	class:AutoFetchList
+client	stackauth/StackAuth.java	/^    private static final HttpClient client = new HttpClient();$/;"	f	class:StackAuth	file:
+clone	json/JSONObject.java	/^        protected final Object clone() {$/;"	m	class:JSONObject.Null
+closedDate	entities/Question.java	/^    private long closedDate;$/;"	f	class:Question	file:
+closedReason	entities/Question.java	/^    private String closedReason;$/;"	f	class:Question	file:
+code	entities/Error.java	/^	private int code;$/;"	f	class:Error	file:
+combine	query/SearchQuery.java	/^	private static String combine(List<String> tags, char delim){$/;"	m	class:SearchQuery	file:
+combineUrlParts	http/HttpClient.java	/^	private static String combineUrlParts(String first, String second) {$/;"	m	class:HttpClient	file:
+comment	entities/Revision.java	/^	private String comment;$/;"	f	class:Revision	file:
+commentClient	StackWrapper.java	/^    private final HttpClient commentClient = new HttpClient();$/;"	f	class:StackWrapper	file:
+commentId	entities/Timeline.java	/^	private int commentId;$/;"	f	class:Timeline	file:
+commentUrl	entities/PostTimeline.java	/^    private String commentUrl;$/;"	f	class:PostTimeline	file:
+comments	entities/MajorPost.java	/^    protected List<Comment> comments;$/;"	f	class:MajorPost
+comments	query/AnswerQuery.java	/^	private static final boolean comments = false;$/;"	f	class:AnswerQuery	file:
+comments	query/QuestionQuery.java	/^	private static final boolean comments = false;$/;"	f	class:QuestionQuery	file:
+comments	query/UserQuestionQuery.java	/^    private static final boolean comments = false;$/;"	f	class:UserQuestionQuery	file:
+commentsUrl	entities/MajorPost.java	/^    protected String commentsUrl;$/;"	f	class:MajorPost
+conn	http/HttpClient.java	/^		private HttpURLConnection conn;$/;"	f	class:HttpClient.ApiRequest	file:
+contains	datastructures/AutoFetchList.java	/^    public boolean contains(Object arg0) {$/;"	m	class:AutoFetchList
+containsAll	datastructures/AutoFetchList.java	/^    public boolean containsAll(Collection<?> arg0) {$/;"	m	class:AutoFetchList
+count	entities/Tag.java	/^    private int count;$/;"	f	class:Tag	file:
+creation	query/AnswerQuery.java	/^    	public static final Sort creation() {$/;"	m	class:AnswerQuery.Sort
+creation	query/CommentQuery.java	/^        public static final Sort creation() {$/;"	m	class:CommentQuery.Sort
+creation	query/FavoriteQuery.java	/^        public static final Sort creation() {$/;"	m	class:FavoriteQuery.Sort
+creation	query/QuestionQuery.java	/^    	public static final Sort creation() {$/;"	m	class:QuestionQuery.Sort
+creation	query/SearchQuery.java	/^    	public static final Sort creation() {$/;"	m	class:SearchQuery.Sort
+creation	query/UnansweredQuery.java	/^    	public static final Sort creation() {$/;"	m	class:UnansweredQuery.Sort
+creation	query/UserQuery.java	/^		public static final Sort creation() {$/;"	m	class:UserQuery.Sort
+creation	query/UserQuestionQuery.java	/^    	public static final Sort creation() {$/;"	m	class:UserQuestionQuery.Sort
+creationDate	entities/Post.java	/^    protected long creationDate;$/;"	f	class:Post
+creationDate	entities/Revision.java	/^	private long creationDate;$/;"	f	class:Revision	file:
+creationDate	entities/Timeline.java	/^	private long creationDate;$/;"	f	class:Timeline	file:
+creationDate	entities/User.java	/^    private long creationDate;$/;"	f	class:User	file:
+creator	entities/StackObjBase.java	/^	private StackWrapper creator;$/;"	f	class:StackObjBase	file:
+dMax	query/sort/BaseSort.java	/^    private final Object dMin, dMax;$/;"	f	class:BaseSort	file:
+dMin	query/sort/BaseSort.java	/^    private final Object dMin, dMax;$/;"	f	class:BaseSort	file:
+data	datastructures/AutoFetchList.java	/^    protected ArrayList<E> data;$/;"	f	class:AutoFetchList
+decodeHtml	entities/Post.java	/^	private static String decodeHtml(final String in) {$/;"	m	class:Post	file:
+decrementPage	query/PageQuery.java	/^    public PageQuery decrementPage() {$/;"	m	class:PageQuery
+dehexchar	json/JSONTokener.java	/^    public static int dehexchar(char c) {$/;"	m	class:JSONTokener
+description	entities/Badge.java	/^    private String description = "";$/;"	f	class:Badge	file:
+description	entities/PostTimeline.java	/^        private String description;$/;"	f	class:PostTimeline.Type	file:
+description	entities/Revision.java	/^        private String description;$/;"	f	class:Revision.Type	file:
+description	entities/UserTimeline.java	/^	private String description;$/;"	f	class:UserTimeline	file:
+description	entities/UserTimeline.java	/^        private String description;$/;"	f	class:UserTimeline.PostType	file:
+description	entities/UserTimeline.java	/^        private String description;$/;"	f	class:UserTimeline.Type	file:
+description	stackauth/entities/Site.java	/^    private String description;$/;"	f	class:Site	file:
+detail	entities/UserTimeline.java	/^	private String detail;$/;"	f	class:UserTimeline	file:
+displayName	entities/User.java	/^    private String displayName = "";$/;"	f	class:User	file:
+displayName	stackauth/entities/Account.java	/^    private String displayName;$/;"	f	class:Account	file:
+doubleToString	json/JSONObject.java	/^    static public String doubleToString(double d) {$/;"	m	class:JSONObject
+downVoteCount	entities/MajorPost.java	/^    private int downVoteCount;$/;"	f	class:MajorPost	file:
+downVotes	entities/User.java	/^    private int downVotes;$/;"	f	class:User	file:
+e	http/ApiRequestQueue.java	/^		private IOException e;$/;"	f	class:ApiRequestQueue.Future	file:
+editCount	entities/Comment.java	/^    private int editCount;$/;"	f	class:Comment	file:
+emailHash	entities/User.java	/^    private String emailHash = "";$/;"	f	class:User	file:
+emailHash	stackauth/entities/Account.java	/^    private String emailHash;$/;"	f	class:Account	file:
+end	json/JSONTokener.java	/^    public boolean end() {$/;"	m	class:JSONTokener
+eof	json/JSONTokener.java	/^	private boolean eof;$/;"	f	class:JSONTokener	file:
+equals	StackWrapper.java	/^	public boolean equals(Object obj) {$/;"	m	class:StackWrapper
+equals	entities/Answer.java	/^    public final boolean equals(final Object obj) {$/;"	m	class:Answer
+equals	entities/Badge.java	/^    public final boolean equals(Object obj) {$/;"	m	class:Badge
+equals	entities/Error.java	/^    public final boolean equals(final Object obj) {$/;"	m	class:Error
+equals	entities/MajorPost.java	/^    public boolean equals(final Object obj) {$/;"	m	class:MajorPost
+equals	entities/Post.java	/^    public boolean equals(final Object obj) {$/;"	m	class:Post
+equals	entities/PostTimeline.java	/^    public final boolean equals(final Object obj) {$/;"	m	class:PostTimeline
+equals	entities/Question.java	/^    public final boolean equals(final Object obj) {$/;"	m	class:Question
+equals	entities/Reputation.java	/^    public final boolean equals(final Object obj) {$/;"	m	class:Reputation
+equals	entities/StackObjBase.java	/^	public boolean equals(final Object obj) {$/;"	m	class:StackObjBase
+equals	entities/Tag.java	/^    public final boolean equals(final Object obj) {$/;"	m	class:Tag
+equals	entities/Timeline.java	/^	public boolean equals(final Object obj) {$/;"	m	class:Timeline
+equals	entities/User.java	/^    public boolean equals(final Object obj) {$/;"	m	class:User
+equals	json/JSONObject.java	/^        public boolean equals(Object object) {$/;"	m	class:JSONObject.Null
+favoriteCount	entities/Question.java	/^    private int favoriteCount;$/;"	f	class:Question	file:
+favs	entities/User.java	/^    private List<Question> favs;$/;"	f	class:User	file:
+featured	query/QuestionQuery.java	/^    	public static final Sort featured() {$/;"	m	class:QuestionQuery.Sort
+fetchAllData	datastructures/AutoFetchList.java	/^    private void fetchAllData() {$/;"	m	class:AutoFetchList	file:
+fetchMoreData	datastructures/AnswerFromIdList.java	/^    public MetadataList<Answer> fetchMoreData() throws IOException,$/;"	m	class:AnswerFromIdList
+fetchMoreData	datastructures/AnswerFromQuestionList.java	/^    public MetadataList<Answer> fetchMoreData() throws IOException, JSONException,$/;"	m	class:AnswerFromQuestionList
+fetchMoreData	datastructures/AnswerFromUserList.java	/^    public MetadataList<Answer> fetchMoreData() throws IOException, JSONException,$/;"	m	class:AnswerFromUserList
+fetchMoreData	datastructures/AutoFetchList.java	/^    public abstract MetadataList<E> fetchMoreData() throws IOException,$/;"	m	class:AutoFetchList
+fetchMoreData	datastructures/CommentFromAnswerIdList.java	/^    public MetadataList<Comment> fetchMoreData() throws IOException,$/;"	m	class:CommentFromAnswerIdList
+fetchMoreData	datastructures/CommentsByIdList.java	/^    public MetadataList<Comment> fetchMoreData() throws IOException,$/;"	m	class:CommentsByIdList
+fetchMoreData	datastructures/CommentsFromPostList.java	/^    public MetadataList<Comment> fetchMoreData() throws IOException,$/;"	m	class:CommentsFromPostList
+fetchMoreData	datastructures/ReputationByUserList.java	/^	public MetadataList<Reputation> fetchMoreData() throws IOException, JSONException,$/;"	m	class:ReputationByUserList
+fetchMoreData	datastructures/UserFromBadgeList.java	/^    public MetadataList<User> fetchMoreData() throws IOException, JSONException,$/;"	m	class:UserFromBadgeList
+fetchMoreData	datastructures/UsersByIdList.java	/^    public MetadataList<User> fetchMoreData() throws IOException, JSONException,$/;"	m	class:UsersByIdList
+fetchMoreData	datastructures/UsersList.java	/^    public MetadataList<User> fetchMoreData() throws IOException, JSONException,$/;"	m	class:UsersList
+filter	query/UserQuery.java	/^	private static final String filter = "";$/;"	f	class:UserQuery	file:
+fixUrl	StackWrapper.java	/^	private static String fixUrl(String url){$/;"	m	class:StackWrapper	file:
+formatElapsedTime	utils/StackUtils.java	/^    public static String formatElapsedTime(long fromDate) {$/;"	m	class:StackUtils
+formatRep	utils/StackUtils.java	/^    public static String formatRep(int rep) {$/;"	m	class:StackUtils
+fromJSONArray	entities/Answer.java	/^    protected static List<Answer> fromJSONArray(final JSONArray arr, final StackWrapper originator)$/;"	m	class:Answer
+fromJSONArray	entities/Badge.java	/^    protected static List<Badge> fromJSONArray(final JSONArray arr, final StackWrapper originator)$/;"	m	class:Badge
+fromJSONArray	entities/Comment.java	/^    protected static List<Comment> fromJSONArray(final JSONArray arr, final StackWrapper originator)$/;"	m	class:Comment
+fromJSONArray	entities/PostTimeline.java	/^    protected static List<PostTimeline> fromJSONArray(final JSONArray arr, final StackWrapper originator)$/;"	m	class:PostTimeline
+fromJSONArray	entities/Question.java	/^    protected static List<Question> fromJSONArray(final JSONArray jsonArray, final StackWrapper originator)$/;"	m	class:Question
+fromJSONArray	entities/Reputation.java	/^    protected static List<Reputation> fromJSONArray(final JSONArray arr, final StackWrapper originator) $/;"	m	class:Reputation
+fromJSONArray	entities/Revision.java	/^    protected static List<Revision> fromJSONArray(final JSONArray arr, final StackWrapper originator) $/;"	m	class:Revision
+fromJSONArray	entities/Tag.java	/^    private static List<Tag> fromJSONArray(final JSONArray jsonArray, final StackWrapper originator)$/;"	m	class:Tag	file:
+fromJSONArray	entities/User.java	/^    public static List<User> fromJSONArray(final JSONArray users, final StackWrapper originator)$/;"	m	class:User
+fromJSONArray	entities/UserTimeline.java	/^	protected static List<UserTimeline> fromJSONArray(final JSONArray arr, final StackWrapper originator) $/;"	m	class:UserTimeline
+fromJSONArray	stackauth/entities/Account.java	/^    public static List<Account> fromJSONArray(JSONArray arr) throws JSONException {$/;"	m	class:Account
+fromJSONArray	stackauth/entities/Site.java	/^    public static List<Site> fromJSONArray(JSONArray arr) throws JSONException {$/;"	m	class:Site
+fromJSONString	entities/Answer.java	/^    public static List<Answer> fromJSONString(final String json, final StackWrapper originator)$/;"	m	class:Answer
+fromJSONString	entities/Badge.java	/^    public static List<Badge> fromJSONString(final String json, final StackWrapper originator)$/;"	m	class:Badge
+fromJSONString	entities/Comment.java	/^    public static List<Comment> fromJSONString(final String json, final StackWrapper originator)$/;"	m	class:Comment
+fromJSONString	entities/PostTimeline.java	/^    public static List<PostTimeline> fromJSONString(final String json, final StackWrapper originator)$/;"	m	class:PostTimeline
+fromJSONString	entities/Question.java	/^    public static List<Question> fromJSONString(final String json, final StackWrapper originator)$/;"	m	class:Question
+fromJSONString	entities/Reputation.java	/^    public static List<Reputation> fromJSONString(final String json, final StackWrapper originator) $/;"	m	class:Reputation
+fromJSONString	entities/Revision.java	/^	public static List<Revision> fromJSONString(final String json, final StackWrapper originator) $/;"	m	class:Revision
+fromJSONString	entities/Stats.java	/^    public static Stats fromJSONString(final String json, final StackWrapper originator) throws JSONException {$/;"	m	class:Stats
+fromJSONString	entities/Tag.java	/^    public static List<Tag> fromJSONString(final String json, final StackWrapper originator)$/;"	m	class:Tag
+fromJSONString	entities/UserTimeline.java	/^    public static List<UserTimeline> fromJSONString(final String json, final StackWrapper originator) $/;"	m	class:UserTimeline
+fromJSONString	stackauth/entities/Site.java	/^    public static List<Site> fromJSONString(String jsonStr)$/;"	m	class:Site
+fromdate	query/AnswerQuery.java	/^	private static final long fromdate = 0L;$/;"	f	class:AnswerQuery	file:
+fromdate	query/UserQuery.java	/^	private static final long fromdate = 0L;$/;"	f	class:UserQuery	file:
+fromdate	query/UserQuestionQuery.java	/^    private static final long fromdate = 0L;$/;"	f	class:UserQuestionQuery	file:
+get	datastructures/AutoFetchList.java	/^    public E get(int arg0) {$/;"	m	class:AutoFetchList
+get	http/ApiRequestQueue.java	/^		public String get() {$/;"	m	class:ApiRequestQueue.Future
+get	json/JSONArray.java	/^    public Object get(int index) throws JSONException {$/;"	m	class:JSONArray
+get	json/JSONObject.java	/^    public Object get(String key) throws JSONException {$/;"	m	class:JSONObject
+get	query/BaseQuery.java	/^	protected String get(final String key){$/;"	m	class:BaseQuery
+getAboutMe	entities/User.java	/^    public String getAboutMe() {$/;"	m	class:User
+getAcceptRate	entities/User.java	/^    public int getAcceptRate() {$/;"	m	class:User
+getAcceptedAnswerId	entities/Question.java	/^    public final int getAcceptedAnswerId() {$/;"	m	class:Question
+getAction	entities/Timeline.java	/^	public final String getAction() {$/;"	m	class:Timeline
+getAge	entities/User.java	/^    public int getAge() {$/;"	m	class:User
+getAllQuestions	entities/User.java	/^    public List<Question> getAllQuestions() throws IOException, JSONException {$/;"	m	class:User
+getAllQuestions	entities/User.java	/^    public List<Question> getAllQuestions(final UserQuestionQuery query) throws IOException, JSONException {$/;"	m	class:User
+getAllReputationPoints	entities/User.java	/^    public List<Reputation> getAllReputationPoints() {$/;"	m	class:User
+getAllSites	stackauth/StackAuth.java	/^    public static List<Site> getAllSites() throws IOException, JSONException {$/;"	m	class:StackAuth
+getAllWrappers	stackauth/StackAuth.java	/^    public static List<StackWrapper> getAllWrappers() throws IOException, JSONException{$/;"	m	class:StackAuth
+getAllWrappers	stackauth/StackAuth.java	/^    public static List<StackWrapper> getAllWrappers(String key) throws IOException, JSONException{$/;"	m	class:StackAuth
+getAnswerById	StackWrapper.java	/^    public Answer getAnswerById(int id) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getAnswerCount	entities/Question.java	/^    public final int getAnswerCount() {$/;"	m	class:Question
+getAnswerCount	entities/User.java	/^    public int getAnswerCount() {$/;"	m	class:User
+getAnswers	StackWrapper.java	/^    public List<Answer> getAnswers(AnswerQuery query) throws IOException, JSONException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getAnswers	entities/Question.java	/^    public final List<Answer> getAnswers() throws IOException, JSONException {$/;"	m	class:Question
+getAnswersById	StackWrapper.java	/^    public List<Answer> getAnswersById(int... ids) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getAnswersByQuestionId	StackWrapper.java	/^    public List<Answer> getAnswersByQuestionId(AnswerQuery query) throws IOException, JSONException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getAnswersByQuestionId	StackWrapper.java	/^    public List<Answer> getAnswersByQuestionId(int... ids) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getAnswersByUserId	StackWrapper.java	/^    public List<Answer> getAnswersByUserId(AnswerQuery query) throws IOException, JSONException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getAnswersByUserId	StackWrapper.java	/^    public List<Answer> getAnswersByUserId(int... ids) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getAnswersPerMinute	entities/Stats.java	/^    public final double getAnswersPerMinute() {$/;"	m	class:Stats
+getApiEndpoint	stackauth/entities/Site.java	/^    public String getApiEndpoint() {$/;"	m	class:Site
+getApiRevision	entities/Stats.java	/^    public final String getApiRevision() {$/;"	m	class:Stats
+getApiVersion	entities/Stats.java	/^    public final String getApiVersion() {$/;"	m	class:Stats
+getAssociatedAccounts	entities/User.java	/^    public List<Account> getAssociatedAccounts() throws IOException, JSONException {$/;"	m	class:User
+getAssociatedAccounts	stackauth/StackAuth.java	/^    public static List<Account> getAssociatedAccounts(String userId) throws IOException, JSONException {$/;"	m	class:StackAuth
+getAssociationId	entities/User.java	/^    public String getAssociationId() {$/;"	m	class:User
+getAwardCount	entities/Badge.java	/^    public final int getAwardCount() {$/;"	m	class:Badge
+getBadgeCounts	entities/User.java	/^    public BadgeCounts getBadgeCounts() {$/;"	m	class:User
+getBadgeRecipients	StackWrapper.java	/^    public List<User> getBadgeRecipients(BadgeQuery query) throws IOException, JSONException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getBadgeRecipients	StackWrapper.java	/^    public List<User> getBadgeRecipients(int... ids) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getBadges	entities/User.java	/^    public List<Badge> getBadges() throws IOException, JSONException {$/;"	m	class:User
+getBadgesByUserId	StackWrapper.java	/^    public List<Badge> getBadgesByUserId(int... ids) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getBadgesPerMinute	entities/Stats.java	/^    public final double getBadgesPerMinute() {$/;"	m	class:Stats
+getBody	entities/Post.java	/^    public String getBody() throws IOException, JSONException {$/;"	m	class:Post
+getBody	entities/Revision.java	/^	public final String getBody() {$/;"	m	class:Revision
+getBoolean	json/JSONArray.java	/^    public boolean getBoolean(int index) throws JSONException {$/;"	m	class:JSONArray
+getBoolean	json/JSONObject.java	/^    public boolean getBoolean(String key) throws JSONException {$/;"	m	class:JSONObject
+getBountyAmount	entities/Question.java	/^    public final int getBountyAmount() {$/;"	m	class:Question
+getBountyClosesDate	entities/Question.java	/^    public final long getBountyClosesDate() {$/;"	m	class:Question
+getCause	json/JSONException.java	/^    public Throwable getCause() {$/;"	m	class:JSONException
+getClosedDate	entities/Question.java	/^    public final long getClosedDate() {$/;"	m	class:Question
+getClosedReason	entities/Question.java	/^    public final String getClosedReason() {$/;"	m	class:Question
+getCode	entities/Error.java	/^    public final int getCode() {$/;"	m	class:Error
+getComment	entities/Revision.java	/^	public final String getComment() {$/;"	m	class:Revision
+getCommentById	StackWrapper.java	/^    public Comment getCommentById(int id) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getCommentId	entities/Timeline.java	/^	public final int getCommentId() {$/;"	m	class:Timeline
+getCommentUrl	entities/PostTimeline.java	/^    public final String getCommentUrl() {$/;"	m	class:PostTimeline
+getComments	StackWrapper.java	/^    public List<Comment> getComments(CommentQuery query) throws IOException, JSONException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getComments	entities/Answer.java	/^    public final List<Comment> getComments() throws IOException, JSONException {$/;"	m	class:Answer
+getComments	entities/MajorPost.java	/^    public List<Comment> getComments() throws IOException, JSONException {$/;"	m	class:MajorPost
+getComments	entities/Question.java	/^    public final List<Comment> getComments() throws IOException, JSONException {$/;"	m	class:Question
+getComments	entities/User.java	/^    public List<Comment> getComments(final CommentQuery query) throws IOException, JSONException {$/;"	m	class:User
+getCommentsByAnswerId	StackWrapper.java	/^    public List<Comment> getCommentsByAnswerId(CommentQuery query) throws IOException, JSONException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getCommentsByAnswerId	StackWrapper.java	/^    public List<Comment> getCommentsByAnswerId(int... answerIds) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getCommentsById	StackWrapper.java	/^    public List<Comment> getCommentsById(int... ids) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getCommentsByPostId	StackWrapper.java	/^    public List<Comment> getCommentsByPostId(CommentQuery query) throws IOException, JSONException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getCommentsByPostId	StackWrapper.java	/^    public List<Comment> getCommentsByPostId(int... ids) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getCommentsByQuestionId	StackWrapper.java	/^    public List<Comment> getCommentsByQuestionId(CommentQuery query) throws IOException, JSONException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getCommentsByQuestionId	StackWrapper.java	/^    public List<Comment> getCommentsByQuestionId(int... ids) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getCommentsByUserId	StackWrapper.java	/^    public List<Comment> getCommentsByUserId(CommentQuery query) throws IOException, JSONException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getCommentsByUserId	StackWrapper.java	/^    public List<Comment> getCommentsByUserId(int... ids) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getCommentsFromUser	entities/User.java	/^    public List<Comment> getCommentsFromUser(final int fromId, final CommentQuery query) $/;"	m	class:User
+getCommentsFromUsersToUser	StackWrapper.java	/^    public List<Comment> getCommentsFromUsersToUser(CommentQuery query, int toId)$/;"	m	class:StackWrapper
+getCommentsFromUsersToUser	StackWrapper.java	/^    public List<Comment> getCommentsFromUsersToUser(int toId, int... fromIds)$/;"	m	class:StackWrapper
+getCommentsToUser	entities/User.java	/^    public List<Comment> getCommentsToUser(final int toId, final CommentQuery query) throws IOException, JSONException {$/;"	m	class:User
+getCount	entities/Tag.java	/^    public final int getCount() {$/;"	m	class:Tag
+getCreatingApi	entities/StackObjBase.java	/^    StackWrapper getCreatingApi(){$/;"	m	class:StackObjBase
+getCreationDate	entities/Post.java	/^    public long getCreationDate() {$/;"	m	class:Post
+getCreationDate	entities/Revision.java	/^	public final long getCreationDate() {$/;"	m	class:Revision
+getCreationDate	entities/Timeline.java	/^	public final long getCreationDate() {$/;"	m	class:Timeline
+getCreationDate	entities/User.java	/^    public long getCreationDate() {$/;"	m	class:User
+getDefaultMax	query/sort/BaseSort.java	/^    public final String getDefaultMax() {$/;"	m	class:BaseSort
+getDefaultMax	query/sort/ISort.java	/^    public String getDefaultMax();$/;"	m	interface:ISort
+getDefaultMin	query/sort/BaseSort.java	/^    public final String getDefaultMin() {$/;"	m	class:BaseSort
+getDefaultMin	query/sort/ISort.java	/^    public String getDefaultMin();$/;"	m	interface:ISort
+getDescription	entities/Badge.java	/^    public final String getDescription() {$/;"	m	class:Badge
+getDescription	entities/UserTimeline.java	/^	public final String getDescription() {$/;"	m	class:UserTimeline
+getDescription	stackauth/entities/Site.java	/^    public String getDescription() {$/;"	m	class:Site
+getDetail	entities/UserTimeline.java	/^	public final String getDetail() {$/;"	m	class:UserTimeline
+getDisplayName	entities/User.java	/^    public String getDisplayName() {$/;"	m	class:User
+getDisplayName	stackauth/entities/Account.java	/^    public String getDisplayName() {$/;"	m	class:Account
+getDouble	json/JSONArray.java	/^    public double getDouble(int index) throws JSONException {$/;"	m	class:JSONArray
+getDouble	json/JSONObject.java	/^    public double getDouble(String key) throws JSONException {$/;"	m	class:JSONObject
+getDownVoteCount	entities/MajorPost.java	/^    public final int getDownVoteCount() {$/;"	m	class:MajorPost
+getDownVotes	entities/User.java	/^    public int getDownVotes() {$/;"	m	class:User
+getEditCount	entities/Comment.java	/^    public final int getEditCount() {$/;"	m	class:Comment
+getEmailHash	entities/User.java	/^    public String getEmailHash() {$/;"	m	class:User
+getEmailHash	stackauth/entities/Account.java	/^    public String getEmailHash() {$/;"	m	class:Account
+getException	http/ApiRequestQueue.java	/^		public IOException getException(){$/;"	m	class:ApiRequestQueue.Future
+getFavoriteCount	entities/Question.java	/^    public final int getFavoriteCount() {$/;"	m	class:Question
+getFavoriteQuestionsByUserId	StackWrapper.java	/^    public List<Question> getFavoriteQuestionsByUserId(FavoriteQuery query) throws IOException, JSONException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getFavoriteQuestionsByUserId	StackWrapper.java	/^    public List<Question> getFavoriteQuestionsByUserId(int... ids) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getFavorites	entities/User.java	/^    public List<Question> getFavorites() throws IOException, JSONException {$/;"	m	class:User
+getGuid	query/RevisionQuery.java	/^    public String getGuid() throws ParameterNotSetException {$/;"	m	class:RevisionQuery
+getIconUrl	stackauth/entities/Site.java	/^    public String getIconUrl() {$/;"	m	class:Site
+getId	entities/Badge.java	/^    public final int getId() {$/;"	m	class:Badge
+getId	entities/User.java	/^    public int getId() {$/;"	m	class:User
+getIds	query/BaseQuery.java	/^	public String getIds() throws ParameterNotSetException {$/;"	m	class:BaseQuery
+getInt	json/JSONArray.java	/^    public int getInt(int index) throws JSONException {$/;"	m	class:JSONArray
+getInt	json/JSONObject.java	/^    public int getInt(String key) throws JSONException {$/;"	m	class:JSONObject
+getJSONArray	json/JSONArray.java	/^    public JSONArray getJSONArray(int index) throws JSONException {$/;"	m	class:JSONArray
+getJSONArray	json/JSONObject.java	/^    public JSONArray getJSONArray(String key) throws JSONException {$/;"	m	class:JSONObject
+getJSONObject	json/JSONArray.java	/^    public JSONObject getJSONObject(int index) throws JSONException {$/;"	m	class:JSONArray
+getJSONObject	json/JSONObject.java	/^    public JSONObject getJSONObject(String key) throws JSONException {$/;"	m	class:JSONObject
+getJson	entities/User.java	/^    protected String getJson() {$/;"	m	class:User
+getLastAccessDate	entities/User.java	/^    public long getLastAccessDate() {$/;"	m	class:User
+getLastActivityDate	entities/MajorPost.java	/^    public final long getLastActivityDate() {$/;"	m	class:MajorPost
+getLastBody	entities/Revision.java	/^	public final String getLastBody() {$/;"	m	class:Revision
+getLastEditDate	entities/MajorPost.java	/^    public final long getLastEditDate() {$/;"	m	class:MajorPost
+getLastTags	entities/Revision.java	/^	public final List<String> getLastTags() {$/;"	m	class:Revision
+getLastTitle	entities/Revision.java	/^	public final String getLastTitle() {$/;"	m	class:Revision
+getLinkColorString	stackauth/entities/Styling.java	/^    public String getLinkColorString(){$/;"	m	class:Styling
+getLocation	entities/User.java	/^    public String getLocation() {$/;"	m	class:User
+getLockedDate	entities/MajorPost.java	/^    public final long getLockedDate() {$/;"	m	class:MajorPost
+getLogoUrl	stackauth/entities/Site.java	/^    public String getLogoUrl() {$/;"	m	class:Site
+getLong	json/JSONArray.java	/^    public long getLong(int index) throws JSONException {$/;"	m	class:JSONArray
+getLong	json/JSONObject.java	/^    public long getLong(String key) throws JSONException {$/;"	m	class:JSONObject
+getMax	query/sort/BaseSort.java	/^    public String getMax() {$/;"	m	class:BaseSort
+getMax	query/sort/ISort.java	/^    public String getMax();$/;"	m	interface:ISort
+getMessage	entities/Error.java	/^    public final String getMessage() {$/;"	m	class:Error
+getMin	query/sort/BaseSort.java	/^    public String getMin() {$/;"	m	class:BaseSort
+getMin	query/sort/ISort.java	/^    public String getMin();$/;"	m	interface:ISort
+getName	entities/Badge.java	/^    public final String getName() {$/;"	m	class:Badge
+getName	entities/Tag.java	/^    public final String getName() {$/;"	m	class:Tag
+getName	query/sort/BaseSort.java	/^    public String getName() {$/;"	m	class:BaseSort
+getName	query/sort/ISort.java	/^    public String getName();$/;"	m	interface:ISort
+getName	stackauth/entities/Site.java	/^    public String getName() {$/;"	m	class:Site
+getNameSiteMap	stackauth/StackAuth.java	/^    public static Map<String, Site> getNameSiteMap() throws IOException, JSONException {$/;"	m	class:StackAuth
+getNames	json/JSONObject.java	/^    public static String[] getNames(JSONObject jo) {$/;"	m	class:JSONObject
+getNames	json/JSONObject.java	/^    public static String[] getNames(Object object) {$/;"	m	class:JSONObject
+getNegativeRep	entities/Reputation.java	/^    public final int getNegativeRep() {$/;"	m	class:Reputation
+getOnDate	entities/Reputation.java	/^    public final long getOnDate() {$/;"	m	class:Reputation
+getOnSite	stackauth/entities/Account.java	/^    public Site getOnSite() {$/;"	m	class:Account
+getOwner	entities/Post.java	/^    public User getOwner() {$/;"	m	class:Post
+getOwner	entities/PostTimeline.java	/^    public final User getOwner() {$/;"	m	class:PostTimeline
+getOwnerId	entities/Post.java	/^    public int getOwnerId() {$/;"	m	class:Post
+getPage	datastructures/MetadataList.java	/^    public int getPage() {$/;"	m	class:MetadataList
+getPage	query/PageQuery.java	/^    public int getPage() {$/;"	m	class:PageQuery
+getPageSize	datastructures/MetadataList.java	/^    public int getPageSize() {$/;"	m	class:MetadataList
+getParentId	entities/Comment.java	/^    public final int getParentId() {$/;"	m	class:Comment
+getParentQuestion	entities/Answer.java	/^    public final Question getParentQuestion() throws IOException, JSONException {$/;"	m	class:Answer
+getPlainTextBody	entities/Post.java	/^    public String getPlainTextBody() throws IOException, JSONException {$/;"	m	class:Post
+getPositiveRep	entities/Reputation.java	/^    public final int getPositiveRep() {$/;"	m	class:Reputation
+getPostId	entities/Post.java	/^    public int getPostId() {$/;"	m	class:Post
+getPostId	entities/Reputation.java	/^    public final int getPostId() {$/;"	m	class:Reputation
+getPostId	entities/Revision.java	/^	public final int getPostId() {$/;"	m	class:Revision
+getPostId	entities/Timeline.java	/^	public final int getPostId() {$/;"	m	class:Timeline
+getPostRevisionUrl	entities/PostTimeline.java	/^    public final String getPostRevisionUrl() {$/;"	m	class:PostTimeline
+getPostType	entities/Comment.java	/^	public final String getPostType() {$/;"	m	class:Comment
+getPostType	entities/Reputation.java	/^    public final String getPostType() {$/;"	m	class:Reputation
+getPostType	entities/UserTimeline.java	/^	public final PostType getPostType() {$/;"	m	class:UserTimeline
+getPostUrl	entities/PostTimeline.java	/^    public final String getPostUrl() {$/;"	m	class:PostTimeline
+getQuestionAnswersUrl	entities/Question.java	/^    public final String getQuestionAnswersUrl() {$/;"	m	class:Question
+getQuestionById	StackWrapper.java	/^    public Question getQuestionById(int id) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getQuestionCount	entities/User.java	/^    public int getQuestionCount() {$/;"	m	class:User
+getQuestionId	entities/Answer.java	/^    public final int getQuestionId() {$/;"	m	class:Answer
+getQuestionId	entities/Timeline.java	/^    public final int getQuestionId() {$/;"	m	class:Timeline
+getQuestionTimeline	StackWrapper.java	/^    public List<PostTimeline> getQuestionTimeline(TimelineQuery query) throws JSONException, IOException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getQuestionTimeline	StackWrapper.java	/^    public List<PostTimeline> getQuestionTimeline(int... ids) throws JSONException, IOException {$/;"	m	class:StackWrapper
+getQuestionTimelineUrl	entities/Question.java	/^    public final String getQuestionTimelineUrl() {$/;"	m	class:Question
+getQuestions	StackWrapper.java	/^    public List<Question> getQuestions(QuestionQuery query) $/;"	m	class:StackWrapper
+getQuestionsById	StackWrapper.java	/^    public List<Question> getQuestionsById(int... ids) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getQuestionsByUserId	StackWrapper.java	/^    public List<Question> getQuestionsByUserId(UserQuestionQuery query) throws IOException, JSONException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getQuestionsByUserId	StackWrapper.java	/^    public List<Question> getQuestionsByUserId(int... userIds) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getQuestionsPerMinute	entities/Stats.java	/^    public final double getQuestionsPerMinute() {$/;"	m	class:Stats
+getRank	entities/Badge.java	/^    public final String getRank() {$/;"	m	class:Badge
+getReplyToUser	entities/Comment.java	/^    public final User getReplyToUser() {$/;"	m	class:Comment
+getReputation	entities/User.java	/^    public int getReputation() {$/;"	m	class:User
+getReputation	stackauth/entities/Account.java	/^    public int getReputation() {$/;"	m	class:Account
+getReputationByUserId	StackWrapper.java	/^    public List<Reputation> getReputationByUserId(ReputationQuery query) throws JSONException, IOException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getReputationByUserId	StackWrapper.java	/^    public List<Reputation> getReputationByUserId(int... ids) throws JSONException, IOException {$/;"	m	class:StackWrapper
+getReputationInfo	entities/User.java	/^    public List<Reputation> getReputationInfo() throws JSONException, IOException {$/;"	m	class:User
+getReputationInfo	entities/User.java	/^    public List<Reputation> getReputationInfo(final ReputationQuery query) throws JSONException, IOException {$/;"	m	class:User
+getReq	http/ApiRequestQueue.java	/^		public ApiRequest getReq() {$/;"	m	class:ApiRequestQueue.Future
+getRequests	http/HttpClient.java	/^	public int getRequests() {$/;"	m	class:HttpClient
+getRevisionByGuid	StackWrapper.java	/^    public Revision getRevisionByGuid(RevisionQuery query) throws IOException, JSONException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getRevisionByGuid	StackWrapper.java	/^    public Revision getRevisionByGuid(String guid, int... ids) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getRevisionGuid	entities/PostTimeline.java	/^    public final String getRevisionGuid() {$/;"	m	class:PostTimeline
+getRevisionGuid	entities/Revision.java	/^	public final String getRevisionGuid() {$/;"	m	class:Revision
+getRevisionNumber	entities/Revision.java	/^	public final int getRevisionNumber() {$/;"	m	class:Revision
+getRevisionType	entities/Revision.java	/^	public final Type getRevisionType() {$/;"	m	class:Revision
+getRevisionsByPostId	StackWrapper.java	/^    public List<Revision> getRevisionsByPostId(RevisionQuery query) throws IOException, JSONException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getRevisionsByPostId	StackWrapper.java	/^    public List<Revision> getRevisionsByPostId(int... ids) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getScore	entities/Post.java	/^    public int getScore() {$/;"	m	class:Post
+getSite	entities/Stats.java	/^    public final Site getSite() {$/;"	m	class:Stats
+getSiteUrl	stackauth/entities/Site.java	/^    public String getSiteUrl() {$/;"	m	class:Site
+getSort	query/BaseQuery.java	/^	public ISort getSort(){$/;"	m	class:BaseQuery
+getStackWrapper	stackauth/entities/Site.java	/^    public StackWrapper getStackWrapper(){$/;"	m	class:Site
+getStackWrapper	stackauth/entities/Site.java	/^    public StackWrapper getStackWrapper(String key){$/;"	m	class:Site
+getStats	StackWrapper.java	/^    public Stats getStats() throws JSONException, IOException {$/;"	m	class:StackWrapper
+getString	json/JSONArray.java	/^    public String getString(int index) throws JSONException {$/;"	m	class:JSONArray
+getString	json/JSONObject.java	/^    public String getString(String key) throws JSONException {$/;"	m	class:JSONObject
+getStyling	stackauth/entities/Site.java	/^    public Styling getStyling(){$/;"	m	class:Site
+getTagBackgroundColorString	stackauth/entities/Styling.java	/^    public String getTagBackgroundColorString(){$/;"	m	class:Styling
+getTagForegroundColorString	stackauth/entities/Styling.java	/^    public String getTagForegroundColorString(){$/;"	m	class:Styling
+getTagList	query/TaggedQuery.java	/^    public String getTagList() throws ParameterNotSetException {$/;"	m	class:TaggedQuery
+getTagMapByUserId	StackWrapper.java	/^    public Map<Integer,List<Tag>> getTagMapByUserId(TagQuery q) throws IOException, JSONException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getTagMapByUserId	StackWrapper.java	/^    public Map<Integer,List<Tag>> getTagMapByUserId(int... ids) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getTags	entities/Question.java	/^    public final List<String> getTags() {$/;"	m	class:Question
+getTags	entities/Revision.java	/^	public final List<String> getTags() {$/;"	m	class:Revision
+getTags	entities/User.java	/^    public List<Tag> getTags() throws IOException, JSONException {$/;"	m	class:User
+getTags	query/TaggedQuery.java	/^    public List<String> getTags() {$/;"	m	class:TaggedQuery
+getTagsByUserId	StackWrapper.java	/^    public List<Tag> getTagsByUserId(TagQuery query) throws IOException, JSONException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getTagsByUserId	StackWrapper.java	/^    public List<Tag> getTagsByUserId(int... ids) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getThrottledRequests	http/HttpClient.java	/^	public int getThrottledRequests() {$/;"	m	class:HttpClient
+getTimelineType	entities/PostTimeline.java	/^    public final Type getTimelineType() {$/;"	m	class:PostTimeline
+getTimelineType	entities/UserTimeline.java	/^	public final Type getTimelineType() {$/;"	m	class:UserTimeline
+getTitle	entities/MajorPost.java	/^    public final String getTitle() {$/;"	m	class:MajorPost
+getTitle	entities/Reputation.java	/^    public final String getTitle() {$/;"	m	class:Reputation
+getTitle	entities/Revision.java	/^	public final String getTitle() {$/;"	m	class:Revision
+getTotal	datastructures/MetadataList.java	/^    public int getTotal() {$/;"	m	class:MetadataList
+getTotalAccepted	entities/Stats.java	/^    public final int getTotalAccepted() {$/;"	m	class:Stats
+getTotalAnswers	entities/Stats.java	/^    public final int getTotalAnswers() {$/;"	m	class:Stats
+getTotalBadges	entities/Stats.java	/^    public final int getTotalBadges() {$/;"	m	class:Stats
+getTotalComments	entities/Stats.java	/^    public final int getTotalComments() {$/;"	m	class:Stats
+getTotalQuestions	entities/Stats.java	/^    public final int getTotalQuestions() {$/;"	m	class:Stats
+getTotalUnanswered	entities/Stats.java	/^    public final int getTotalUnanswered() {$/;"	m	class:Stats
+getTotalUsers	entities/Stats.java	/^    public final int getTotalUsers() {$/;"	m	class:Stats
+getTotalVotes	entities/Stats.java	/^    public final int getTotalVotes() {$/;"	m	class:Stats
+getUpVoteCount	entities/MajorPost.java	/^    public final int getUpVoteCount() {$/;"	m	class:MajorPost
+getUpVotes	entities/User.java	/^    public int getUpVotes() {$/;"	m	class:User
+getUrlForComments	entities/MajorPost.java	/^    public final String getUrlForComments() {$/;"	m	class:MajorPost
+getUrlParams	query/BaseQuery.java	/^	public String getUrlParams() {$/;"	m	class:BaseQuery
+getUrlParams	query/PageQuery.java	/^    public String getUrlParams() {$/;"	m	class:PageQuery
+getUrlParams	query/TaggedQuery.java	/^    public String getUrlParams() {$/;"	m	class:TaggedQuery
+getUser	entities/PostTimeline.java	/^    public final User getUser() {$/;"	m	class:PostTimeline
+getUser	entities/Revision.java	/^	public final User getUser() {$/;"	m	class:Revision
+getUserAnswers	entities/User.java	/^    public List<Answer> getUserAnswers(final AnswerQuery query) throws IOException, JSONException {$/;"	m	class:User
+getUserById	StackWrapper.java	/^    public User getUserById(int id) throws JSONException, IOException {$/;"	m	class:StackWrapper
+getUserId	entities/Tag.java	/^    public final Integer getUserId() {$/;"	m	class:Tag
+getUserId	entities/UserTimeline.java	/^	public final int getUserId() {$/;"	m	class:UserTimeline
+getUserId	stackauth/entities/Account.java	/^    public int getUserId() {$/;"	m	class:Account
+getUserMentions	StackWrapper.java	/^    public List<Comment> getUserMentions(CommentQuery query) throws IOException, JSONException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getUserMentions	StackWrapper.java	/^    public List<Comment> getUserMentions(int... ids) throws IOException, JSONException {$/;"	m	class:StackWrapper
+getUserTimeline	StackWrapper.java	/^    public List<UserTimeline> getUserTimeline(TimelineQuery query)  throws JSONException, IOException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getUserTimeline	StackWrapper.java	/^    public List<UserTimeline> getUserTimeline(int... ids) throws JSONException, IOException {$/;"	m	class:StackWrapper
+getUserType	stackauth/entities/Account.java	/^    public String getUserType() {$/;"	m	class:Account
+getUsersById	StackWrapper.java	/^    public List<User> getUsersById(UserQuery query) throws JSONException, IOException, ParameterNotSetException {$/;"	m	class:StackWrapper
+getUsersById	StackWrapper.java	/^    public List<User> getUsersById(int... ids) throws JSONException, IOException {$/;"	m	class:StackWrapper
+getViewCount	entities/MajorPost.java	/^    public final int getViewCount() {$/;"	m	class:MajorPost
+getViews	entities/User.java	/^    public int getViews() {$/;"	m	class:User
+getViewsPerDay	entities/Stats.java	/^    public final double getViewsPerDay() {$/;"	m	class:Stats
+getVoteRatio	entities/User.java	/^    public double getVoteRatio() {$/;"	m	class:User
+getWebsiteUrl	entities/User.java	/^    public String getWebsiteUrl() {$/;"	m	class:User
+gold	entities/User.java	/^    	public final int bronze, silver, gold;$/;"	f	class:User.BadgeCounts
+guid	query/RevisionQuery.java	/^	private String guid = "";$/;"	f	class:RevisionQuery	file:
+has	json/JSONObject.java	/^    public boolean has(String key) {$/;"	m	class:JSONObject
+hasBounty	entities/Question.java	/^    public final boolean hasBounty() {$/;"	m	class:Question
+hasMorePages	datastructures/AutoFetchList.java	/^    private boolean hasMorePages = true;$/;"	f	class:AutoFetchList	file:
+hashCode	StackWrapper.java	/^	public int hashCode() {$/;"	m	class:StackWrapper
+hashCode	entities/Answer.java	/^    public final int hashCode() {$/;"	m	class:Answer
+hashCode	entities/Badge.java	/^    public final int hashCode() {$/;"	m	class:Badge
+hashCode	entities/Error.java	/^    public final int hashCode() {$/;"	m	class:Error
+hashCode	entities/MajorPost.java	/^    public int hashCode() {$/;"	m	class:MajorPost
+hashCode	entities/Post.java	/^    public int hashCode() {$/;"	m	class:Post
+hashCode	entities/PostTimeline.java	/^    public final int hashCode() {$/;"	m	class:PostTimeline
+hashCode	entities/Question.java	/^    public final int hashCode() {$/;"	m	class:Question
+hashCode	entities/Reputation.java	/^    public final int hashCode() {$/;"	m	class:Reputation
+hashCode	entities/StackObjBase.java	/^	public int hashCode() {$/;"	m	class:StackObjBase
+hashCode	entities/Tag.java	/^    public final int hashCode() {$/;"	m	class:Tag
+hashCode	entities/Timeline.java	/^	public int hashCode() {$/;"	m	class:Timeline
+hashCode	entities/User.java	/^    public int hashCode() {$/;"	m	class:User
+hot	query/QuestionQuery.java	/^    	public static final Sort hot() {$/;"	m	class:QuestionQuery.Sort
+iconUrl	stackauth/entities/Site.java	/^    private String iconUrl;$/;"	f	class:Site	file:
+id	entities/Badge.java	/^	private int id;$/;"	f	class:Badge	file:
+id	entities/User.java	/^    private int id;$/;"	f	class:User	file:
+idSet	query/BaseQuery.java	/^	protected Set<Integer> idSet = new HashSet<Integer>();$/;"	f	class:BaseQuery
+inTitle	query/SearchQuery.java	/^	private static final String inTitle = "";$/;"	f	class:SearchQuery	file:
+increment	json/JSONObject.java	/^    public JSONObject increment(String key) throws JSONException {$/;"	m	class:JSONObject
+incrementPage	query/PageQuery.java	/^    public PageQuery incrementPage() {$/;"	m	class:PageQuery
+index	json/JSONTokener.java	/^    private int 	index;$/;"	f	class:JSONTokener	file:
+indexOf	datastructures/AutoFetchList.java	/^    public int indexOf(Object arg0) {$/;"	m	class:AutoFetchList
+isAccepted	entities/Answer.java	/^    private boolean isAccepted;$/;"	f	class:Answer	file:
+isAccepted	entities/Answer.java	/^    public final boolean isAccepted() {$/;"	m	class:Answer
+isAutoIncrement	query/PageQuery.java	/^    public boolean isAutoIncrement() {$/;"	m	class:PageQuery
+isCommunityOwned	entities/MajorPost.java	/^    private boolean isCommunityOwned;$/;"	f	class:MajorPost	file:
+isCommunityOwned	entities/MajorPost.java	/^    public final boolean isCommunityOwned() {$/;"	m	class:MajorPost
+isEmpty	datastructures/AutoFetchList.java	/^    public boolean isEmpty() {$/;"	m	class:AutoFetchList
+isIsModerator	entities/User.java	/^    public boolean isIsModerator() {$/;"	m	class:User
+isModerator	entities/User.java	/^    private boolean isModerator;$/;"	f	class:User	file:
+isNull	json/JSONArray.java	/^    public boolean isNull(int index) {$/;"	m	class:JSONArray
+isNull	json/JSONObject.java	/^    public boolean isNull(String key) {$/;"	m	class:JSONObject
+isOnQuestion	entities/Comment.java	/^    public final boolean isOnQuestion() {$/;"	m	class:Comment
+isQuestion	entities/Revision.java	/^	private boolean isQuestion;$/;"	f	class:Revision	file:
+isQuestion	entities/Revision.java	/^	public final boolean isQuestion() {$/;"	m	class:Revision
+isRollback	entities/Revision.java	/^	private boolean isRollback;$/;"	f	class:Revision	file:
+isRollback	entities/Revision.java	/^	public final boolean isRollback() {$/;"	m	class:Revision
+isSetCommunityWiki	entities/Revision.java	/^	public final boolean isSetCommunityWiki() {$/;"	m	class:Revision
+isTagBased	entities/Badge.java	/^    public final boolean isTagBased() {$/;"	m	class:Badge
+isValidGuid	query/RevisionQuery.java	/^    public static boolean isValidGuid(String guid) {$/;"	m	class:RevisionQuery
+iterator	datastructures/AutoFetchList.java	/^    public Iterator<E> iterator() {$/;"	m	class:AutoFetchList
+join	json/JSONArray.java	/^    public String join(String separator) throws JSONException {$/;"	m	class:JSONArray
+json	entities/User.java	/^    private String json;$/;"	f	class:User	file:
+keys	json/JSONObject.java	/^    public Iterator keys() {$/;"	m	class:JSONObject
+lastAccessDate	entities/User.java	/^    private long lastAccessDate;$/;"	f	class:User	file:
+lastActivityDate	entities/MajorPost.java	/^    private long lastActivityDate;$/;"	f	class:MajorPost	file:
+lastBody	entities/Revision.java	/^	private String lastBody;$/;"	f	class:Revision	file:
+lastEditDate	entities/MajorPost.java	/^    private long lastEditDate;$/;"	f	class:MajorPost	file:
+lastIndexOf	datastructures/AutoFetchList.java	/^    public int lastIndexOf(Object arg0) {$/;"	m	class:AutoFetchList
+lastRequest	http/HttpClient.java	/^	private long lastRequest = 0;$/;"	f	class:HttpClient	file:
+lastTags	entities/Revision.java	/^	private List<String> lastTags;$/;"	f	class:Revision	file:
+lastTitle	entities/Revision.java	/^	private String lastTitle;$/;"	f	class:Revision	file:
+length	json/JSONArray.java	/^    public int length() {$/;"	m	class:JSONArray
+length	json/JSONObject.java	/^    public int length() {$/;"	m	class:JSONObject
+line	json/JSONTokener.java	/^    private int 	line;$/;"	f	class:JSONTokener	file:
+linkColor	stackauth/entities/Styling.java	/^    private String linkColor;$/;"	f	class:Styling	file:
+listBadges	StackWrapper.java	/^    public List<Badge> listBadges() throws IOException, JSONException {$/;"	m	class:StackWrapper
+listIterator	datastructures/AutoFetchList.java	/^    public ListIterator<E> listIterator() {$/;"	m	class:AutoFetchList
+listIterator	datastructures/AutoFetchList.java	/^    public ListIterator<E> listIterator(int arg0) {$/;"	m	class:AutoFetchList
+listModerators	StackWrapper.java	/^    public List<User> listModerators() throws JSONException, IOException {$/;"	m	class:StackWrapper
+listModerators	StackWrapper.java	/^    public List<User> listModerators(UserQuery query) throws JSONException, IOException {$/;"	m	class:StackWrapper
+listQuestions	StackWrapper.java	/^    public List<Question> listQuestions() throws IOException, JSONException {$/;"	m	class:StackWrapper
+listQuestions	StackWrapper.java	/^    public List<Question> listQuestions(QuestionQuery query) throws IOException, JSONException {$/;"	m	class:StackWrapper
+listStandardBadges	StackWrapper.java	/^    public List<Badge> listStandardBadges() throws IOException, JSONException {$/;"	m	class:StackWrapper
+listTagBadges	StackWrapper.java	/^    public List<Badge> listTagBadges() throws IOException, JSONException {$/;"	m	class:StackWrapper
+listTags	StackWrapper.java	/^    public List<Tag> listTags() throws IOException, JSONException {$/;"	m	class:StackWrapper
+listTags	StackWrapper.java	/^    public List<Tag> listTags(TagQuery query) throws IOException, JSONException {$/;"	m	class:StackWrapper
+listUnansweredQuestions	StackWrapper.java	/^    public List<Question> listUnansweredQuestions() throws IOException, JSONException {$/;"	m	class:StackWrapper
+listUnansweredQuestions	StackWrapper.java	/^    public List<Question> listUnansweredQuestions(UnansweredQuery query) throws IOException, JSONException {$/;"	m	class:StackWrapper
+listUsers	StackWrapper.java	/^    public List<User> listUsers() throws IOException, JSONException {$/;"	m	class:StackWrapper
+listUsers	StackWrapper.java	/^    public List<User> listUsers(UserQuery query) throws IOException, JSONException {$/;"	m	class:StackWrapper
+location	entities/User.java	/^    private String location = "";$/;"	f	class:User	file:
+lockedDate	entities/MajorPost.java	/^	private long lockedDate;$/;"	f	class:MajorPost	file:
+logoUrl	stackauth/entities/Site.java	/^    private String logoUrl;$/;"	f	class:Site	file:
+makeRequest	http/HttpClient.java	/^		public String makeRequest() throws IOException {$/;"	m	class:HttpClient.ApiRequest
+map	json/JSONObject.java	/^    private Map map;$/;"	f	class:JSONObject	file:
+max	query/sort/BaseSort.java	/^    private Object max;$/;"	f	class:BaseSort	file:
+message	entities/Error.java	/^    private String message;$/;"	f	class:Error	file:
+min	query/sort/BaseSort.java	/^    private Object min;$/;"	f	class:BaseSort	file:
+month	query/QuestionQuery.java	/^    	public static final Sort month() {$/;"	m	class:QuestionQuery.Sort
+more	json/JSONTokener.java	/^    public boolean more() throws JSONException {$/;"	m	class:JSONTokener
+mv	query/TagQuery.java	/^        private static final char mv = Character.MAX_VALUE;$/;"	f	class:TagQuery.Sort	file:
+mv	query/UserQuery.java	/^        private static char mv = Character.MAX_VALUE;$/;"	f	class:UserQuery.Sort	file:
+myArrayList	json/JSONArray.java	/^    private ArrayList myArrayList;$/;"	f	class:JSONArray	file:
+name	entities/Badge.java	/^    private String name = "";$/;"	f	class:Badge	file:
+name	entities/Tag.java	/^    private String name = "";$/;"	f	class:Tag	file:
+name	enums/Order.java	/^    private String name;$/;"	f	class:Order	file:
+name	query/TagQuery.java	/^		public static final Sort name() {$/;"	m	class:TagQuery.Sort
+name	query/UserQuery.java	/^		public static final Sort name() {$/;"	m	class:UserQuery.Sort
+name	query/sort/BaseSort.java	/^    private String name;$/;"	f	class:BaseSort	file:
+name	stackauth/entities/Site.java	/^    private String name;$/;"	f	class:Site	file:
+names	json/JSONObject.java	/^    public JSONArray names() {$/;"	m	class:JSONObject
+negativeRep	entities/Reputation.java	/^    private int negativeRep;$/;"	f	class:Reputation	file:
+net.sf.stackwrap4j	Meta.java	/^package net.sf.stackwrap4j;$/;"	p
+net.sf.stackwrap4j	ServerFault.java	/^package net.sf.stackwrap4j;$/;"	p
+net.sf.stackwrap4j	StackOverflow.java	/^package net.sf.stackwrap4j;$/;"	p
+net.sf.stackwrap4j	StackWrapper.java	/^package net.sf.stackwrap4j;$/;"	p
+net.sf.stackwrap4j	SuperUser.java	/^package net.sf.stackwrap4j;$/;"	p
+net.sf.stackwrap4j.datastructures	datastructures/AnswerFromIdList.java	/^package net.sf.stackwrap4j.datastructures;$/;"	p
+net.sf.stackwrap4j.datastructures	datastructures/AnswerFromQuestionList.java	/^package net.sf.stackwrap4j.datastructures;$/;"	p
+net.sf.stackwrap4j.datastructures	datastructures/AnswerFromUserList.java	/^package net.sf.stackwrap4j.datastructures;$/;"	p
+net.sf.stackwrap4j.datastructures	datastructures/AutoFetchList.java	/^package net.sf.stackwrap4j.datastructures;$/;"	p
+net.sf.stackwrap4j.datastructures	datastructures/CommentFromAnswerIdList.java	/^package net.sf.stackwrap4j.datastructures;$/;"	p
+net.sf.stackwrap4j.datastructures	datastructures/CommentsByIdList.java	/^package net.sf.stackwrap4j.datastructures;$/;"	p
+net.sf.stackwrap4j.datastructures	datastructures/CommentsFromPostList.java	/^package net.sf.stackwrap4j.datastructures;$/;"	p
+net.sf.stackwrap4j.datastructures	datastructures/MetadataList.java	/^package net.sf.stackwrap4j.datastructures;$/;"	p
+net.sf.stackwrap4j.datastructures	datastructures/ReputationByUserList.java	/^package net.sf.stackwrap4j.datastructures;$/;"	p
+net.sf.stackwrap4j.datastructures	datastructures/UserFromBadgeList.java	/^package net.sf.stackwrap4j.datastructures;$/;"	p
+net.sf.stackwrap4j.datastructures	datastructures/UsersByIdList.java	/^package net.sf.stackwrap4j.datastructures;$/;"	p
+net.sf.stackwrap4j.datastructures	datastructures/UsersList.java	/^package net.sf.stackwrap4j.datastructures;$/;"	p
+net.sf.stackwrap4j.entities	entities/Answer.java	/^package net.sf.stackwrap4j.entities;$/;"	p
+net.sf.stackwrap4j.entities	entities/Badge.java	/^package net.sf.stackwrap4j.entities;$/;"	p
+net.sf.stackwrap4j.entities	entities/Comment.java	/^package net.sf.stackwrap4j.entities;$/;"	p
+net.sf.stackwrap4j.entities	entities/Error.java	/^package net.sf.stackwrap4j.entities;$/;"	p
+net.sf.stackwrap4j.entities	entities/MajorPost.java	/^package net.sf.stackwrap4j.entities;$/;"	p
+net.sf.stackwrap4j.entities	entities/Post.java	/^package net.sf.stackwrap4j.entities;$/;"	p
+net.sf.stackwrap4j.entities	entities/PostTimeline.java	/^package net.sf.stackwrap4j.entities;$/;"	p
+net.sf.stackwrap4j.entities	entities/Question.java	/^package net.sf.stackwrap4j.entities;$/;"	p
+net.sf.stackwrap4j.entities	entities/Reputation.java	/^package net.sf.stackwrap4j.entities;$/;"	p
+net.sf.stackwrap4j.entities	entities/Revision.java	/^package net.sf.stackwrap4j.entities;$/;"	p
+net.sf.stackwrap4j.entities	entities/StackObjBase.java	/^package net.sf.stackwrap4j.entities;$/;"	p
+net.sf.stackwrap4j.entities	entities/Stats.java	/^package net.sf.stackwrap4j.entities;$/;"	p
+net.sf.stackwrap4j.entities	entities/Tag.java	/^package net.sf.stackwrap4j.entities;$/;"	p
+net.sf.stackwrap4j.entities	entities/Timeline.java	/^package net.sf.stackwrap4j.entities;$/;"	p
+net.sf.stackwrap4j.entities	entities/User.java	/^package net.sf.stackwrap4j.entities;$/;"	p
+net.sf.stackwrap4j.entities	entities/UserTimeline.java	/^package net.sf.stackwrap4j.entities;$/;"	p
+net.sf.stackwrap4j.enums	enums/Order.java	/^package net.sf.stackwrap4j.enums;$/;"	p
+net.sf.stackwrap4j.exceptions	exceptions/ParameterNotSetException.java	/^package net.sf.stackwrap4j.exceptions;$/;"	p
+net.sf.stackwrap4j.http	http/ApiRequestQueue.java	/^package net.sf.stackwrap4j.http;$/;"	p
+net.sf.stackwrap4j.http	http/HttpClient.java	/^package net.sf.stackwrap4j.http;$/;"	p
+net.sf.stackwrap4j.http	http/Throttle.java	/^package net.sf.stackwrap4j.http;$/;"	p
+net.sf.stackwrap4j.json	json/JSONArray.java	/^package net.sf.stackwrap4j.json;$/;"	p
+net.sf.stackwrap4j.json	json/JSONException.java	/^package net.sf.stackwrap4j.json;$/;"	p
+net.sf.stackwrap4j.json	json/JSONObject.java	/^package net.sf.stackwrap4j.json;$/;"	p
+net.sf.stackwrap4j.json	json/JSONString.java	/^package net.sf.stackwrap4j.json;$/;"	p
+net.sf.stackwrap4j.json	json/JSONTokener.java	/^package net.sf.stackwrap4j.json;$/;"	p
+net.sf.stackwrap4j.json	json/PoliteJSONObject.java	/^package net.sf.stackwrap4j.json;$/;"	p
+net.sf.stackwrap4j.query	query/AnswerQuery.java	/^package net.sf.stackwrap4j.query;$/;"	p
+net.sf.stackwrap4j.query	query/BadgeQuery.java	/^package net.sf.stackwrap4j.query;$/;"	p
+net.sf.stackwrap4j.query	query/BaseQuery.java	/^package net.sf.stackwrap4j.query;$/;"	p
+net.sf.stackwrap4j.query	query/CommentQuery.java	/^package net.sf.stackwrap4j.query;$/;"	p
+net.sf.stackwrap4j.query	query/FavoriteQuery.java	/^package net.sf.stackwrap4j.query;$/;"	p
+net.sf.stackwrap4j.query	query/PageQuery.java	/^package net.sf.stackwrap4j.query;$/;"	p
+net.sf.stackwrap4j.query	query/QuestionQuery.java	/^package net.sf.stackwrap4j.query;$/;"	p
+net.sf.stackwrap4j.query	query/ReputationQuery.java	/^package net.sf.stackwrap4j.query;$/;"	p
+net.sf.stackwrap4j.query	query/RevisionQuery.java	/^package net.sf.stackwrap4j.query;$/;"	p
+net.sf.stackwrap4j.query	query/SearchQuery.java	/^package net.sf.stackwrap4j.query;$/;"	p
+net.sf.stackwrap4j.query	query/TagQuery.java	/^package net.sf.stackwrap4j.query;$/;"	p
+net.sf.stackwrap4j.query	query/TaggedQuery.java	/^package net.sf.stackwrap4j.query;$/;"	p
+net.sf.stackwrap4j.query	query/TimelineQuery.java	/^package net.sf.stackwrap4j.query;$/;"	p
+net.sf.stackwrap4j.query	query/UnansweredQuery.java	/^package net.sf.stackwrap4j.query;$/;"	p
+net.sf.stackwrap4j.query	query/UserQuery.java	/^package net.sf.stackwrap4j.query;$/;"	p
+net.sf.stackwrap4j.query	query/UserQuestionQuery.java	/^package net.sf.stackwrap4j.query;$/;"	p
+net.sf.stackwrap4j.query.sort	query/sort/BaseSort.java	/^package net.sf.stackwrap4j.query.sort;$/;"	p
+net.sf.stackwrap4j.query.sort	query/sort/ISort.java	/^package net.sf.stackwrap4j.query.sort;$/;"	p
+net.sf.stackwrap4j.routes	routes/BaseRoute.java	/^package net.sf.stackwrap4j.routes;$/;"	p
+net.sf.stackwrap4j.stackauth	stackauth/StackAuth.java	/^package net.sf.stackwrap4j.stackauth;$/;"	p
+net.sf.stackwrap4j.stackauth.entities	stackauth/entities/Account.java	/^package net.sf.stackwrap4j.stackauth.entities;$/;"	p
+net.sf.stackwrap4j.stackauth.entities	stackauth/entities/Site.java	/^package net.sf.stackwrap4j.stackauth.entities;$/;"	p
+net.sf.stackwrap4j.stackauth.entities	stackauth/entities/Styling.java	/^package net.sf.stackwrap4j.stackauth.entities;$/;"	p
+net.sf.stackwrap4j.utils	utils/StackUtils.java	/^package net.sf.stackwrap4j.utils;$/;"	p
+next	json/JSONTokener.java	/^     public String next(int n) throws JSONException {$/;"	m	class:JSONTokener
+next	json/JSONTokener.java	/^    public char next() throws JSONException {$/;"	m	class:JSONTokener
+next	json/JSONTokener.java	/^    public char next(char c) throws JSONException {$/;"	m	class:JSONTokener
+nextClean	json/JSONTokener.java	/^    public char nextClean() throws JSONException {$/;"	m	class:JSONTokener
+nextString	json/JSONTokener.java	/^    public String nextString(char quote) throws JSONException {$/;"	m	class:JSONTokener
+nextTo	json/JSONTokener.java	/^    public String nextTo(String delimiters) throws JSONException {$/;"	m	class:JSONTokener
+nextTo	json/JSONTokener.java	/^    public String nextTo(char d) throws JSONException {$/;"	m	class:JSONTokener
+nextValue	json/JSONTokener.java	/^    public Object nextValue() throws JSONException {$/;"	m	class:JSONTokener
+notTagged	query/SearchQuery.java	/^	private static final String notTagged = "";$/;"	f	class:SearchQuery	file:
+numberToString	json/JSONObject.java	/^    static public String numberToString(Number n)$/;"	m	class:JSONObject
+obj	json/PoliteJSONObject.java	/^    private JSONObject obj;$/;"	f	class:PoliteJSONObject	file:
+offer	http/ApiRequestQueue.java	/^	public Future offer(HttpClient.ApiRequest req) {$/;"	m	class:ApiRequestQueue
+onDate	entities/Reputation.java	/^    private long onDate;$/;"	f	class:Reputation	file:
+onQuestion	entities/Comment.java	/^    private boolean onQuestion;$/;"	f	class:Comment	file:
+onSite	stackauth/entities/Account.java	/^    private Site onSite;$/;"	f	class:Account	file:
+opt	json/JSONArray.java	/^    public Object opt(int index) {$/;"	m	class:JSONArray
+opt	json/JSONObject.java	/^    public Object opt(String key) {$/;"	m	class:JSONObject
+optBoolean	json/JSONArray.java	/^    public boolean optBoolean(int index)  {$/;"	m	class:JSONArray
+optBoolean	json/JSONArray.java	/^    public boolean optBoolean(int index, boolean defaultValue)  {$/;"	m	class:JSONArray
+optBoolean	json/JSONObject.java	/^    public boolean optBoolean(String key) {$/;"	m	class:JSONObject
+optBoolean	json/JSONObject.java	/^    public boolean optBoolean(String key, boolean defaultValue) {$/;"	m	class:JSONObject
+optDouble	json/JSONArray.java	/^    public double optDouble(int index) {$/;"	m	class:JSONArray
+optDouble	json/JSONArray.java	/^    public double optDouble(int index, double defaultValue) {$/;"	m	class:JSONArray
+optDouble	json/JSONObject.java	/^    public double optDouble(String key) {$/;"	m	class:JSONObject
+optDouble	json/JSONObject.java	/^    public double optDouble(String key, double defaultValue) {$/;"	m	class:JSONObject
+optInt	json/JSONArray.java	/^    public int optInt(int index) {$/;"	m	class:JSONArray
+optInt	json/JSONArray.java	/^    public int optInt(int index, int defaultValue) {$/;"	m	class:JSONArray
+optInt	json/JSONObject.java	/^    public int optInt(String key) {$/;"	m	class:JSONObject
+optInt	json/JSONObject.java	/^    public int optInt(String key, int defaultValue) {$/;"	m	class:JSONObject
+optJSONArray	json/JSONArray.java	/^    public JSONArray optJSONArray(int index) {$/;"	m	class:JSONArray
+optJSONArray	json/JSONObject.java	/^    public JSONArray optJSONArray(String key) {$/;"	m	class:JSONObject
+optJSONObject	json/JSONArray.java	/^    public JSONObject optJSONObject(int index) {$/;"	m	class:JSONArray
+optJSONObject	json/JSONObject.java	/^    public JSONObject optJSONObject(String key) {$/;"	m	class:JSONObject
+optLong	json/JSONArray.java	/^    public long optLong(int index) {$/;"	m	class:JSONArray
+optLong	json/JSONArray.java	/^    public long optLong(int index, long defaultValue) {$/;"	m	class:JSONArray
+optLong	json/JSONObject.java	/^    public long optLong(String key) {$/;"	m	class:JSONObject
+optLong	json/JSONObject.java	/^    public long optLong(String key, long defaultValue) {$/;"	m	class:JSONObject
+optString	json/JSONArray.java	/^    public String optString(int index) {$/;"	m	class:JSONArray
+optString	json/JSONArray.java	/^    public String optString(int index, String defaultValue) {$/;"	m	class:JSONArray
+optString	json/JSONObject.java	/^    public String optString(String key) {$/;"	m	class:JSONObject
+optString	json/JSONObject.java	/^    public String optString(String key, String defaultValue) {$/;"	m	class:JSONObject
+order	query/AnswerQuery.java	/^	private static final Order order = Order.DESC;$/;"	f	class:AnswerQuery	file:
+order	query/QuestionQuery.java	/^	private static final Order order = Order.DESC;$/;"	f	class:QuestionQuery	file:
+order	query/SearchQuery.java	/^	private static final Order order = Order.DESC;$/;"	f	class:SearchQuery	file:
+order	query/UserQuery.java	/^	private static final Order order = Order.DESC;$/;"	f	class:UserQuery	file:
+order	query/UserQuestionQuery.java	/^    private static final Order order = Order.DESC;$/;"	f	class:UserQuestionQuery	file:
+owner	entities/Post.java	/^    protected User owner = null;$/;"	f	class:Post
+owner	entities/PostTimeline.java	/^    private User owner;$/;"	f	class:PostTimeline	file:
+page	datastructures/MetadataList.java	/^    private int total, page, pageSize;$/;"	f	class:MetadataList	file:
+page	query/AnswerQuery.java	/^	private static final int page = 1;$/;"	f	class:AnswerQuery	file:
+page	query/QuestionQuery.java	/^    private static final int page = 1;$/;"	f	class:QuestionQuery	file:
+page	query/SearchQuery.java	/^    private static final int page = 1;$/;"	f	class:SearchQuery	file:
+page	query/UserQuery.java	/^    private static final int page = 1;$/;"	f	class:UserQuery	file:
+page	query/UserQuestionQuery.java	/^    private static final int page = 1;$/;"	f	class:UserQuestionQuery	file:
+pageSize	datastructures/MetadataList.java	/^    private int total, page, pageSize;$/;"	f	class:MetadataList	file:
+pageSize	query/AnswerQuery.java	/^	private static final int pageSize = 30;$/;"	f	class:AnswerQuery	file:
+pageSize	query/QuestionQuery.java	/^	private static final int pageSize = 30;$/;"	f	class:QuestionQuery	file:
+pageSize	query/SearchQuery.java	/^	private static final int pageSize = 30;$/;"	f	class:SearchQuery	file:
+pageSize	query/UserQuery.java	/^	private static final int pageSize = 30;$/;"	f	class:UserQuery	file:
+pageSize	query/UserQuestionQuery.java	/^    private static final int pageSize = 30;$/;"	f	class:UserQuestionQuery	file:
+parent	entities/Answer.java	/^    private Question parent;$/;"	f	class:Answer	file:
+parentId	entities/Comment.java	/^    private int parentId;$/;"	f	class:Comment	file:
+parseValues	datastructures/MetadataList.java	/^    private void parseValues(String json) throws JSONException{$/;"	m	class:MetadataList	file:
+popular	query/TagQuery.java	/^		public static final Sort popular() {$/;"	m	class:TagQuery.Sort
+populateMap	json/JSONObject.java	/^    private void populateMap(Object bean) {$/;"	m	class:JSONObject	file:
+positiveRep	entities/Reputation.java	/^    private int positiveRep;$/;"	f	class:Reputation	file:
+postClient	StackWrapper.java	/^    private final HttpClient postClient = new HttpClient();$/;"	f	class:StackWrapper	file:
+postId	entities/Post.java	/^    protected int postId;$/;"	f	class:Post
+postId	entities/Reputation.java	/^    private int postId;$/;"	f	class:Reputation	file:
+postId	entities/Revision.java	/^    private int postId;$/;"	f	class:Revision	file:
+postId	entities/Timeline.java	/^	private int postId;$/;"	f	class:Timeline	file:
+postRevisionUrl	entities/PostTimeline.java	/^    private String postRevisionUrl;$/;"	f	class:PostTimeline	file:
+postType	entities/Comment.java	/^    private String postType;$/;"	f	class:Comment	file:
+postType	entities/Reputation.java	/^    private String postType = "";$/;"	f	class:Reputation	file:
+postType	entities/UserTimeline.java	/^	private PostType postType;$/;"	f	class:UserTimeline	file:
+postUrl	entities/PostTimeline.java	/^    private String postUrl;$/;"	f	class:PostTimeline	file:
+previous	json/JSONTokener.java	/^    private char 	previous;$/;"	f	class:JSONTokener	file:
+proxyServer	http/HttpClient.java	/^	public static Proxy proxyServer = null;$/;"	f	class:HttpClient
+put	json/JSONArray.java	/^    public JSONArray put(Collection value) {$/;"	m	class:JSONArray
+put	json/JSONArray.java	/^    public JSONArray put(Map value) {$/;"	m	class:JSONArray
+put	json/JSONArray.java	/^    public JSONArray put(Object value) {$/;"	m	class:JSONArray
+put	json/JSONArray.java	/^    public JSONArray put(boolean value) {$/;"	m	class:JSONArray
+put	json/JSONArray.java	/^    public JSONArray put(double value) throws JSONException {$/;"	m	class:JSONArray
+put	json/JSONArray.java	/^    public JSONArray put(int index, Collection value) throws JSONException {$/;"	m	class:JSONArray
+put	json/JSONArray.java	/^    public JSONArray put(int index, Map value) throws JSONException {$/;"	m	class:JSONArray
+put	json/JSONArray.java	/^    public JSONArray put(int index, Object value) throws JSONException {$/;"	m	class:JSONArray
+put	json/JSONArray.java	/^    public JSONArray put(int index, boolean value) throws JSONException {$/;"	m	class:JSONArray
+put	json/JSONArray.java	/^    public JSONArray put(int index, double value) throws JSONException {$/;"	m	class:JSONArray
+put	json/JSONArray.java	/^    public JSONArray put(int index, int value) throws JSONException {$/;"	m	class:JSONArray
+put	json/JSONArray.java	/^    public JSONArray put(int index, long value) throws JSONException {$/;"	m	class:JSONArray
+put	json/JSONArray.java	/^    public JSONArray put(int value) {$/;"	m	class:JSONArray
+put	json/JSONArray.java	/^    public JSONArray put(long value) {$/;"	m	class:JSONArray
+put	json/JSONObject.java	/^    public JSONObject put(String key, Collection value) throws JSONException {$/;"	m	class:JSONObject
+put	json/JSONObject.java	/^    public JSONObject put(String key, Map value) throws JSONException {$/;"	m	class:JSONObject
+put	json/JSONObject.java	/^    public JSONObject put(String key, Object value) throws JSONException {$/;"	m	class:JSONObject
+put	json/JSONObject.java	/^    public JSONObject put(String key, boolean value) throws JSONException {$/;"	m	class:JSONObject
+put	json/JSONObject.java	/^    public JSONObject put(String key, double value) throws JSONException {$/;"	m	class:JSONObject
+put	json/JSONObject.java	/^    public JSONObject put(String key, int value) throws JSONException {$/;"	m	class:JSONObject
+put	json/JSONObject.java	/^    public JSONObject put(String key, long value) throws JSONException {$/;"	m	class:JSONObject
+put	query/BaseQuery.java	/^	protected String put(final String key, final String value) {$/;"	m	class:BaseQuery
+putOnce	json/JSONObject.java	/^    public JSONObject putOnce(String key, Object value) throws JSONException {$/;"	m	class:JSONObject
+putOpt	json/JSONObject.java	/^    public JSONObject putOpt(String key, Object value) throws JSONException {$/;"	m	class:JSONObject
+query	datastructures/AutoFetchList.java	/^    protected PageQuery query;$/;"	f	class:AutoFetchList
+questionAnswersUrl	entities/Question.java	/^    private String questionAnswersUrl;$/;"	f	class:Question	file:
+questionClient	StackWrapper.java	/^    private final HttpClient questionClient = new HttpClient();$/;"	f	class:StackWrapper	file:
+questionCount	entities/User.java	/^    private int questionCount;$/;"	f	class:User	file:
+questionId	entities/Answer.java	/^    private int questionId;$/;"	f	class:Answer	file:
+questionId	entities/Timeline.java	/^	private int questionId;$/;"	f	class:Timeline	file:
+questionTimelineUrl	entities/Question.java	/^    private String questionTimelineUrl;$/;"	f	class:Question	file:
+questionsPerMinute	entities/Stats.java	/^    private double questionsPerMinute;$/;"	f	class:Stats	file:
+queue	http/HttpClient.java	/^	private ApiRequestQueue queue = null; \/\/new ApiRequestQueue();$/;"	f	class:HttpClient	file:
+quote	json/JSONObject.java	/^    public static String quote(String string) {$/;"	m	class:JSONObject
+rank	entities/Badge.java	/^    private String rank;$/;"	f	class:Badge	file:
+reader	json/JSONTokener.java	/^    private Reader 	reader;$/;"	f	class:JSONTokener	file:
+remove	datastructures/AutoFetchList.java	/^    public E remove(int arg0) {$/;"	m	class:AutoFetchList
+remove	datastructures/AutoFetchList.java	/^    public boolean remove(Object arg0) {$/;"	m	class:AutoFetchList
+remove	json/JSONArray.java	/^    public Object remove(int index) {$/;"	m	class:JSONArray
+remove	json/JSONObject.java	/^    public Object remove(String key) {$/;"	m	class:JSONObject
+removeAll	datastructures/AutoFetchList.java	/^    public boolean removeAll(Collection<?> arg0) {$/;"	m	class:AutoFetchList
+removeIds	query/BaseQuery.java	/^	public void removeIds() {$/;"	m	class:BaseQuery
+replyToUser	entities/Comment.java	/^    private User replyToUser;$/;"	f	class:Comment	file:
+reputation	entities/User.java	/^    private int reputation;$/;"	f	class:User	file:
+reputation	query/UserQuery.java	/^		public static final Sort reputation() {$/;"	m	class:UserQuery.Sort
+reputation	stackauth/entities/Account.java	/^    private int reputation;$/;"	f	class:Account	file:
+req	http/ApiRequestQueue.java	/^		private final ApiRequest req;$/;"	f	class:ApiRequestQueue.Future	file:
+reqResult	http/ApiRequestQueue.java	/^		private String reqResult;$/;"	f	class:ApiRequestQueue.Future	file:
+requests	http/ApiRequestQueue.java	/^	private Queue<Future> requests;$/;"	f	class:ApiRequestQueue	file:
+requests	http/HttpClient.java	/^	private int requests = 0;$/;"	f	class:HttpClient	file:
+restoreDefaults	query/AnswerQuery.java	/^	public AnswerQuery restoreDefaults(){$/;"	m	class:AnswerQuery
+restoreDefaults	query/BadgeQuery.java	/^	public BadgeQuery restoreDefaults() {$/;"	m	class:BadgeQuery
+restoreDefaults	query/BaseQuery.java	/^	public abstract BaseQuery restoreDefaults();$/;"	m	class:BaseQuery
+restoreDefaults	query/CommentQuery.java	/^    public CommentQuery restoreDefaults() {$/;"	m	class:CommentQuery
+restoreDefaults	query/QuestionQuery.java	/^    public QuestionQuery restoreDefaults() {$/;"	m	class:QuestionQuery
+restoreDefaults	query/ReputationQuery.java	/^	public ReputationQuery restoreDefaults() {$/;"	m	class:ReputationQuery
+restoreDefaults	query/RevisionQuery.java	/^    public RevisionQuery restoreDefaults() {$/;"	m	class:RevisionQuery
+restoreDefaults	query/SearchQuery.java	/^    public SearchQuery restoreDefaults() {$/;"	m	class:SearchQuery
+restoreDefaults	query/TagQuery.java	/^    public TagQuery restoreDefaults() {$/;"	m	class:TagQuery
+restoreDefaults	query/TimelineQuery.java	/^	public TimelineQuery restoreDefaults() {$/;"	m	class:TimelineQuery
+restoreDefaults	query/UserQuery.java	/^    public UserQuery restoreDefaults() {$/;"	m	class:UserQuery
+restoreDefaults	query/UserQuestionQuery.java	/^	public UserQuestionQuery restoreDefaults() {$/;"	m	class:UserQuestionQuery
+restoreDefaults	query/sort/BaseSort.java	/^    public void restoreDefaults() {$/;"	m	class:BaseSort
+restoreDefaults	query/sort/ISort.java	/^    public void restoreDefaults();$/;"	m	interface:ISort
+retainAll	datastructures/AutoFetchList.java	/^    public boolean retainAll(Collection<?> arg0) {$/;"	m	class:AutoFetchList
+revision	entities/Stats.java	/^        String revision;$/;"	f	class:Stats.ApiVersion
+revisionClient	StackWrapper.java	/^    private final HttpClient revisionClient = new HttpClient();$/;"	f	class:StackWrapper	file:
+revisionGuid	entities/PostTimeline.java	/^    private String revisionGuid;$/;"	f	class:PostTimeline	file:
+revisionGuid	entities/Revision.java	/^    private String revisionGuid;$/;"	f	class:Revision	file:
+revisionNumber	entities/Revision.java	/^    private int revisionNumber;$/;"	f	class:Revision	file:
+revisionType	entities/Revision.java	/^    private Type revisionType;$/;"	f	class:Revision	file:
+run	http/ApiRequestQueue.java	/^	public void run() {$/;"	m	class:ApiRequestQueue
+score	entities/Post.java	/^    protected int score;$/;"	f	class:Post
+search	StackWrapper.java	/^    public List<Question> search(SearchQuery query) throws IOException, JSONException {$/;"	m	class:StackWrapper
+sendGetRequest	http/HttpClient.java	/^	public String sendGetRequest(String baseURL, String versionString, String extendedURL,$/;"	m	class:HttpClient
+sendGetRequestThrottled	http/HttpClient.java	/^	public String sendGetRequestThrottled(String baseURL, String versionString, String extendedURL,$/;"	m	class:HttpClient
+serialVersionUID	Meta.java	/^    private static final long serialVersionUID = 3107664497124653439L;$/;"	f	class:Meta	file:
+serialVersionUID	ServerFault.java	/^    private static final long serialVersionUID = -5386480367065452217L;$/;"	f	class:ServerFault	file:
+serialVersionUID	StackOverflow.java	/^    private static final long serialVersionUID = 16284580977850694L;$/;"	f	class:StackOverflow	file:
+serialVersionUID	StackWrapper.java	/^    private static final long serialVersionUID = -8206261687224998064L;$/;"	f	class:StackWrapper	file:
+serialVersionUID	SuperUser.java	/^    private static final long serialVersionUID = -9168623811838251618L;$/;"	f	class:SuperUser	file:
+serialVersionUID	datastructures/AutoFetchList.java	/^    private static final long serialVersionUID = 6305205644027871658L;$/;"	f	class:AutoFetchList	file:
+serialVersionUID	datastructures/MetadataList.java	/^    private static final long serialVersionUID = 968623794644895438L;$/;"	f	class:MetadataList	file:
+serialVersionUID	entities/Answer.java	/^    private static final long serialVersionUID = -7133000911614192700L;$/;"	f	class:Answer	file:
+serialVersionUID	entities/Badge.java	/^    private static final long serialVersionUID = -3990124684780217030L;$/;"	f	class:Badge	file:
+serialVersionUID	entities/Comment.java	/^    private static final long serialVersionUID = 4155537877981116560L;$/;"	f	class:Comment	file:
+serialVersionUID	entities/Error.java	/^    private static final long serialVersionUID = -2659788451363020513L;$/;"	f	class:Error	file:
+serialVersionUID	entities/MajorPost.java	/^    private static final long serialVersionUID = -1356543893716595603L;$/;"	f	class:MajorPost	file:
+serialVersionUID	entities/Post.java	/^    private static final long serialVersionUID = 2648317960608128067L;$/;"	f	class:Post	file:
+serialVersionUID	entities/PostTimeline.java	/^    private static final long serialVersionUID = -1989840776575627916L;$/;"	f	class:PostTimeline	file:
+serialVersionUID	entities/Question.java	/^    private static final long serialVersionUID = -4569236296352955838L;$/;"	f	class:Question	file:
+serialVersionUID	entities/Reputation.java	/^    private static final long serialVersionUID = -3262340595944119809L;$/;"	f	class:Reputation	file:
+serialVersionUID	entities/Revision.java	/^    private static final long serialVersionUID = -6047088490208373937L;$/;"	f	class:Revision	file:
+serialVersionUID	entities/StackObjBase.java	/^    private static final long serialVersionUID = -4597055115167250588L;$/;"	f	class:StackObjBase	file:
+serialVersionUID	entities/Stats.java	/^    private static final long serialVersionUID = 2791464414362708711L;$/;"	f	class:Stats	file:
+serialVersionUID	entities/Tag.java	/^    private static final long serialVersionUID = -5455407162132896992L;$/;"	f	class:Tag	file:
+serialVersionUID	entities/Timeline.java	/^    private static final long serialVersionUID = -2522546875090496762L;$/;"	f	class:Timeline	file:
+serialVersionUID	entities/User.java	/^    	private static final long serialVersionUID = 6670910336247003658L;$/;"	f	class:User.BadgeCounts	file:
+serialVersionUID	entities/User.java	/^    private static final long serialVersionUID = -2672492877177944263L;$/;"	f	class:User	file:
+serialVersionUID	entities/UserTimeline.java	/^    private static final long serialVersionUID = -8483559713386148234L;$/;"	f	class:UserTimeline	file:
+serialVersionUID	exceptions/ParameterNotSetException.java	/^    private static final long serialVersionUID = -4569963233146839214L;$/;"	f	class:ParameterNotSetException	file:
+serialVersionUID	json/JSONException.java	/^	private static final long serialVersionUID = 0;$/;"	f	class:JSONException	file:
+serialVersionUID	query/AnswerQuery.java	/^        private static final long serialVersionUID = -356385482658677490L;$/;"	f	class:AnswerQuery.Sort	file:
+serialVersionUID	query/AnswerQuery.java	/^    private static final long serialVersionUID = 674891748117685665L;$/;"	f	class:AnswerQuery	file:
+serialVersionUID	query/BadgeQuery.java	/^    private static final long serialVersionUID = -2198446337000429285L;$/;"	f	class:BadgeQuery	file:
+serialVersionUID	query/BaseQuery.java	/^    private static final long serialVersionUID = 3269490908968253120L;$/;"	f	class:BaseQuery	file:
+serialVersionUID	query/CommentQuery.java	/^        private static final long serialVersionUID = -3806609696930943631L;$/;"	f	class:CommentQuery.Sort	file:
+serialVersionUID	query/CommentQuery.java	/^    private static final long serialVersionUID = -3389618808022836752L;$/;"	f	class:CommentQuery	file:
+serialVersionUID	query/FavoriteQuery.java	/^        private static final long serialVersionUID = -4331575702170248678L;$/;"	f	class:FavoriteQuery.Sort	file:
+serialVersionUID	query/FavoriteQuery.java	/^    private static final long serialVersionUID = -1128351250307421626L;$/;"	f	class:FavoriteQuery	file:
+serialVersionUID	query/PageQuery.java	/^    private static final long serialVersionUID = 8136853699665621963L;$/;"	f	class:PageQuery	file:
+serialVersionUID	query/QuestionQuery.java	/^        private static final long serialVersionUID = 1639268298469651097L;$/;"	f	class:QuestionQuery.Sort	file:
+serialVersionUID	query/QuestionQuery.java	/^    private static final long serialVersionUID = -6104910926423020413L;$/;"	f	class:QuestionQuery	file:
+serialVersionUID	query/ReputationQuery.java	/^    private static final long serialVersionUID = -6655413756650658047L;$/;"	f	class:ReputationQuery	file:
+serialVersionUID	query/RevisionQuery.java	/^    private static final long serialVersionUID = -8659710454779423223L;$/;"	f	class:RevisionQuery	file:
+serialVersionUID	query/SearchQuery.java	/^        private static final long serialVersionUID = 9048461541954269038L;$/;"	f	class:SearchQuery.Sort	file:
+serialVersionUID	query/SearchQuery.java	/^    private static final long serialVersionUID = -1260731004294644012L;$/;"	f	class:SearchQuery	file:
+serialVersionUID	query/TagQuery.java	/^        private static final long serialVersionUID = 7465472393658051288L;$/;"	f	class:TagQuery.Sort	file:
+serialVersionUID	query/TagQuery.java	/^    private static final long serialVersionUID = -2300899500828435451L;$/;"	f	class:TagQuery	file:
+serialVersionUID	query/TaggedQuery.java	/^    private static final long serialVersionUID = 1589654098440384374L;$/;"	f	class:TaggedQuery	file:
+serialVersionUID	query/TimelineQuery.java	/^    private static final long serialVersionUID = 2838566813452201214L;$/;"	f	class:TimelineQuery	file:
+serialVersionUID	query/UnansweredQuery.java	/^        private static final long serialVersionUID = -6933932996351876361L;$/;"	f	class:UnansweredQuery.Sort	file:
+serialVersionUID	query/UnansweredQuery.java	/^    private static final long serialVersionUID = -8521833680710472733L;$/;"	f	class:UnansweredQuery	file:
+serialVersionUID	query/UserQuery.java	/^        private static final long serialVersionUID = -7379607107067297393L;$/;"	f	class:UserQuery.Sort	file:
+serialVersionUID	query/UserQuery.java	/^    private static final long serialVersionUID = -1726552855230928884L;$/;"	f	class:UserQuery	file:
+serialVersionUID	query/UserQuestionQuery.java	/^        private static final long serialVersionUID = -1344476309694726050L;$/;"	f	class:UserQuestionQuery.Sort	file:
+serialVersionUID	query/UserQuestionQuery.java	/^    private static final long serialVersionUID = 988361380006159246L;$/;"	f	class:UserQuestionQuery	file:
+serialVersionUID	query/sort/BaseSort.java	/^    private static final long serialVersionUID = -8756530435595635505L;$/;"	f	class:BaseSort	file:
+set	datastructures/AutoFetchList.java	/^    public E set(int arg0, E arg1) {$/;"	m	class:AutoFetchList
+set	http/ApiRequestQueue.java	/^		protected void set(String result) {$/;"	m	class:ApiRequestQueue.Future
+setAnswers	query/QuestionQuery.java	/^	public QuestionQuery setAnswers(boolean answers) {$/;"	m	class:QuestionQuery
+setAnswers	query/UserQuestionQuery.java	/^    public UserQuestionQuery setAnswers(boolean answers) {$/;"	m	class:UserQuestionQuery
+setAutoIncrement	query/PageQuery.java	/^    public void setAutoIncrement(boolean autoIncrement) {$/;"	m	class:PageQuery
+setBody	query/AnswerQuery.java	/^	public AnswerQuery setBody(boolean body) {$/;"	m	class:AnswerQuery
+setBody	query/QuestionQuery.java	/^	public QuestionQuery setBody(boolean body) {$/;"	m	class:QuestionQuery
+setBody	query/UserQuestionQuery.java	/^    public UserQuestionQuery setBody(boolean body) {$/;"	m	class:UserQuestionQuery
+setComments	query/AnswerQuery.java	/^	public AnswerQuery setComments(boolean comments) {$/;"	m	class:AnswerQuery
+setComments	query/QuestionQuery.java	/^	public QuestionQuery setComments(boolean comments) {$/;"	m	class:QuestionQuery
+setComments	query/UserQuestionQuery.java	/^    public UserQuestionQuery setComments(boolean comments) {$/;"	m	class:UserQuestionQuery
+setCommunityWiki	entities/Revision.java	/^    private boolean setCommunityWiki;$/;"	f	class:Revision	file:
+setException	http/ApiRequestQueue.java	/^		protected void setException(IOException e){$/;"	m	class:ApiRequestQueue.Future
+setFilter	query/TagQuery.java	/^	public TagQuery setFilter(String filter) {$/;"	m	class:TagQuery
+setFilter	query/UserQuery.java	/^	public UserQuery setFilter(String filter) {$/;"	m	class:UserQuery
+setFromDate	query/AnswerQuery.java	/^	public AnswerQuery setFromDate(long fromdate) {$/;"	m	class:AnswerQuery
+setFromDate	query/BadgeQuery.java	/^	public BadgeQuery setFromDate(long fromDate) {$/;"	m	class:BadgeQuery
+setFromDate	query/CommentQuery.java	/^	public CommentQuery setFromDate(long fromDate) {$/;"	m	class:CommentQuery
+setFromDate	query/QuestionQuery.java	/^	public QuestionQuery setFromDate(long fromDate) {$/;"	m	class:QuestionQuery
+setFromDate	query/ReputationQuery.java	/^	public ReputationQuery setFromDate(long fromDate) {$/;"	m	class:ReputationQuery
+setFromDate	query/RevisionQuery.java	/^	public RevisionQuery setFromDate(long fromDate) {$/;"	m	class:RevisionQuery
+setFromDate	query/TagQuery.java	/^	public TagQuery setFromDate(long fromDate) {$/;"	m	class:TagQuery
+setFromDate	query/TimelineQuery.java	/^	public TimelineQuery setFromDate(long fromDate) {$/;"	m	class:TimelineQuery
+setFromDate	query/UserQuery.java	/^	public UserQuery setFromDate(long fromdate) {$/;"	m	class:UserQuery
+setFromDate	query/UserQuestionQuery.java	/^    public UserQuestionQuery setFromDate(long fromdate) {$/;"	m	class:UserQuestionQuery
+setGuid	query/RevisionQuery.java	/^	public RevisionQuery setGuid(String guid) throws IllegalArgumentException {$/;"	m	class:RevisionQuery
+setIds	query/BaseQuery.java	/^	public BaseQuery setIds(final int...id){$/;"	m	class:BaseQuery
+setInTitle	query/SearchQuery.java	/^	public SearchQuery setInTitle(String inTitle) {$/;"	m	class:SearchQuery
+setMax	query/sort/BaseSort.java	/^    public void setMax(Object max) {$/;"	m	class:BaseSort
+setMax	query/sort/ISort.java	/^    public void setMax(Object max);$/;"	m	interface:ISort
+setMin	query/sort/BaseSort.java	/^    public void setMin(Object min) {$/;"	m	class:BaseSort
+setMin	query/sort/ISort.java	/^    public void setMin(Object min);$/;"	m	interface:ISort
+setNotTagged	query/SearchQuery.java	/^	public SearchQuery setNotTagged(List<String> tags){$/;"	m	class:SearchQuery
+setNotTagged	query/SearchQuery.java	/^	public SearchQuery setNotTagged(String notTagged) {$/;"	m	class:SearchQuery
+setNotTagged	query/SearchQuery.java	/^	public SearchQuery setNotTagged(String[] tags){$/;"	m	class:SearchQuery
+setOrder	query/AnswerQuery.java	/^	public AnswerQuery setOrder(Order order) {$/;"	m	class:AnswerQuery
+setOrder	query/CommentQuery.java	/^	public CommentQuery setOrder(Order order) {$/;"	m	class:CommentQuery
+setOrder	query/QuestionQuery.java	/^	public QuestionQuery setOrder(Order order) {$/;"	m	class:QuestionQuery
+setOrder	query/SearchQuery.java	/^	public SearchQuery setOrder(Order order) {$/;"	m	class:SearchQuery
+setOrder	query/TagQuery.java	/^	public TagQuery setOrder(Order order) {$/;"	m	class:TagQuery
+setOrder	query/UserQuery.java	/^	public UserQuery setOrder(Order order) {$/;"	m	class:UserQuery
+setOrder	query/UserQuestionQuery.java	/^    public UserQuestionQuery setOrder(Order order) {$/;"	m	class:UserQuestionQuery
+setPage	query/PageQuery.java	/^    public PageQuery setPage(int page) {$/;"	m	class:PageQuery
+setPageSize	query/PageQuery.java	/^    public PageQuery setPageSize(int pageSize) {$/;"	m	class:PageQuery
+setSort	query/BaseQuery.java	/^	public BaseQuery setSort(final BaseSort sort) {$/;"	m	class:BaseQuery
+setTags	query/TaggedQuery.java	/^    public TaggedQuery setTags(List<String> tags){$/;"	m	class:TaggedQuery
+setTags	query/TaggedQuery.java	/^    public TaggedQuery setTags(String tags) {$/;"	m	class:TaggedQuery
+setTags	query/TaggedQuery.java	/^    public TaggedQuery setTags(String[] tags){$/;"	m	class:TaggedQuery
+setTimeout	http/HttpClient.java	/^	public static void setTimeout(int timeout) {$/;"	m	class:HttpClient
+setToDate	query/AnswerQuery.java	/^	public AnswerQuery setToDate(long todate) {$/;"	m	class:AnswerQuery
+setToDate	query/BadgeQuery.java	/^	public BadgeQuery setToDate(long toDate) {$/;"	m	class:BadgeQuery
+setToDate	query/CommentQuery.java	/^	public CommentQuery setToDate(long toDate) {$/;"	m	class:CommentQuery
+setToDate	query/QuestionQuery.java	/^	public QuestionQuery setToDate(long toDate) {$/;"	m	class:QuestionQuery
+setToDate	query/ReputationQuery.java	/^	public ReputationQuery setToDate(long toDate) {$/;"	m	class:ReputationQuery
+setToDate	query/TagQuery.java	/^	public TagQuery setToDate(long toDate) {$/;"	m	class:TagQuery
+setToDate	query/TimelineQuery.java	/^	public TimelineQuery setToDate(long toDate) {$/;"	m	class:TimelineQuery
+setToDate	query/UserQuery.java	/^	public UserQuery setToDate(long todate) {$/;"	m	class:UserQuery
+setToDate	query/UserQuestionQuery.java	/^    public UserQuestionQuery setToDate(long todate) {$/;"	m	class:UserQuestionQuery
+setTodate	query/RevisionQuery.java	/^	public RevisionQuery setTodate(long toDate) {$/;"	m	class:RevisionQuery
+silver	entities/User.java	/^    	public final int bronze, silver, gold;$/;"	f	class:User.BadgeCounts
+simulateError	StackWrapper.java	/^    public Error simulateError(int errorId) throws IOException, JSONException {$/;"	m	class:StackWrapper
+site	entities/Stats.java	/^    private Site site;$/;"	f	class:Stats	file:
+siteUrl	stackauth/entities/Site.java	/^    private String siteUrl;$/;"	f	class:Site	file:
+size	datastructures/AutoFetchList.java	/^    public int size() {$/;"	m	class:AutoFetchList
+skipTo	json/JSONTokener.java	/^    public char skipTo(char to) throws JSONException {$/;"	m	class:JSONTokener
+soApiKey	StackWrapper.java	/^    protected String soApiKey;$/;"	f	class:StackWrapper
+sort	query/BaseQuery.java	/^	private ISort sort = null;$/;"	f	class:BaseQuery	file:
+sortedKeys	json/JSONObject.java	/^    public Iterator sortedKeys() {$/;"	m	class:JSONObject
+stringToValue	json/JSONObject.java	/^    static public Object stringToValue(String s) {$/;"	m	class:JSONObject
+styling	stackauth/entities/Site.java	/^    private Styling styling;$/;"	f	class:Site	file:
+subList	datastructures/AutoFetchList.java	/^    public List<E> subList(int arg0, int arg1) {$/;"	m	class:AutoFetchList
+sw	datastructures/AutoFetchList.java	/^    protected StackWrapper sw;$/;"	f	class:AutoFetchList
+syntaxError	json/JSONTokener.java	/^    public JSONException syntaxError(String message) {$/;"	m	class:JSONTokener
+tagBackgroundColor	stackauth/entities/Styling.java	/^    private String tagBackgroundColor;$/;"	f	class:Styling	file:
+tagBased	entities/Badge.java	/^    private boolean tagBased;$/;"	f	class:Badge	file:
+tagForegroundColor	stackauth/entities/Styling.java	/^    private String tagForegroundColor;$/;"	f	class:Styling	file:
+tags	entities/Question.java	/^    private List<String> tags;$/;"	f	class:Question	file:
+tags	entities/Revision.java	/^    private List<String> tags;$/;"	f	class:Revision	file:
+tags	query/TaggedQuery.java	/^    protected List<String> tags = new ArrayList<String>();$/;"	f	class:TaggedQuery
+tagsClient	StackWrapper.java	/^    private final HttpClient tagsClient = new HttpClient();$/;"	f	class:StackWrapper	file:
+testValidity	json/JSONObject.java	/^    static void testValidity(Object o) throws JSONException {$/;"	m	class:JSONObject
+throttle	http/HttpClient.java	/^	public static Throttle throttle = Throttle.NON_THREADED;$/;"	f	class:HttpClient
+throttledRequests	http/HttpClient.java	/^	private int throttledRequests = 0;$/;"	f	class:HttpClient	file:
+timelineType	entities/PostTimeline.java	/^	private Type timelineType;$/;"	f	class:PostTimeline	file:
+timelineType	entities/UserTimeline.java	/^	private Type timelineType;$/;"	f	class:UserTimeline	file:
+timeout	http/HttpClient.java	/^	private static int timeout = 0;$/;"	f	class:HttpClient	file:
+title	entities/MajorPost.java	/^    private String title;$/;"	f	class:MajorPost	file:
+title	entities/Reputation.java	/^    private String title = "";$/;"	f	class:Reputation	file:
+title	entities/Revision.java	/^    private String title;$/;"	f	class:Revision	file:
+toArray	datastructures/AutoFetchList.java	/^    public <T> T[] toArray(T[] arg0) {$/;"	m	class:AutoFetchList
+toArray	datastructures/AutoFetchList.java	/^    public Object[] toArray() {$/;"	m	class:AutoFetchList
+toJSONArray	json/JSONObject.java	/^    public JSONArray toJSONArray(JSONArray names) throws JSONException {$/;"	m	class:JSONObject
+toJSONObject	json/JSONArray.java	/^    public JSONObject toJSONObject(JSONArray names) throws JSONException {$/;"	m	class:JSONArray
+toJSONString	json/JSONString.java	/^	public String toJSONString();$/;"	m	interface:JSONString
+toString	entities/Error.java	/^    public final String toString() {$/;"	m	class:Error
+toString	entities/PostTimeline.java	/^        public String toString() {$/;"	m	class:PostTimeline.Type
+toString	entities/Revision.java	/^        public String toString() {$/;"	m	class:Revision.Type
+toString	entities/UserTimeline.java	/^        public String toString() {$/;"	m	class:UserTimeline.PostType
+toString	entities/UserTimeline.java	/^        public String toString() {$/;"	m	class:UserTimeline.Type
+toString	enums/Order.java	/^    public String toString() {$/;"	m	class:Order
+toString	json/JSONArray.java	/^    String toString(int indentFactor, int indent) throws JSONException {$/;"	m	class:JSONArray
+toString	json/JSONArray.java	/^    public String toString() {$/;"	m	class:JSONArray
+toString	json/JSONArray.java	/^    public String toString(int indentFactor) throws JSONException {$/;"	m	class:JSONArray
+toString	json/JSONObject.java	/^        public String toString() {$/;"	m	class:JSONObject.Null
+toString	json/JSONObject.java	/^    String toString(int indentFactor, int indent) throws JSONException {$/;"	m	class:JSONObject
+toString	json/JSONObject.java	/^    public String toString() {$/;"	m	class:JSONObject
+toString	json/JSONObject.java	/^    public String toString(int indentFactor) throws JSONException {$/;"	m	class:JSONObject
+toString	json/JSONTokener.java	/^    public String toString() {$/;"	m	class:JSONTokener
+todate	query/AnswerQuery.java	/^	private static final long todate = 253402300799L;$/;"	f	class:AnswerQuery	file:
+todate	query/UserQuery.java	/^	private static final long todate = 253402300799L;$/;"	f	class:UserQuery	file:
+todate	query/UserQuestionQuery.java	/^    private static final long todate = 253402300799L;$/;"	f	class:UserQuestionQuery	file:
+total	datastructures/AutoFetchList.java	/^    protected int total = -1;$/;"	f	class:AutoFetchList
+total	datastructures/MetadataList.java	/^    private int total, page, pageSize;$/;"	f	class:MetadataList	file:
+totalAccepted	entities/Stats.java	/^    private int totalAccepted;$/;"	f	class:Stats	file:
+totalAnswers	entities/Stats.java	/^    private int totalAnswers;$/;"	f	class:Stats	file:
+totalBadges	entities/Stats.java	/^    private int totalBadges;$/;"	f	class:Stats	file:
+totalComments	entities/Stats.java	/^    private int totalComments;$/;"	f	class:Stats	file:
+totalQuestions	entities/Stats.java	/^	private int totalQuestions;$/;"	f	class:Stats	file:
+totalUnanswered	entities/Stats.java	/^    private int totalUnanswered;$/;"	f	class:Stats	file:
+totalUsers	entities/Stats.java	/^    private int totalUsers;$/;"	f	class:Stats	file:
+totalVotes	entities/Stats.java	/^    private int totalVotes;$/;"	f	class:Stats	file:
+tryGet	json/PoliteJSONObject.java	/^    public Object tryGet(String key) {$/;"	m	class:PoliteJSONObject
+tryGetBoolean	json/PoliteJSONObject.java	/^    public boolean tryGetBoolean(String key, boolean defaultRet) {$/;"	m	class:PoliteJSONObject
+tryGetInt	json/PoliteJSONObject.java	/^    public int tryGetInt(String key, int defaultRet) {$/;"	m	class:PoliteJSONObject
+tryGetInteger	json/PoliteJSONObject.java	/^    public Integer tryGetInteger(String key) {$/;"	m	class:PoliteJSONObject
+tryGetJSONArray	json/PoliteJSONObject.java	/^    public JSONArray tryGetJSONArray(String key) {$/;"	m	class:PoliteJSONObject
+tryGetJSONObject	json/PoliteJSONObject.java	/^    public JSONObject tryGetJSONObject(String key) {$/;"	m	class:PoliteJSONObject
+tryGetLong	json/PoliteJSONObject.java	/^    public long tryGetLong(String key, long defaultRet) {$/;"	m	class:PoliteJSONObject
+tryGetString	json/PoliteJSONObject.java	/^    public String tryGetString(String key) {$/;"	m	class:PoliteJSONObject
+upVoteCount	entities/MajorPost.java	/^    private int upVoteCount;$/;"	f	class:MajorPost	file:
+upVotes	entities/User.java	/^    private int upVotes;$/;"	f	class:User	file:
+updateData	datastructures/AutoFetchList.java	/^    private boolean updateData() {$/;"	m	class:AutoFetchList	file:
+urlParamMap	query/BaseQuery.java	/^	private Map<String, String> urlParamMap = new HashMap<String, String>();$/;"	f	class:BaseQuery	file:
+usePrevious	json/JSONTokener.java	/^    private boolean usePrevious;$/;"	f	class:JSONTokener	file:
+used	http/HttpClient.java	/^		private boolean used;$/;"	f	class:HttpClient.ApiRequest	file:
+user	entities/PostTimeline.java	/^    private User user;$/;"	f	class:PostTimeline	file:
+user	entities/Revision.java	/^    private User user;$/;"	f	class:Revision	file:
+userClient	StackWrapper.java	/^    private final HttpClient userClient = new HttpClient();$/;"	f	class:StackWrapper	file:
+userId	entities/Tag.java	/^    private Integer userId;$/;"	f	class:Tag	file:
+userId	entities/UserTimeline.java	/^	private int userId;$/;"	f	class:UserTimeline	file:
+userId	stackauth/entities/Account.java	/^    private int userId;$/;"	f	class:Account	file:
+userType	stackauth/entities/Account.java	/^    private String userType;$/;"	f	class:Account	file:
+validateDateRange	query/QuestionQuery.java	/^	private void validateDateRange(long date) {$/;"	m	class:QuestionQuery	file:
+valueToString	json/JSONObject.java	/^     static String valueToString(Object value, int indentFactor, int indent)$/;"	m	class:JSONObject
+valueToString	json/JSONObject.java	/^    static String valueToString(Object value) throws JSONException {$/;"	m	class:JSONObject
+version	entities/Stats.java	/^        String version;$/;"	f	class:Stats.ApiVersion
+viewCount	entities/MajorPost.java	/^    private int viewCount;$/;"	f	class:MajorPost	file:
+views	entities/User.java	/^    private int views;$/;"	f	class:User	file:
+views	query/AnswerQuery.java	/^    	public static final Sort views() {$/;"	m	class:AnswerQuery.Sort
+views	query/FavoriteQuery.java	/^        public static final Sort views() {$/;"	m	class:FavoriteQuery.Sort
+views	query/SearchQuery.java	/^    	public static final Sort views() {$/;"	m	class:SearchQuery.Sort
+views	query/UserQuestionQuery.java	/^    	public static final Sort views() {$/;"	m	class:UserQuestionQuery.Sort
+viewsPerDay	entities/Stats.java	/^    private double viewsPerDay;$/;"	f	class:Stats	file:
+votes	query/AnswerQuery.java	/^    	public static final Sort votes() {$/;"	m	class:AnswerQuery.Sort
+votes	query/CommentQuery.java	/^        public static final Sort votes() {$/;"	m	class:CommentQuery.Sort
+votes	query/FavoriteQuery.java	/^        public static final Sort votes() {$/;"	m	class:FavoriteQuery.Sort
+votes	query/QuestionQuery.java	/^    	public static final Sort votes() {$/;"	m	class:QuestionQuery.Sort
+votes	query/SearchQuery.java	/^    	public static final Sort votes() {$/;"	m	class:SearchQuery.Sort
+votes	query/UnansweredQuery.java	/^    	public static final Sort votes() {$/;"	m	class:UnansweredQuery.Sort
+votes	query/UserQuestionQuery.java	/^    	public static final Sort votes() {$/;"	m	class:UserQuestionQuery.Sort
+websiteUrl	entities/User.java	/^    private String websiteUrl = "";$/;"	f	class:User	file:
+week	query/QuestionQuery.java	/^    	public static final Sort week() {$/;"	m	class:QuestionQuery.Sort
+wrap	json/JSONObject.java	/^     static Object wrap(Object object) {$/;"	m	class:JSONObject
+write	json/JSONArray.java	/^    public Writer write(Writer writer) throws JSONException {$/;"	m	class:JSONArray
+write	json/JSONObject.java	/^     public Writer write(Writer writer) throws JSONException {$/;"	m	class:JSONObject

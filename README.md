@@ -1,4 +1,5 @@
 5h2N6nXJKrRZrgjzpYtm
 ====================
-
-5h2N6nXJKrRZrgjzpYtm 5h2N6nXJKrRZrgjzpYtm
+##StackRanger
+StackRanger is a Android App to view all the Stackchange sites.
+It provides Conveinent User Interfaces to View/Search/Answer Questions.

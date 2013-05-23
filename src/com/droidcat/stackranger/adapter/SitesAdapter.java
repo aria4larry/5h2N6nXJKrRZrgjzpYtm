@@ -80,15 +80,7 @@ public class SitesAdapter extends BaseAdapter {
             case TYPE_NORMAL:
             default:
                 SiteViewHolder holder = SiteViewHolder.createOrRecycle(mInflater,
-                        convertView);
-                Site site = mSites.get(position);
-                holder.mDes.setText(site.getAudience());
-                holder.mName.setText(site.getName());
-                holder.mSite = site;
-                ImageLoader.getInstance().displayImage(site.getIcon_url(),
-                        holder.mSiteIcon);
-                holder.mRootView.setBackgroundColor(site.getStyling().getTagBackgroundColor());
-                holder.mName.setTextColor(site.getStyling().getLinkColor());
+                        convertView,mSites.get(position));
                 return holder.mRootView;
 
         }
@@ -103,11 +95,12 @@ public class SitesAdapter extends BaseAdapter {
         View mRootView;
 
         public static SiteViewHolder createOrRecycle(LayoutInflater inflater,
-                                                     View convertView) {
+                                                     View convertView,Site site) {
+            SiteViewHolder holder;
             if (convertView == null || convertView.getTag() == null) {
                 //convertView.getTag()==null means the view is the click2loadview
                 convertView = inflater.inflate(R.layout.site_list_item, null);
-                SiteViewHolder holder = new SiteViewHolder();
+                holder = new SiteViewHolder();
                 holder.mRootView = convertView;
                 holder.mDes = (TextView) convertView
                         .findViewById(R.id.site_des);
@@ -116,10 +109,20 @@ public class SitesAdapter extends BaseAdapter {
                 holder.mSiteIcon = (ImageView) convertView
                         .findViewById(R.id.site_icon);
                 convertView.setTag(holder);
-                return holder;
             } else {
-                return (SiteViewHolder) convertView.getTag();
+                holder = (SiteViewHolder) convertView.getTag();
             }
+            holder.mSite = site;
+            holder.updateView();
+            return holder;
+        }
+        void updateView(){
+            mDes.setText(mSite.getAudience());
+            mName.setText(mSite.getName());
+            ImageLoader.getInstance().displayImage(mSite.getIcon_url(),
+                    mSiteIcon);
+            mRootView.setBackgroundColor(mSite.getStyling().getTagBackgroundColor());
+            mName.setTextColor(mSite.getStyling().getLinkColor());
         }
     }
 

@@ -1,6 +1,5 @@
 package com.droidcat.stackranger.ui;
 
-import net.sf.stackwrap4j.entities.Question;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -8,40 +7,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-
 import com.droidcat.stackranger.adapter.QuestionAdapter;
+import net.sf.stackwrap4j.entities.Question;
 
 public class QuestionsFragment extends ListFragment {
 
-    private QuestionAdapter mQuestionAdapter;
-
-    private Callbacks mCallbacks;
-
+    public static final String TAG_BACKGROUND = "TAG_BG";
+    public static final String TAG_FOREGROUND = "TAG_FG";
     /**
      * The fragment argument representing the item ID that this fragment
      * represents.
      */
     public static final String ARG_SITE = "SITE";
-
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
-    public QuestionsFragment() {
-    }
-
-    /**
-     * A callback interface that all activities containing this fragment must
-     * implement. This mechanism allows activities to be notified of item
-     * selections.
-     */
-    public interface Callbacks {
-        /**
-         * Callback for when an item has been selected.
-         */
-        public void onQuestionSelected(Question question);
-    }
-
     /**
      * A dummy implementation of the {@link Callbacks} interface that does
      * nothing. Used only when this fragment is not attached to an activity.
@@ -52,17 +29,27 @@ public class QuestionsFragment extends ListFragment {
             // TODO Auto-generated method stub
         }
     };
+    private QuestionAdapter mQuestionAdapter;
+    private Callbacks mCallbacks;
+
+    /**
+     * Mandatory empty constructor for the fragment manager to instantiate the
+     * fragment (e.g. upon screen orientation changes).
+     */
+    public QuestionsFragment() {
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        if (getArguments().containsKey(ARG_SITE)) {
+        Bundle bundle = getArguments();
+        if (bundle != null && bundle.containsKey(ARG_SITE)) {
             // Load the dummy content specified by the fragment
             // arguments. In a real-world scenario, use a Loader
             // to load content from a content provider.
             String site = getArguments().getString(ARG_SITE);
-            mQuestionAdapter = new QuestionAdapter(getActivity(), site);
+            mQuestionAdapter = new QuestionAdapter(getActivity(),getActivity().getLayoutInflater(), site);
+            mQuestionAdapter.setBgandFg(bundle.getInt(TAG_BACKGROUND), bundle.getInt(TAG_FOREGROUND));
             setListAdapter(mQuestionAdapter);
         }
     }
@@ -87,7 +74,7 @@ public class QuestionsFragment extends ListFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
         View rootView = inflater.inflate(android.R.layout.list_content,
                 container, false);
 
@@ -101,6 +88,18 @@ public class QuestionsFragment extends ListFragment {
         super.onListItemClick(l, v, position, id);
         mCallbacks.onQuestionSelected((Question) mQuestionAdapter
                 .getItem(position));
+    }
+
+    /**
+     * A callback interface that all activities containing this fragment must
+     * implement. This mechanism allows activities to be notified of item
+     * selections.
+     */
+    public interface Callbacks {
+        /**
+         * Callback for when an item has been selected.
+         */
+        public void onQuestionSelected(Question question);
     }
 
 }

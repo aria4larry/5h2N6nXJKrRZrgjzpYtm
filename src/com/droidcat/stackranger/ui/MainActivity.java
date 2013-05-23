@@ -1,9 +1,9 @@
 package com.droidcat.stackranger.ui;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
-
 import com.droidcat.stackranger.R;
 import com.droidcat.stackranger.cache.SitesCache;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
@@ -13,7 +13,6 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
-
 import net.sf.stackwrap4j.entities.Question;
 import net.sf.stackwrap4j.stackauth.entities.Site;
 
@@ -36,6 +35,7 @@ public class MainActivity extends SlidingFragmentActivity implements
         SitesListFragment.Callbacks, QuestionsFragment.Callbacks {
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
     DisplayImageOptions defaultDisplayImageOptions;
+    SlidingMenu sm;
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
      * device.
@@ -60,6 +60,10 @@ public class MainActivity extends SlidingFragmentActivity implements
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Bundle arguments = new Bundle();
         arguments.putString(QuestionsFragment.ARG_SITE, "stackoverflow");
+        arguments.putInt(QuestionsFragment.TAG_BACKGROUND, Color.parseColor("#E0EAF1"));
+        arguments.putInt(QuestionsFragment.TAG_FOREGROUND, Color.parseColor("#3E6D8E"));
+        QuestionsFragment fragment = new QuestionsFragment();
+        fragment.setArguments(arguments);
         QuestionsFragment questionsFragment = new QuestionsFragment();
         questionsFragment.setArguments(arguments);
         getSupportFragmentManager().beginTransaction()
@@ -79,7 +83,6 @@ public class MainActivity extends SlidingFragmentActivity implements
         // TODO: If exposing deep links into your app, handle intents here.
     }
 
-    SlidingMenu sm;
     private void setupSlidingMenu() {
         sm = getSlidingMenu();
         sm.setMode(SlidingMenu.LEFT_RIGHT);
@@ -114,6 +117,8 @@ public class MainActivity extends SlidingFragmentActivity implements
         mEndPoint = site.getApi_site_parameter();
         Bundle arguments = new Bundle();
         arguments.putString(QuestionsFragment.ARG_SITE, mEndPoint);
+        arguments.putInt(QuestionsFragment.TAG_BACKGROUND, site.getStyling().getTagBackgroundColor());
+        arguments.putInt(QuestionsFragment.TAG_FOREGROUND, site.getStyling().getTagForegroundColor());
         QuestionsFragment fragment = new QuestionsFragment();
         fragment.setArguments(arguments);
         getSupportFragmentManager().beginTransaction()

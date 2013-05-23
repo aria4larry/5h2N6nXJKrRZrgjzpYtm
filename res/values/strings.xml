@@ -56,6 +56,6 @@
 		\'AS IS\' BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
 		either express or implied. See the License for the specific 
 		language governing permissions and limitations under the License.</string>
-    <string name="no_email">Sorry, I couldn\'t find any e-mail apps on your phone</string><string name="no_data">No data pull down to refresh</string><string name="click_to_load_more">Click to load more</string>
+    <string name="no_email">Sorry, I couldn\'t find any e-mail apps on your phone</string><string name="no_data">No data pull down to refresh</string><string name="click_to_load_more">Click to load more</string><string name="votes">votes</string><string name="answersL">answers</string><string name="viewsL">views</string>
     
 </resources>

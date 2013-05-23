@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:descendantFocusability="blocksDescendants"
+              android:layout_height="match_parent" android:orientation="vertical" android:paddingTop="2dp"
+              android:paddingBottom="2dp">
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="12"
+                    android:id="@+id/q_vote" android:textStyle="bold" android:padding="3dp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/votes"
+                    android:id="@+id/votesL" android:layout_marginLeft="3dp" android:textColor="@color/hint_gray"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="8"
+                    android:id="@+id/answerN" android:textStyle="bold" android:layout_marginLeft="5dp"
+                    android:background="@color/color_0ans" android:padding="3dp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/answersL"
+                    android:id="@+id/answersL"
+                    android:background="@color/color_0ans"
+                    android:textColor="@color/hint_gray" android:padding="3dp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="25"
+                    android:id="@+id/viewsN" android:textStyle="bold" android:layout_marginLeft="5dp"
+                    android:padding="3dp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="@string/viewsL"
+                    android:id="@+id/viewsL" android:layout_marginLeft="3dp" android:textColor="@color/hint_gray"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="How to write efficialt Android applications?"
+            android:id="@+id/question_title" android:layout_marginLeft="5dp" android:layout_marginRight="5dp"/>"
+    android:layout_marginLeft="5dp" android:padding="3dp"/>
+    <HorizontalScrollView android:layout_height="wrap_content" android:layout_width="match_parent">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tags"
+                android:layout_marginLeft="5dp" android:layout_marginRight="5dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Android"
+                    android:id="@+id/tag"
+                    android:background="#999" android:padding="3dp" android:layout_marginLeft="3dp"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

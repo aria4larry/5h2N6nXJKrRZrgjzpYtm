@@ -17,11 +17,13 @@ public class AsyncTaskGetQuestions extends
 
     private Handler mHandler;
     private String mSite;
-
-    public AsyncTaskGetQuestions(Handler handler, String site) {
+    final static String FILTER_DEFAULT_ADD_VOTES = "!bULULQb52eMgYV";
+    final QuestionQuery mQuestionQuery;
+    public AsyncTaskGetQuestions(Handler handler, String site,QuestionQuery questionQuery) {
         super();
         mHandler = handler;
         mSite = site;
+        mQuestionQuery = questionQuery;
     }
 
     @Override
@@ -32,10 +34,10 @@ public class AsyncTaskGetQuestions extends
     @Override
     protected List<Question> doInBackground(String... params) {
         StackWrapper stackWrapper = new StackWrapper(mSite, Config.APIKEY);
-        QuestionQuery qq = new QuestionQuery();
-        Log.i("error", qq.getUrlParams());
+        mQuestionQuery.setFilter(FILTER_DEFAULT_ADD_VOTES);
+        Log.i("error", mQuestionQuery.getUrlParams());
         try {
-            return stackWrapper.listQuestions(qq);
+            return stackWrapper.listQuestions(mQuestionQuery);
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

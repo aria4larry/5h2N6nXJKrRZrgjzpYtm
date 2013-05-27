@@ -128,10 +128,10 @@ public class SitesListFragment extends ListFragment implements
                     mSites.addAll(sites);
                     mSitesAdapter.setData(mSites);
                     mSitesAdapter.notifyDataSetChanged();
-                    mPullToRefreshListView.onRefreshComplete();
                 } else {
                     Utilis.showToast(getActivity(), R.string.toast_no_data_fenched, Toast.LENGTH_LONG);
                 }
+                mPullToRefreshListView.onRefreshComplete();
 
             }
         };

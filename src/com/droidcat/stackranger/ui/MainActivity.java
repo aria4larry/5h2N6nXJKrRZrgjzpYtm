@@ -85,22 +85,23 @@ public class MainActivity extends SlidingFragmentActivity implements
 
     private void setupSlidingMenu() {
         sm = getSlidingMenu();
-        sm.setMode(SlidingMenu.LEFT_RIGHT);
+        sm.setMode(SlidingMenu.LEFT);
+        //TODO:add right sliding menu for user account infomation
         sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
         sm.setShadowWidthRes(R.dimen.shadow_width);
         sm.setShadowDrawable(R.drawable.shadow);
         sm.setBehindOffsetRes(R.dimen.slidingmenu_offset);
         sm.setFadeDegree(0.35f);
-        sm.setSecondaryMenu(R.layout.menu_frame);
-        sm.setSecondaryShadowDrawable(R.drawable.shadow);
+//        sm.setSecondaryMenu(R.layout.menu_frame);
+//        sm.setSecondaryShadowDrawable(R.drawable.shadow);
         SitesListFragment sitesListFragment = new SitesListFragment();
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.menu_frame, sitesListFragment).commit();
-        sm.setSecondaryMenu(R.layout.menu_frame_two);
-        sm.setSecondaryShadowDrawable(R.drawable.shadowright);
-        sitesListFragment = new SitesListFragment();
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.menu_frame_two, sitesListFragment).commit();
+//        sm.setSecondaryMenu(R.layout.menu_frame_two);
+//        sm.setSecondaryShadowDrawable(R.drawable.shadowright);
+//        sitesListFragment = new SitesListFragment();
+//        getSupportFragmentManager().beginTransaction()
+//                .replace(R.id.menu_frame_two, sitesListFragment).commit();
     }
 
     /**

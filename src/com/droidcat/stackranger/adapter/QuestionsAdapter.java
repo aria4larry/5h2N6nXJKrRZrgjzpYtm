@@ -2,9 +2,7 @@ package com.droidcat.stackranger.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.os.Handler;
-import android.os.Message;
-import android.util.Log;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,36 +10,28 @@ import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.droidcat.stackranger.R;
-import com.droidcat.stackranger.newwork.AsyncTaskGetQuestions;
 import com.droidcat.stackranger.util.Utilis;
 import net.sf.stackwrap4j.entities.Question;
 
 import java.util.List;
 
-public class QuestionAdapter extends BaseAdapter {
+public class QuestionsAdapter extends BaseAdapter {
     public static final String LOGTAG = SitesAdapter.class.getSimpleName();
-    final static String LOG_TAG = QuestionAdapter.class.getSimpleName();
+    final static String LOG_TAG = QuestionsAdapter.class.getSimpleName();
     List<Question> mQuestions;
-    Handler mHandler;
     LayoutInflater mInflater;
+    int mAnsweredColor;
+    int mUnansweredColor;
 
     @SuppressLint("HandlerLeak")
-    public QuestionAdapter(Context context, LayoutInflater inflater, String site) {
+    public QuestionsAdapter(Context context, LayoutInflater inflater) {
         mInflater = inflater;
-        mHandler = new Handler() {
-            @SuppressWarnings("unchecked")
-            @Override
-            public void handleMessage(Message msg) {
-                mQuestions = (List<Question>) msg.obj;
-                if (mQuestions != null) {
-                    Log.i(LOGTAG, "mQuestions  size" + mQuestions.size());
-                }
-                notifyDataSetChanged();
-            }
-        };
-        new AsyncTaskGetQuestions(mHandler, site).execute();
         QuestionViewHolder.sContext = context;
         QuestionViewHolder.dp3px = Utilis.dip2px(context, 3f);
+    }
+
+    public void setData(List<Question> questions) {
+        mQuestions = questions;
     }
 
     public void setBgandFg(int bg, int fg) {
@@ -70,11 +60,20 @@ public class QuestionAdapter extends BaseAdapter {
         return holder.mRootView;
     }
 
+    public void setColors(int answered, int unanswered) {
+        mAnsweredColor = answered;
+        mUnansweredColor = unanswered;
+        QuestionViewHolder.sAnsweredColor = mAnsweredColor;
+        QuestionViewHolder.sUnansweredColor = mUnansweredColor;
+    }
+
     static class QuestionViewHolder {
         static int sbg;
         static int sfg;
         static Context sContext;
         static int dp3px;
+        static int sAnsweredColor;
+        static int sUnansweredColor;
         Question mQuestion;
         TextView mVotesN;
         TextView mAnswersN;
@@ -84,6 +83,11 @@ public class QuestionAdapter extends BaseAdapter {
         LinearLayout mTags;
         TextView mTag;
         View mRootView;
+        static int sColorAnsweredAccepted;
+
+        static {
+            sColorAnsweredAccepted = Color.parseColor("#E1E818");
+        }
 
         public static QuestionViewHolder createOrRecycle(LayoutInflater inflater,
                                                          View convertView, Question question) {
@@ -118,6 +122,22 @@ public class QuestionAdapter extends BaseAdapter {
             mTag.setTextColor(sfg);
             mVotesN.setText(Integer.toString(mQuestion.getUp_vote_count() - mQuestion.getDown_vote_count()));
             mAnswersN.setText(Integer.toString(mQuestion.getAnswer_count()));
+            if (mQuestion.getAnswer_count() > 0) {
+                mAnswersL.setBackgroundColor(sAnsweredColor);
+                mAnswersN.setBackgroundColor(sAnsweredColor);
+                if (mQuestion.getAccepted_answer_id() != -1) {
+                    mAnswersL.setTextColor(sColorAnsweredAccepted);
+                    mAnswersN.setTextColor(sColorAnsweredAccepted);
+                } else {
+                    mAnswersL.setTextColor(Color.WHITE);
+                    mAnswersN.setTextColor(Color.WHITE);
+                }
+            } else {
+                mAnswersL.setBackgroundColor(Color.TRANSPARENT);
+                mAnswersN.setBackgroundColor(Color.TRANSPARENT);
+                mAnswersL.setTextColor(sUnansweredColor);
+                mAnswersN.setTextColor(sUnansweredColor);
+            }
             mViewsN.setText(Integer.toString(mQuestion.getView_count()));
             mTitle.setText(mQuestion.getTitle());
             updateTags(mQuestion.getTags());

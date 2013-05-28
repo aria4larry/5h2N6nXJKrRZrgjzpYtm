@@ -5,7 +5,7 @@
               android:descendantFocusability="blocksDescendants"
               android:layout_height="match_parent" android:orientation="vertical" android:paddingTop="2dp"
               android:paddingBottom="2dp">
-    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+    <HorizontalScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
 
         <LinearLayout
                 android:layout_width="fill_parent"
@@ -36,7 +36,7 @@
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:text="@string/answersL"
                     android:id="@+id/answersL"
-                    android:background="@color/color_0ans"
+                    android:background="@color/color_has_ans"
                     android:textColor="@color/hint_gray" android:padding="3dp"/>
             <TextView
                     android:layout_width="wrap_content"

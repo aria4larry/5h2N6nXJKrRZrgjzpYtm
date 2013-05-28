@@ -16,8 +16,9 @@ import net.sf.stackwrap4j.entities.Question;
 import java.util.List;
 
 public class QuestionsAdapter extends BaseAdapter {
-    public static final String LOGTAG = SitesAdapter.class.getSimpleName();
-    final static String LOG_TAG = QuestionsAdapter.class.getSimpleName();
+    final static String LOGTAG = QuestionsAdapter.class.getSimpleName();
+    static final int type_normal = 1;
+    static final int type_progress = 2;
     List<Question> mQuestions;
     LayoutInflater mInflater;
     int mAnsweredColor;
@@ -41,7 +42,7 @@ public class QuestionsAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return mQuestions == null ? 0 : mQuestions.size();
+        return mQuestions == null ? 0 : mQuestions.size() + 1;
     }
 
     @Override
@@ -50,14 +51,33 @@ public class QuestionsAdapter extends BaseAdapter {
     }
 
     @Override
-    public long getItemId(int location) {
-        return mQuestions.get(location).hashCode();
+    public int getItemViewType(int position) {
+        if (position == getCount() - 1) {
+            return type_progress;
+        } else {
+            return type_normal;
+        }
     }
 
     @Override
+    public long getItemId(int location) {
+        return mQuestions.get(location).hashCode();
+    }
+    View mProgressing = null ;
+    @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        QuestionViewHolder holder = QuestionViewHolder.createOrRecycle(mInflater, convertView, mQuestions.get(position));
-        return holder.mRootView;
+        switch (getItemViewType(position)) {
+            case type_progress:
+                if (mProgressing == null){
+                    mProgressing = mInflater.inflate(R.layout.footer_loading_view,null);
+                }
+                return mProgressing;
+            case type_normal:
+            default:
+                QuestionViewHolder holder = QuestionViewHolder.createOrRecycle(mInflater, convertView, mQuestions.get(position));
+                return holder.mRootView;
+        }
+
     }
 
     public void setColors(int answered, int unanswered) {
@@ -74,6 +94,12 @@ public class QuestionsAdapter extends BaseAdapter {
         static int dp3px;
         static int sAnsweredColor;
         static int sUnansweredColor;
+        static int sColorAnsweredAccepted;
+
+        static {
+            sColorAnsweredAccepted = Color.parseColor("#E1E818");
+        }
+
         Question mQuestion;
         TextView mVotesN;
         TextView mAnswersN;
@@ -83,16 +109,11 @@ public class QuestionsAdapter extends BaseAdapter {
         LinearLayout mTags;
         TextView mTag;
         View mRootView;
-        static int sColorAnsweredAccepted;
-
-        static {
-            sColorAnsweredAccepted = Color.parseColor("#E1E818");
-        }
 
         public static QuestionViewHolder createOrRecycle(LayoutInflater inflater,
                                                          View convertView, Question question) {
             QuestionViewHolder holder;
-            if (convertView == null) {
+            if (convertView == null || convertView.getTag()==null) {
                 convertView = inflater.inflate(R.layout.question_list_item, null);
                 holder = new QuestionViewHolder();
                 holder.mRootView = convertView;

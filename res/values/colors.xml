@@ -1,3 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<color name="hint_gray">#888</color><color name="question">#00f</color><color name="color_0ans">#f96</color></resources>
+    <color name="hint_gray">#888</color>
+    <color name="question">#00f</color>
+    <color name="color_0ans">#9A4444</color>
+    <color name="color_has_ans">#75845C</color>
+</resources>

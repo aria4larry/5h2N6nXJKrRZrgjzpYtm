@@ -32,29 +32,27 @@
   </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_LOG_LEVEL" value="INFO" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="stackranger" />
   </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/net/sf/stackwrap4j/stackauth/entities/Styling.java" line="46" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db2fb00e-c687-4592-a735-885c25dd303c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/color/stackcolors.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/droidcat/stackranger/adapter/QuestionAdapter.java" afterPath="$PROJECT_DIR$/src/com/droidcat/stackranger/adapter/QuestionsAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/footer_loading_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/droidcat/stackranger/newwork/AsyncTaskGetQuestion.java" afterPath="$PROJECT_DIR$/src/com/droidcat/stackranger/newwork/AsyncTaskGetQuestion.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/droidcat/stackranger/newwork/AsyncTaskGetQuestions.java" afterPath="$PROJECT_DIR$/src/com/droidcat/stackranger/newwork/AsyncTaskGetQuestions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/droidcat/stackranger/ui/MainActivity.java" afterPath="$PROJECT_DIR$/src/com/droidcat/stackranger/ui/MainActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/droidcat/stackranger/ui/QuestionFragment.java" afterPath="$PROJECT_DIR$/src/com/droidcat/stackranger/ui/QuestionFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/droidcat/stackranger/adapter/QuestionsAdapter.java" afterPath="$PROJECT_DIR$/src/com/droidcat/stackranger/adapter/QuestionsAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/droidcat/stackranger/ui/QuestionsFragment.java" afterPath="$PROJECT_DIR$/src/com/droidcat/stackranger/ui/QuestionsFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/droidcat/stackranger/ui/SitesListFragment.java" afterPath="$PROJECT_DIR$/src/com/droidcat/stackranger/ui/SitesListFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/question.xml" afterPath="$PROJECT_DIR$/res/layout/question.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/question_list_item.xml" afterPath="$PROJECT_DIR$/res/layout/question_list_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="7727b67f-6be7-48b5-a3fa-10dee242cfc3" name="pull down to refresh" comment="" />
     <ignored path="StackRanger.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1369668896016" ignored="false" />
+    <file path="/Dummy.txt" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1369751503591" ignored="false" />
     <file path="$PROJECT_DIR$/../android-libs/ActionBarSherlock-master/actionbarsherlock/src/com/actionbarsherlock/internal/view/menu/MenuBuilder.java" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1368674139250" ignored="false" />
     <file path="$PROJECT_DIR$/../android-libs/ActionBarSherlock-master/actionbarsherlock/src/com/actionbarsherlock/internal/view/menu/BaseMenuPresenter.java" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1368674139250" ignored="false" />
     <file path="$PROJECT_DIR$/../android-libs/ActionBarSherlock-master/actionbarsherlock/src/com/actionbarsherlock/internal/view/menu/SubMenuWrapper.java" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1368674139250" ignored="false" />
@@ -112,10 +110,12 @@
     <file path="/a.xml" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1369147253730" ignored="false" />
     <file path="/QuestionAdapter.java" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1369326619122" ignored="false" />
     <file path="/question_list_item.xml" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1369326559622" ignored="false" />
-    <file path="/QuestionsFragment.java" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1369669045654" ignored="false" />
-    <file path="/QuestionsAdapter.java" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1369668608878" ignored="false" />
-    <file path="/AsyncTaskGetQuestions.java" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1369664484128" ignored="false" />
+    <file path="/QuestionsFragment.java" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1369756126876" ignored="false" />
+    <file path="/QuestionsAdapter.java" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1369756460336" ignored="false" />
+    <file path="/AsyncTaskGetQuestions.java" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1369753389208" ignored="false" />
     <file path="/colors.xml" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1369666882437" ignored="false" />
+    <file path="/AsyncTaskGetQuestion.java" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1369752870121" ignored="false" />
+    <file path="/QuestionFragment.java" changelist="db2fb00e-c687-4592-a735-885c25dd303c" time="1369753181761" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +135,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -171,7 +172,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -181,36 +181,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="QuestionsAdapter.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="QuestionsAdapter.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/droidcat/stackranger/adapter/QuestionsAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="132" column="54" selection-start="4931" selection-end="4931" vertical-scroll-proportion="-9.24138">
+            <state line="18" column="0" selection-start="544" selection-end="544" vertical-scroll-proportion="0.16435987">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Question.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/net/sf/stackwrap4j/entities/Question.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="251" column="36" selection-start="8622" selection-end="8640" vertical-scroll-proportion="-6.62069">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuestionsFragment.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="QuestionsFragment.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/droidcat/stackranger/ui/QuestionsFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="64" selection-start="5199" selection-end="5199" vertical-scroll-proportion="3.0333333">
+            <state line="158" column="54" selection-start="6480" selection-end="6480" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1601#1759#0" expanded="true" />
                 <element signature="e#1752#1753#0" expanded="true" />
-                <element signature="e#2746#3469#0" expanded="true" />
-                <element signature="e#2778#2808#0" expanded="true" />
-                <element signature="e#3454#3455#0" expanded="true" />
+                <element signature="e#2778#3935#0" expanded="true" />
+                <element signature="e#2810#2840#0" expanded="true" />
+                <element signature="e#3920#3921#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AsyncTaskGetQuestions.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/droidcat/stackranger/newwork/AsyncTaskGetQuestions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -241,22 +241,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/droidcat/stackranger/cache/SitesCache.java" />
-        <option value="$PROJECT_DIR$/src/com/droidcat/stackranger/util/FileUtils.java" />
         <option value="$PROJECT_DIR$/src/com/droidcat/stackranger/adapter/SitesAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/droidcat/stackranger/util/Utilis.java" />
         <option value="$PROJECT_DIR$/src/com/droidcat/stackranger/adapter/QuestionAdapter.java" />
         <option value="$PROJECT_DIR$/src/com/droidcat/stackranger/ui/SitesListFragment.java" />
         <option value="$PROJECT_DIR$/src/com/droidcat/stackranger/ui/MainActivity.java" />
         <option value="$PROJECT_DIR$/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/res/layout/question.xml" />
-        <option value="$PROJECT_DIR$/src/com/droidcat/stackranger/ui/QuestionFragment.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/com/droidcat/stackranger/newwork/AsyncTaskGetQuestions.java" />
         <option value="$PROJECT_DIR$/res/layout/question_list_item.xml" />
         <option value="$PROJECT_DIR$/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/src/com/droidcat/stackranger/adapter/QuestionsAdapter.java" />
+        <option value="$PROJECT_DIR$/res/layout/footer_loading_view.xml" />
+        <option value="$PROJECT_DIR$/res/layout/question.xml" />
+        <option value="$PROJECT_DIR$/src/com/droidcat/stackranger/newwork/AsyncTaskGetQuestion.java" />
+        <option value="$PROJECT_DIR$/src/com/droidcat/stackranger/ui/QuestionFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/droidcat/stackranger/newwork/AsyncTaskGetQuestions.java" />
         <option value="$PROJECT_DIR$/src/com/droidcat/stackranger/ui/QuestionsFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/droidcat/stackranger/adapter/QuestionsAdapter.java" />
       </list>
     </option>
   </component>
@@ -295,16 +295,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StackRanger" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -545,24 +535,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StackRanger" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="StackRanger" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -589,16 +561,26 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StackRanger" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="ExportedApkPath" value="$PROJECT_DIR$/StackRanger.apk" />
-    <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="ExportedApkPath" value="$PROJECT_DIR$/StackRanger.apk" />
     <property name="ExportedModule" value="StackRanger" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../android-libs/Android-PullToRefresh/library" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -845,6 +827,7 @@
       <workItem from="1369313512430" duration="12574000" />
       <workItem from="1369326360681" duration="967000" />
       <workItem from="1369660417246" duration="8752000" />
+      <workItem from="1369750211350" duration="6450000" />
     </task>
     <task id="LOCAL-00001" summary="add image loader~~~ import to android studio ~~~">
       <created>1368679995250</created>
@@ -870,7 +853,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91496000" />
+    <option name="totallyTimeSpent" value="97946000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -899,22 +882,22 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17373572" sideWeight="0.16436252" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26182708" sideWeight="0.16436252" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33155793" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.92626727" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.28608924" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.46758103" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262317" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.76958525" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8356375" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.76958525" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.56989247" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288948" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963924" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.3297414" sideWeight="0.07349081" order="4" side_tool="false" content_ui="tabs" x="491" y="453" width="459" height="56" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21451876" sideWeight="0.16436252" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21451876" sideWeight="0.6666667" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297414" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -937,15 +920,15 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.46758103" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262317" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.76958525" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.8356375" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.56989247" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288948" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963924" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.3297414" sideWeight="0.07349081" order="4" side_tool="false" content_ui="tabs" x="491" y="453" width="459" height="56" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21451876" sideWeight="0.16436252" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21451876" sideWeight="0.6666667" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33333334" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1013,64 +996,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/net/sf/stackwrap4j/entities/MajorPost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="23" selection-start="3530" selection-end="3545" vertical-scroll-proportion="-12.034483">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/droidcat/stackranger/newwork/AsyncTaskGetSites.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="11" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../android-libs/Android-PullToRefresh/library/src/com/handmark/pulltorefresh/library/PullToRefreshBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="302" column="22" selection-start="8875" selection-end="8875" vertical-scroll-proportion="3.3377266">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/questions_list.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/sites_list.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/sf/stackwrap4j/query/QuestionQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="25" selection-start="2130" selection-end="2130" vertical-scroll-proportion="0.33225808">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/sf/stackwrap4j/query/PageQuery.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="77" column="21" selection-start="2300" selection-end="2300" vertical-scroll-proportion="0.33278418">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/droidcat/stackranger/newwork/AsyncTaskGetQuestions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="22" selection-start="685" selection-end="685" vertical-scroll-proportion="0.057660624">
           <folding />
         </state>
       </provider>
@@ -1081,13 +1009,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/droidcat/stackranger/adapter/SitesAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="33" selection-start="3152" selection-end="3152" vertical-scroll-proportion="2.785832">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,36 +1031,101 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/sf/stackwrap4j/entities/Question.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="251" column="36" selection-start="8622" selection-end="8640" vertical-scroll-proportion="-6.62069">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/droidcat/stackranger/adapter/QuestionsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="54" selection-start="4931" selection-end="4931" vertical-scroll-proportion="-9.24138">
+        <state line="251" column="36" selection-start="8622" selection-end="8640" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/sdk/platforms/android-17/android.jar!/java/lang/Override.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="18" selection-start="306" selection-end="306" vertical-scroll-proportion="0.21451613">
+        <state line="8" column="18" selection-start="306" selection-end="306" vertical-scroll-proportion="0.21451613" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/question.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../android-libs/SlidingMenu/library/libs/android-support-v4.jar!/android/support/v4/app/Fragment.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="108" column="25" selection-start="4219" selection-end="4219" vertical-scroll-proportion="0.36966825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/droidcat/stackranger/ui/QuestionFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="123" column="0" selection-start="4691" selection-end="4691" vertical-scroll-proportion="2.1258066">
+          <folding>
+            <element signature="e#1462#2380#0" expanded="true" />
+            <element signature="e#2373#2374#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/footer_loading_view.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../android-libs/Android-PullToRefresh/library/src/com/handmark/pulltorefresh/library/PullToRefreshBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="6" selection-start="3124" selection-end="3124" vertical-scroll-proportion="1.3459637">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/droidcat/stackranger/adapter/SitesAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="9" selection-start="698" selection-end="698" vertical-scroll-proportion="0.31301484">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/droidcat/stackranger/newwork/AsyncTaskGetQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="24" selection-start="919" selection-end="919" vertical-scroll-proportion="0.5222405">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/droidcat/stackranger/newwork/AsyncTaskGetQuestions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="542" selection-end="542" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/droidcat/stackranger/ui/QuestionsFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="64" selection-start="5199" selection-end="5199" vertical-scroll-proportion="3.0333333">
+        <state line="158" column="54" selection-start="6480" selection-end="6480" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1601#1759#0" expanded="true" />
             <element signature="e#1752#1753#0" expanded="true" />
-            <element signature="e#2746#3469#0" expanded="true" />
-            <element signature="e#2778#2808#0" expanded="true" />
-            <element signature="e#3454#3455#0" expanded="true" />
+            <element signature="e#2778#3935#0" expanded="true" />
+            <element signature="e#2810#2840#0" expanded="true" />
+            <element signature="e#3920#3921#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/droidcat/stackranger/adapter/QuestionsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="544" selection-end="544" vertical-scroll-proportion="0.16435987">
+          <folding />
         </state>
       </provider>
     </entry>

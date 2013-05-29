@@ -1,16 +1,5 @@
 package com.droidcat.stackranger.ui;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.List;
-
-import net.sf.jtpl.Template;
-import net.sf.stackwrap4j.entities.Comment;
-import net.sf.stackwrap4j.entities.Question;
-import net.sf.stackwrap4j.entities.User;
-import net.sf.stackwrap4j.json.JSONException;
-import net.sf.stackwrap4j.utils.StackUtils;
 import android.annotation.SuppressLint;
 import android.content.res.AssetManager;
 import android.os.Bundle;
@@ -24,35 +13,59 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
+import android.widget.ProgressBar;
 import com.droidcat.stackranger.R;
 import com.droidcat.stackranger.newwork.AsyncTaskGetQuestion;
+import net.sf.jtpl.Template;
+import net.sf.stackwrap4j.entities.Comment;
+import net.sf.stackwrap4j.entities.Question;
+import net.sf.stackwrap4j.entities.User;
+import net.sf.stackwrap4j.json.JSONException;
+import net.sf.stackwrap4j.utils.StackUtils;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 @SuppressLint("HandlerLeak")
 public class QuestionFragment extends Fragment {
-    private WebView mWebView;
     public static final String KEY_QUESTION_ID = "QUESTION_ID";
-    private Question mQuestion;
-    private int mQuestionId;
-    private static String sTemplateString;
     private static final String LOG_TAG = QuestionFragment.class
             .getSimpleName();
+    private static String sTemplateString;
+    private WebView mWebView;
+    private ProgressBar mProgressBar;
+    private Question mQuestion;
+    private int mQuestionId;
     private String mEndPoint;
     private boolean mHaveComment = false;
-
     private Handler mHandler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
-            Log.d(LOG_TAG, "handleMessage question~~~");
-            Log.d(LOG_TAG, "msg.obj question~~~" + msg.obj);
-            if (msg.obj != null) {
-                Log.d(LOG_TAG, "msg.obj != null~");
-                mQuestion = (Question) msg.obj;
-                mHaveComment = msg.what == 1;
-                updateView();
+            switch (msg.what){
+                case AsyncTaskGetQuestion.MSG_LOADING:
+                    mProgressBar.setVisibility(View.VISIBLE);
+                    break;
+                case AsyncTaskGetQuestion.MSG_UPDATE_PROGRESS:
+                    mProgressBar.setProgress(msg.arg1);
+                    break;
+                default:
+                    Log.d(LOG_TAG, "handleMessage question~~~");
+                    Log.d(LOG_TAG, "msg.obj question~~~" + msg.obj);
+                    if (msg.obj != null && !isDetached()) {
+                        Log.d(LOG_TAG, "msg.obj != null~");
+                        mQuestion = (Question) msg.obj;
+                        mHaveComment = msg.what == AsyncTaskGetQuestion.MSG_HAVE_COMMENT;
+                        updateView();
+                    }
             }
         }
     };
+
+    public QuestionFragment() {
+
+    }
 
     @Override
     public void onDetach() {
@@ -82,14 +95,11 @@ public class QuestionFragment extends Fragment {
         }
     }
 
-    public QuestionFragment() {
-
-    }
-
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        mProgressBar = (ProgressBar)getActivity().findViewById(R.id.progressBar);
         mWebView = (WebView) getActivity().findViewById(R.id.webview);
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new SampleWebViewClient());
@@ -106,7 +116,7 @@ public class QuestionFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
         return inflater.inflate(R.layout.question, container, false);
     }
 

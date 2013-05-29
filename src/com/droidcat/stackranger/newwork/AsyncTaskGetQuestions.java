@@ -15,11 +15,14 @@ import java.util.List;
 public class AsyncTaskGetQuestions extends
         AsyncTask<String, Integer, List<Question>> {
 
-    private Handler mHandler;
-    private String mSite;
+    public static final int MSG_LOADING = 3;
+    public static final int MSG_LOADING_COMPLETE = 4;
     final static String FILTER_DEFAULT_ADD_VOTES = "!bULULQb52eMgYV";
     final QuestionQuery mQuestionQuery;
-    public AsyncTaskGetQuestions(Handler handler, String site,QuestionQuery questionQuery) {
+    private Handler mHandler;
+    private String mSite;
+
+    public AsyncTaskGetQuestions(Handler handler, String site, QuestionQuery questionQuery) {
         super();
         mHandler = handler;
         mSite = site;
@@ -27,8 +30,13 @@ public class AsyncTaskGetQuestions extends
     }
 
     @Override
+    protected void onPreExecute() {
+        mHandler.handleMessage(mHandler.obtainMessage(MSG_LOADING));
+    }
+
+    @Override
     protected void onPostExecute(List<Question> result) {
-        mHandler.handleMessage(mHandler.obtainMessage(0, result));
+        mHandler.handleMessage(mHandler.obtainMessage(MSG_LOADING_COMPLETE, result));
     }
 
     @Override

@@ -47,6 +47,7 @@ public class QuestionsFragment extends ListFragment
     };
     String mSite = null;
     Handler mHandler;
+    boolean mIsLoading = false;
     private QuestionsAdapter mQuestionAdapter;
     private Callbacks mCallbacks;
     private PullToRefreshListView mPullToRefreshListView;
@@ -74,15 +75,23 @@ public class QuestionsFragment extends ListFragment
                 @SuppressWarnings("unchecked")
                 @Override
                 public void handleMessage(Message msg) {
-                    List<Question> questions = (List<Question>) msg.obj;
-                    if (questions != null && questions.size() > 0) {
-                        mQuestions.addAll(questions);
-                        mQuestionAdapter.setData(mQuestions);
-                        mQuestionAdapter.notifyDataSetChanged();
-                    } else {
-                        Utilis.showToast(getActivity(), R.string.toast_no_data_fenched, Toast.LENGTH_LONG);
+                    switch (msg.what) {
+                        case AsyncTaskGetQuestions.MSG_LOADING:
+                            mIsLoading = true;
+                            break;
+                        case AsyncTaskGetQuestions.MSG_LOADING_COMPLETE:
+                            mIsLoading = false;
+                        default:
+                            List<Question> questions = (List<Question>) msg.obj;
+                            if (questions != null && questions.size() > 0) {
+                                mQuestions.addAll(questions);
+                                mQuestionAdapter.setData(mQuestions);
+                                mQuestionAdapter.notifyDataSetChanged();
+                            } else {
+                                Utilis.showToast(getActivity(), R.string.toast_no_data_fenched, Toast.LENGTH_LONG);
+                            }
+                            mPullToRefreshListView.onRefreshComplete();
                     }
-                    mPullToRefreshListView.onRefreshComplete();
                 }
             };
             mQuestionQuery = new QuestionQuery();
@@ -152,13 +161,21 @@ public class QuestionsFragment extends ListFragment
 
     @Override
     public void onLastItemVisible() {
-        Log.i(LOG_TAG, "onLastItemVisible");
-        loadMore();
+        if (!mIsLoading) {
+
+            Log.i(LOG_TAG, "onLastItemVisible");
+            loadMore();
+        }
+
     }
 
     @Override
     public void onRefresh(PullToRefreshBase refreshView) {
-        refresh();
+        if (!mIsLoading) {
+
+            refresh();
+        }
+
     }
 
     @SuppressLint("NewApi")

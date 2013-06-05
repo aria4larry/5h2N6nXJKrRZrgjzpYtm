@@ -19,7 +19,8 @@
     <dimen name="slidingmenu_offset">100dp</dimen>
     <dimen name="list_padding">10dp</dimen>
     <dimen name="shadow_width">15dp</dimen>
-
+    <dimen name="answer_slidingmenu_offset">15dp</dimen>
     <integer name="num_cols">1</integer>
+    <dimen name="title_bar_height">44.0dip</dimen>
 
 </resources>

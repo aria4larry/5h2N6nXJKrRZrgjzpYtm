@@ -3,8 +3,6 @@ package com.droidcat.stackranger.ui;
 import android.annotation.SuppressLint;
 import android.content.res.AssetManager;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,82 +12,47 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 import com.droidcat.stackranger.R;
-import com.droidcat.stackranger.newwork.AsyncTaskGetQuestion;
+import com.droidcat.stackranger.util.Utilis;
 import net.sf.jtpl.Template;
+import net.sf.stackwrap4j.entities.Answer;
 import net.sf.stackwrap4j.entities.Comment;
-import net.sf.stackwrap4j.entities.Question;
 import net.sf.stackwrap4j.entities.User;
 import net.sf.stackwrap4j.json.JSONException;
 import net.sf.stackwrap4j.utils.StackUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.List;
 
 @SuppressLint("HandlerLeak")
-public class QuestionFragment extends Fragment {
-    public static final String KEY_QUESTION_ID = "QUESTION_ID";
-    private static final String LOG_TAG = QuestionFragment.class
+public class AnswerFragment extends Fragment {
+    private static final String LOG_TAG = AnswerFragment.class
             .getSimpleName();
     private static String sTemplateString;
-    String questinWebSource = null;
-    AnswerFragment.onAnswerLoaded mOnAnswerLoaded;
+    int mAnswerIndex = 0;
+    List<Answer> mAnswers;
     private WebView mWebView;
     private ProgressBar mProgressBar;
-    private Question mQuestion;
-    private int mQuestionId;
-    private String mEndPoint;
+    private String mEndPoint = "";
     private boolean mHaveComment = false;
-    private Handler mHandler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case AsyncTaskGetQuestion.MSG_LOADING:
-                    mProgressBar.setVisibility(View.VISIBLE);
-                    break;
-                default:
-                    Log.d(LOG_TAG, "handleMessage question~~~");
-                    Log.d(LOG_TAG, "msg.obj question~~~" + msg.obj);
-                    if (msg.obj != null && !isDetached()) {
-                        Log.d(LOG_TAG, "msg.obj != null~");
-                        mQuestion = (Question) msg.obj;
-                        mHaveComment = msg.what == AsyncTaskGetQuestion.MSG_HAVE_COMMENT;
-                        if (mQuestion.getAnswer_count() > 0) {
-                            try {
-                                mOnAnswerLoaded.onAnswerLoaded(mQuestion.getAnswers());
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                        //TODO:null pointer happend when calling this
-                        //if the activity is destroyed
-                        showQuestion();
-                    }
-            }
-        }
-    };
+    private HashMap<String, String> answerWebsourceMap;
 
-    public QuestionFragment() {
-
-    }
-
-    public void setOnAnswerLoadedCallBack(AnswerFragment.onAnswerLoaded onAnswerLoadedCallBack) {
-        mOnAnswerLoaded = onAnswerLoadedCallBack;
+    public AnswerFragment(List<Answer> answers) {
+        mAnswers = answers;
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        mHandler = null;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (QuestionFragment.sTemplateString == null) {
+        if (AnswerFragment.sTemplateString == null) {
             try {
                 InputStream iStream = getActivity().getAssets().open(
                         "question.html", AssetManager.ACCESS_BUFFER);
@@ -99,13 +62,14 @@ public class QuestionFragment extends Fragment {
                 while ((readLen = iStream.read(buffer)) != -1) {
                     sBuilder.append(new String(buffer, 0, readLen));
                 }
-                QuestionFragment.sTemplateString = sBuilder.toString();
-                Log.i(LOG_TAG, QuestionFragment.sTemplateString);
+                AnswerFragment.sTemplateString = sBuilder.toString();
+                Log.i(LOG_TAG, AnswerFragment.sTemplateString);
             } catch (IOException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
         }
+        answerWebsourceMap = new HashMap<String, String>();
     }
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -119,39 +83,58 @@ public class QuestionFragment extends Fragment {
         mWebView.setWebViewClient(new SampleWebViewClient());
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
-        if (getArguments().containsKey(KEY_QUESTION_ID)
-                && getArguments().containsKey(QuestionsFragment.ARG_SITE)) {
-            mQuestionId = getArguments().getInt(KEY_QUESTION_ID);
+        if (getArguments() != null && getArguments().containsKey(QuestionsFragment.ARG_SITE)) {
             mEndPoint = getArguments().getString(QuestionsFragment.ARG_SITE);
-            new AsyncTaskGetQuestion(getActivity(), mHandler, mEndPoint,
-                    mQuestionId).execute(mEndPoint);
         }
+        showNextAnswer();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.question, container, false);
+        return inflater.inflate(R.layout.answer, container, false);
     }
 
-    private void showQuestion() {
-        Log.d(LOG_TAG, "updateView");
-        getActivity().setTitle(mQuestion.getTitle());
-        if (questinWebSource == null) {
-            questinWebSource = loadQuestion(mQuestion);
+    private void showNextAnswer() {
+        if (mAnswers != null && mAnswerIndex < mAnswers.size()) {
+            Answer answer = mAnswers.get(mAnswerIndex);
+            String webSource = answerWebsourceMap.get(Integer.toString(answer.getPostId()));
+            if (webSource == null) {
+                webSource = loadAnswer(answer);
+                answerWebsourceMap.put(Integer.toString(answer.getPostId()), webSource);
+            }
+            Log.i(LOG_TAG, webSource);
+            mWebView.loadDataWithBaseURL("about:blank", webSource, "text/html",
+                    "utf-8", null);
+            mAnswerIndex++;
+        } else {
+            Utilis.showToast(getActivity(), "No more answers", Toast.LENGTH_SHORT);
         }
-        Log.i(LOG_TAG, questinWebSource);
-        mWebView.loadDataWithBaseURL("about:blank", questinWebSource, "text/html",
-                "utf-8", null);
-        mProgressBar.setVisibility(View.GONE);
     }
 
-    private String loadQuestion(Question question) {
+    private void showPreviousAnswer() {
+        mAnswerIndex--;
+        if (mAnswers != null && mAnswerIndex >= 0) {
+            Answer answer = mAnswers.get(mAnswerIndex);
+            String webSource = answerWebsourceMap.get(Integer.toString(answer.getPostId()));
+            if (webSource == null) {
+                webSource = loadAnswer(answer);
+                answerWebsourceMap.put(Integer.toString(answer.getPostId()), webSource);
+            }
+            Log.i(LOG_TAG, webSource);
+            mWebView.loadDataWithBaseURL("about:blank", webSource, "text/html",
+                    "utf-8", null);
+        } else {
+            Utilis.showToast(getActivity(), "No more answers", Toast.LENGTH_SHORT);
+        }
+    }
+
+    private String loadAnswer(Answer answer) {
         Template template = new Template(sTemplateString);
-        template.assign("TITLE", question.getTitle());
+        template.assign("TITLE", "");
         template.parse("main.title");
         try {
-            template.assign("QBODY", question.getBody());
+            template.assign("QBODY", answer.getBody());
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -159,24 +142,18 @@ public class QuestionFragment extends Fragment {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        User user = question.getOwner();
-        template.assign("QSCORE", String.valueOf(question.getScore()));
+        User user = answer.getOwner();
+        template.assign("QSCORE", String.valueOf(answer.getScore()));
         template.assign("QAHASH", String.valueOf(user.getEmailHash()));
         template.assign("QANAME", user.getDisplayName());
         template.assign("QAREP", StackUtils.formatRep(user.getReputation()));
         template.assign("QAID", String.valueOf(user.getId()));
         template.assign("ENDPOINT", mEndPoint);
         template.assign("QWHEN",
-                StackUtils.formatElapsedTime(question.getCreationDate()));
-        List<String> tags = question.getTags();
-        for (String tag : tags) {
-            template.assign("TAG", tag);
-            template.parse("main.post.tags.tag");
-        }
-        template.parse("main.post.tags");
+                StackUtils.formatElapsedTime(answer.getCreationDate()));
         try {
-            if (mHaveComment) {
-                for (Comment comment : question.getComments()) {
+            if (answer.getComments() != null) {
+                for (Comment comment : answer.getComments()) {
                     template.assign("CBODY", comment.getBody());
                     User user2 = comment.getOwner();
                     if (user2 != null) {
@@ -203,6 +180,11 @@ public class QuestionFragment extends Fragment {
         template.parse("main");
         return template.out();
     }
+
+    public interface onAnswerLoaded {
+        void onAnswerLoaded(List<Answer> answers);
+    }
+
     private static class SampleWebViewClient extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {

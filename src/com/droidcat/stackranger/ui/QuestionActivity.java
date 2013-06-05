@@ -1,14 +1,22 @@
 package com.droidcat.stackranger.ui;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-
 import com.droidcat.stackranger.R;
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
+import net.sf.stackwrap4j.entities.Answer;
 
-public class QuestionActivity extends FragmentActivity {
+import java.util.List;
+
+public class QuestionActivity extends SlidingFragmentActivity implements AnswerFragment.onAnswerLoaded {
+    SlidingMenu sm;
+    AnswerFragment answerFragment;
+    Bundle mExtras;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setBehindContentView(R.layout.menu_frame);
         setContentView(R.layout.content_frame);
         // Show the Up button in the action bar.
         getActionBar().setDisplayHomeAsUpEnabled(true);
@@ -25,11 +33,28 @@ public class QuestionActivity extends FragmentActivity {
         if (savedInstanceState == null) {
             // Create the detail fragment and add it to the activity
             // using a fragment transaction.
+            mExtras = getIntent().getExtras();
             QuestionFragment fragment = new QuestionFragment();
-            fragment.setArguments(getIntent().getExtras());
+            fragment.setArguments(mExtras);
+            fragment.setOnAnswerLoadedCallBack(this);
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.content_frame, fragment).commit();
         }
+    }
+
+    private void setupSlidingMenu(List<Answer> answers) {
+        sm = getSlidingMenu();
+        sm.setMode(SlidingMenu.RIGHT);
+        sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        sm.setTouchModeBehind(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        sm.setShadowWidthRes(R.dimen.shadow_width);
+        sm.setShadowDrawable(R.drawable.shadowright);
+        sm.setBehindOffsetRes(R.dimen.answer_slidingmenu_offset);
+        sm.setFadeDegree(0.35f);
+        answerFragment = new AnswerFragment(answers);
+        answerFragment.setArguments(mExtras);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.menu_frame, answerFragment).commit();
     }
 
     @Override
@@ -44,4 +69,8 @@ public class QuestionActivity extends FragmentActivity {
         super.onResume();
     }
 
+    @Override
+    public void onAnswerLoaded(List<Answer> answers) {
+        setupSlidingMenu(answers);
+    }
 }

@@ -1,6 +1,6 @@
 /**
  * StackWrap4J - A Java wrapper for the Stack Exchange API.
- * 
+ *
  * Copyright (c) 2010 Bill Cruise and Justin Nelson.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -24,10 +24,6 @@
 
 package net.sf.stackwrap4j.entities;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 import net.sf.stackwrap4j.StackWrapper;
 import net.sf.stackwrap4j.enums.Order;
 import net.sf.stackwrap4j.json.JSONArray;
@@ -36,90 +32,121 @@ import net.sf.stackwrap4j.json.JSONObject;
 import net.sf.stackwrap4j.json.PoliteJSONObject;
 import net.sf.stackwrap4j.query.QuestionQuery;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Represents a Question in the Stack Exchange family of sites.
- * 
+ *
  * @author Justin Nelson
  * @author Bill Cruise
  */
 public class Question extends MajorPost {
 
-    private static final String COMMENT_FILTER_STRING = "!bULULTgRQnYH9u";
-
-    /** The universal version identifier for a Serializable class. */
-    private static final long serialVersionUID = -4569236296352955838L;
-
-    /** The default page to be returned in results. */
+    /**
+     * The default page to be returned in results.
+     */
     public static final int DEFAULT_PAGE = 1;
-
-    /** The default size of the page returned in a result. */
+    /**
+     * The default size of the page returned in a result.
+     */
     public static final int DEFAULT_PAGE_SIZE = 30;
-
-    /** The default option to include the body of a Question. */
+    /**
+     * The default option to include the body of a Question.
+     */
     public static final boolean DEFAULT_BODY = false;
-
-    /** The default option to include the comments of a Question. */
+    /**
+     * The default option to include the comments of a Question.
+     */
     public static final boolean DEFAULT_COMMENTS = false;
-
-    /** The default order to return results. */
+    /**
+     * The default order to return results.
+     */
     public static final Order DEFAULT_ORDER = Order.ASC;
-
-    /** The default max date. */
+    /**
+     * The default max date.
+     */
     public static final long DEFAULT_TO_DATE = Long.MAX_VALUE;
-
-    /** The default min date. */
+    /**
+     * The default min date.
+     */
     public static final long DEFAULT_FROM_DATE = 1L;
-
-    /** The default in title value. */
+    /**
+     * The default in title value.
+     */
     public static final String DEFAULT_IN_TITLE = null;
-
-    /** The default string for tagged option. */
+    /**
+     * The default string for tagged option.
+     */
     public static final String DEFAULT_TAGGED = null;
-
-    /** The default string for not tagged option. */
+    /**
+     * The default string for not tagged option.
+     */
     public static final String DEFAULT_NOT_TAGGED = null;
-
-    /** The default search min. */
+    /**
+     * The default search min.
+     */
     public static final int DEFAULT_SEARCH_MIN = Integer.MIN_VALUE;
-
-    /** The default search max. */
+    /**
+     * The default search max.
+     */
     public static final int DEFAULT_SEARCH_MAX = Integer.MAX_VALUE;
-
-    /** The default option on whether or not to return answers. */
+    /**
+     * The default option on whether or not to return answers.
+     */
     public static final boolean DEFAULT_ANSWERS = true;
-
-    /** The number of answers on this question. */
+    private static final String COMMENT_FILTER_STRING = "!bULULTgRQnYH9u";
+    /**
+     * The universal version identifier for a Serializable class.
+     */
+    private static final long serialVersionUID = -4569236296352955838L;
+    boolean tryedAnswer = false;
+    boolean tryedComments = false;
+    /**
+     * The number of answers on this question.
+     */
     private int answer_count;
-
-    /** The list of answers for this question. */
+    /**
+     * The list of answers for this question.
+     */
     private List<Answer> answers;
-
-    /** The id of the accepted answer to this question. */
+    /**
+     * The id of the accepted answer to this question.
+     */
     private int accepted_answer_id;
     private String notice;
-    /** The number of times this questions has been favorited (starred). */
+    /**
+     * The number of times this questions has been favorited (starred).
+     */
     private int favorite_count;
-
-    /** The end date of the bounty on this question. */
+    /**
+     * The end date of the bounty on this question.
+     */
     private long bounty_closes_date;
-
-    /** The bounty amount for this question. */
+    /**
+     * The bounty amount for this question.
+     */
     private int bounty_amount;
-
     private int close_vote_count;
     private long community_owned_date;
     private long creation_date;
     private int delete_vote_count;
-    /** The date this question was closed. */
+    /**
+     * The date this question was closed.
+     */
     private long closed_date;
     private boolean is_answered;
     private long locked_date;
     private String title;
-    /** The reason this question was closed. */
+    /**
+     * The reason this question was closed.
+     */
     private String closed_reason;
-
     private long protected_date;
-    /** The list of tags on this question. */
+    /**
+     * The list of tags on this question.
+     */
     private List<String> tags;
     private String migrated_from;
     private int reopen_vote_count;
@@ -127,13 +154,10 @@ public class Question extends MajorPost {
 
     /**
      * Creates a Question from a JSON string.
-     * 
-     * @param json
-     *            string containing questions.
-     * @param originator
-     *            the StackExchange instance that created this
-     * @throws JSONException
-     *             if there's a problem parsing the string.
+     *
+     * @param json       string containing questions.
+     * @param originator the StackExchange instance that created this
+     * @throws JSONException if there's a problem parsing the string.
      */
     Question(final String json, final StackWrapper originator)
             throws JSONException {
@@ -143,14 +167,11 @@ public class Question extends MajorPost {
 
     /**
      * Creates a Question from a JSON object.
-     * 
-     * @param jQ
-     *            object containing questions.
-     * @param originator
-     *            originator the StackExchange instance that created this
-     * @throws JSONException
-     *             if there's a problem communicating with the API or if an
-     *             invalid attribute is requested.
+     *
+     * @param jQ         object containing questions.
+     * @param originator originator the StackExchange instance that created this
+     * @throws JSONException if there's a problem communicating with the API or if an
+     *                       invalid attribute is requested.
      */
     Question(final JSONObject jQ, final StackWrapper originator)
             throws JSONException {
@@ -245,6 +266,37 @@ public class Question extends MajorPost {
         return DEFAULT_ANSWERS;
     }
 
+    /**
+     * Extracts a list of Questions from a JSONArray object.
+     *
+     * @param jsonArray  containing questions
+     * @param originator the StackExchange instance that created this
+     * @return the list of questions.
+     * @throws JSONException if there's a problem communicating with the API.
+     */
+    protected static List<Question> fromJSONArray(final JSONArray jsonArray,
+                                                  final StackWrapper originator) throws JSONException {
+        List<Question> ret = new ArrayList<Question>(jsonArray.length());
+        for (int i = 0; i < jsonArray.length(); i++) {
+            ret.add(new Question(jsonArray.getJSONObject(i), originator));
+        }
+        return ret;
+    }
+
+    /**
+     * Parses a JSON string into a list of questions.
+     *
+     * @param json       string containing questions.
+     * @param originator the StackExchange instance that created this
+     * @return a List of questions.
+     * @throws JSONException if there's a problem communicating with the API.
+     */
+    public static List<Question> fromJSONString(final String json,
+                                                final StackWrapper originator) throws JSONException {
+        return fromJSONArray(new JSONObject(json).getJSONArray("items"),
+                originator);
+    }
+
     public int getAnswer_count() {
         return answer_count;
     }
@@ -323,7 +375,7 @@ public class Question extends MajorPost {
 
     /**
      * The id of the answer that was accepted for this question.
-     * 
+     *
      * @return the id of the accepted answer, or -1 if there was no accepted
      *         answer
      */
@@ -333,7 +385,7 @@ public class Question extends MajorPost {
 
     /**
      * The number of times this question has been favorited.
-     * 
+     *
      * @return the fav count
      */
     public final int getFavoriteCount() {
@@ -342,7 +394,7 @@ public class Question extends MajorPost {
 
     /**
      * The tags this question was tagged with.
-     * 
+     *
      * @return list of tags
      */
     public final List<String> getTags() {
@@ -351,7 +403,7 @@ public class Question extends MajorPost {
 
     /**
      * The number of answers on this question.
-     * 
+     *
      * @return the answer count
      */
     public final int getAnswerCount() {
@@ -361,15 +413,14 @@ public class Question extends MajorPost {
     /**
      * Gets the answers associated with this Question. <br />
      * May make another API call if no answers have been loaded yet.
-     * 
+     *
      * @return list of answers
-     * @throws IOException
-     *             if the connection to the API fails
-     * @throws JSONException
-     *             if the JSON returned by the api is bad
+     * @throws IOException   if the connection to the API fails
+     * @throws JSONException if the JSON returned by the api is bad
      */
     public final List<Answer> getAnswers() throws IOException, JSONException {
-        if (answers == null || answers.size() == 0) {
+        if ((answers == null || answers.size() == 0) && !tryedAnswer) {
+            tryedAnswer = true;
             answers = getCreatingApi().getAnswersByQuestionId(getPostId());
             answer_count = answers.size();
         }
@@ -378,7 +429,7 @@ public class Question extends MajorPost {
 
     /**
      * The date the bounty was closed on this question.
-     * 
+     *
      * @return the bountyClosesDate or -1 if no bounty
      */
     public final long getBountyClosesDate() {
@@ -387,7 +438,7 @@ public class Question extends MajorPost {
 
     /**
      * Status of bountyness.
-     * 
+     *
      * @return whether or not this question had a bounty
      */
     public final boolean hasBounty() {
@@ -396,7 +447,7 @@ public class Question extends MajorPost {
 
     /**
      * The amount of bounty on this question.
-     * 
+     *
      * @return the bountyAmount
      */
     public final int getBountyAmount() {
@@ -405,7 +456,7 @@ public class Question extends MajorPost {
 
     /**
      * The date the question was closed.
-     * 
+     *
      * @return the closedDate
      */
     public final long getClosedDate() {
@@ -414,7 +465,7 @@ public class Question extends MajorPost {
 
     /**
      * The reason for closing this question.
-     * 
+     *
      * @return the closedReason
      */
     public final String getClosedReason() {
@@ -423,58 +474,20 @@ public class Question extends MajorPost {
 
     /**
      * Gets a list of comments on this question.
-     * 
+     *
      * @return the list of answers.
-     * @throws IOException
-     *             if there's a problem communicating with the API.
-     * @throws JSONException
-     *             if the response cannot be parsed.
+     * @throws IOException   if there's a problem communicating with the API.
+     * @throws JSONException if the response cannot be parsed.
      */
     @Override
     public final List<Comment> getComments() throws IOException, JSONException {
-        if (comments == null) {
+        if (comments == null && !tryedComments) {
+            tryedComments = true;
             QuestionQuery query = new QuestionQuery();
             query.setFilter(COMMENT_FILTER_STRING);
             comments = getCreatingApi().getQuestionById(this.getPostId(), null).comments;
         }
         return comments;
-    }
-
-    /**
-     * Extracts a list of Questions from a JSONArray object.
-     * 
-     * @param jsonArray
-     *            containing questions
-     * @param originator
-     *            the StackExchange instance that created this
-     * @return the list of questions.
-     * @throws JSONException
-     *             if there's a problem communicating with the API.
-     */
-    protected static List<Question> fromJSONArray(final JSONArray jsonArray,
-            final StackWrapper originator) throws JSONException {
-        List<Question> ret = new ArrayList<Question>(jsonArray.length());
-        for (int i = 0; i < jsonArray.length(); i++) {
-            ret.add(new Question(jsonArray.getJSONObject(i), originator));
-        }
-        return ret;
-    }
-
-    /**
-     * Parses a JSON string into a list of questions.
-     * 
-     * @param json
-     *            string containing questions.
-     * @param originator
-     *            the StackExchange instance that created this
-     * @return a List of questions.
-     * @throws JSONException
-     *             if there's a problem communicating with the API.
-     */
-    public static List<Question> fromJSONString(final String json,
-            final StackWrapper originator) throws JSONException {
-        return fromJSONArray(new JSONObject(json).getJSONArray("items"),
-                originator);
     }
 
     /*

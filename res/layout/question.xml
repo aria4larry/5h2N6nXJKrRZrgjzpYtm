@@ -8,10 +8,11 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/progressBar" android:layout_gravity="center" android:visibility="gone"/>
+            android:id="@+id/progressBar" android:visibility="gone" android:indeterminate="true"
+            android:indeterminateBehavior="cycle" android:background="#fff"/>
     <WebView
-        android:id="@+id/webview"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent" android:layout_margin="2dp"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webView" android:layout_gravity="center"/>
 
 </LinearLayout>

@@ -5,4 +5,5 @@
     <color name="color_0ans">#9A4444</color>
     <color name="color_has_ans">#75845C</color>
     <color name="title_text_color">#ffffffff</color>
+    <color name="activity_bg_color">#ffe6e6e6</color>
 </resources>

@@ -47,6 +47,15 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
+    <style name="top_update_count_base">
+        <item name="android:textSize">13.0dip</item>
+        <item name="android:shadowDy">-1.0</item>
+    </style>
+    <style name="top_update_count">
+        <item name="android:textSize">8.0dip</item>
+        <item name="android:textColor">#ff950000</item>
+        <item name="android:gravity">center</item>
+    </style>
     <style name="toolbar_action">
         <item name="android:gravity">center</item>
         <item name="android:layout_gravity">center</item>
@@ -55,6 +64,7 @@
         <item name="android:scaleType">center</item>
         <item name="android:minWidth">44.0dip</item>
         <item name="android:layout_weight">0.0</item>
+        <item name="android:layout_margin">5dip</item>
     </style>
     <style name="toolbar_style">
         <item name="android:background">@drawable/toolbar</item>

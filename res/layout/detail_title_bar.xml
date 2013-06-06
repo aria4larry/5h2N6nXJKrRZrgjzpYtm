@@ -4,5 +4,4 @@
     <TextView android:id="@+id/back" style="@style/back_view" />
     <TextView android:id="@+id/title" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" style="@style/title_text_style" />
     <ImageView android:id="@+id/title_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/title" android:layout_centerInParent="true" />
-    <TextView android:id="@+id/top_comment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" style="@style/title_bar_button" />
 </RelativeLayout>

@@ -13,7 +13,9 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import com.droidcat.stackranger.R;
 import com.droidcat.stackranger.newwork.AsyncTaskGetQuestion;
 import net.sf.jtpl.Template;
@@ -28,7 +30,7 @@ import java.io.InputStream;
 import java.util.List;
 
 @SuppressLint("HandlerLeak")
-public class QuestionFragment extends Fragment {
+public class QuestionFragment extends Fragment implements View.OnClickListener {
     public static final String KEY_QUESTION_ID = "QUESTION_ID";
     private static final String LOG_TAG = QuestionFragment.class
             .getSimpleName();
@@ -37,9 +39,12 @@ public class QuestionFragment extends Fragment {
     AnswerFragment.onAnswerLoaded mOnAnswerLoaded;
     private WebView mWebView;
     private ProgressBar mProgressBar;
+    private TextView mAnswerCount;
     private Question mQuestion;
     private int mQuestionId;
+    private ImageView mRefresh;
     private String mEndPoint;
+    private ImageView btn_back;
     private boolean mHaveComment = false;
     private Handler mHandler = new Handler() {
         @Override
@@ -47,6 +52,7 @@ public class QuestionFragment extends Fragment {
             switch (msg.what) {
                 case AsyncTaskGetQuestion.MSG_LOADING:
                     mProgressBar.setVisibility(View.VISIBLE);
+                    mRefresh.setVisibility(View.GONE);
                     break;
                 default:
                     Log.d(LOG_TAG, "handleMessage question~~~");
@@ -64,6 +70,8 @@ public class QuestionFragment extends Fragment {
                                 e.printStackTrace();
                             }
                         }
+                        mAnswerCount.setVisibility(View.VISIBLE);
+                        mAnswerCount.setText(Integer.toString(mQuestion.getAnswer_count()));
                         //TODO:null pointer happend when calling this
                         //if the activity is destroyed
                         showQuestion();
@@ -112,12 +120,15 @@ public class QuestionFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mProgressBar = (ProgressBar) getActivity().findViewById(R.id.progressBar);
-        mProgressBar.setIndeterminate(true);
+        mRefresh = (ImageView) getActivity().findViewById(R.id.top_refresh);
+        mProgressBar = (ProgressBar) getActivity().findViewById(R.id.top_progress);
+        mAnswerCount = (TextView) getActivity().findViewById(R.id.top_message_count);
         mWebView = (WebView) getActivity().findViewById(R.id.webView);
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new SampleWebViewClient());
         WebSettings webSettings = mWebView.getSettings();
+        btn_back = (ImageView) getActivity().findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(this);
         webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         if (getArguments().containsKey(KEY_QUESTION_ID)
                 && getArguments().containsKey(QuestionsFragment.ARG_SITE)) {
@@ -144,6 +155,7 @@ public class QuestionFragment extends Fragment {
         mWebView.loadDataWithBaseURL("about:blank", questinWebSource, "text/html",
                 "utf-8", null);
         mProgressBar.setVisibility(View.GONE);
+        mRefresh.setVisibility(View.VISIBLE);
     }
 
     private String loadQuestion(Question question) {
@@ -203,6 +215,16 @@ public class QuestionFragment extends Fragment {
         template.parse("main");
         return template.out();
     }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_back:
+                getActivity().onBackPressed();
+                break;
+        }
+    }
+
     private static class SampleWebViewClient extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {

@@ -1,19 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="horizontal" android:layout_alignParentBottom="true" style="@style/toolbar_style"
-  xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="horizontal" android:layout_alignParentBottom="true" style="@style/toolbar_style">
     <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
-        <ImageView android:id="@+id/action_favor" android:src="@drawable/ic_action_favor" style="@style/toolbar_action" />
+        <ImageView android:id="@+id/action_favor" android:src="@drawable/ic_action_favor" style="@style/toolbar_action"/>
     </FrameLayout>
     <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
-        <ImageView android:id="@+id/action_write" android:src="@drawable/ic_action_write" style="@style/toolbar_action" />
+        <ImageView android:id="@+id/action_write" android:src="@drawable/ic_action_write" style="@style/toolbar_action"/>
     </FrameLayout>
     <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
-        <ImageView android:id="@+id/action_previous" android:src="@drawable/ic_action_previous" style="@style/toolbar_action" />
+        <ImageView android:id="@+id/action_previous" android:src="@drawable/ic_action_previous" style="@style/toolbar_action"
+                   />
     </FrameLayout>
     <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
-        <ImageView android:id="@+id/action_next" android:src="@drawable/ic_action_next" style="@style/toolbar_action" />
+        <ImageView android:id="@+id/action_next" android:src="@drawable/ic_action_next" style="@style/toolbar_action"/>
     </FrameLayout>
     <FrameLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
-        <ImageView android:id="@+id/action_share" android:src="@drawable/ic_action_share" style="@style/toolbar_action" />
+        <ImageView android:id="@+id/action_share" android:src="@drawable/ic_action_share" style="@style/toolbar_action"/>
     </FrameLayout>
 </LinearLayout>

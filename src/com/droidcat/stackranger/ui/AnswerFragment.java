@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ProgressBar;
+import android.widget.ImageView;
 import android.widget.Toast;
 import com.droidcat.stackranger.R;
 import com.droidcat.stackranger.util.Utilis;
@@ -28,16 +28,17 @@ import java.util.HashMap;
 import java.util.List;
 
 @SuppressLint("HandlerLeak")
-public class AnswerFragment extends Fragment {
+public class AnswerFragment extends Fragment implements View.OnClickListener {
     private static final String LOG_TAG = AnswerFragment.class
             .getSimpleName();
     private static String sTemplateString;
-    int mAnswerIndex = 0;
+    int mAnswerIndex = -1;
     List<Answer> mAnswers;
+    ImageView action_next;
+    ImageView action_prev;
+    ImageView btn_back;
     private WebView mWebView;
-    private ProgressBar mProgressBar;
     private String mEndPoint = "";
-    private boolean mHaveComment = false;
     private HashMap<String, String> answerWebsourceMap;
 
     public AnswerFragment(List<Answer> answers) {
@@ -76,11 +77,15 @@ public class AnswerFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mProgressBar = (ProgressBar) getActivity().findViewById(R.id.progressBar);
-        mProgressBar.setIndeterminate(true);
         mWebView = (WebView) getActivity().findViewById(R.id.webView);
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new SampleWebViewClient());
+        action_next = (ImageView) getActivity().findViewById(R.id.action_next);
+        action_next.setOnClickListener(this);
+        action_prev = (ImageView) getActivity().findViewById(R.id.action_previous);
+        action_prev.setOnClickListener(this);
+        btn_back = (ImageView) getActivity().findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(this);
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         if (getArguments() != null && getArguments().containsKey(QuestionsFragment.ARG_SITE)) {
@@ -96,6 +101,9 @@ public class AnswerFragment extends Fragment {
     }
 
     private void showNextAnswer() {
+        mAnswerIndex++;
+        Log.i(LOG_TAG, "showNextAnswer"+mAnswerIndex);
+        checkNextPrev();
         if (mAnswers != null && mAnswerIndex < mAnswers.size()) {
             Answer answer = mAnswers.get(mAnswerIndex);
             String webSource = answerWebsourceMap.get(Integer.toString(answer.getPostId()));
@@ -106,14 +114,28 @@ public class AnswerFragment extends Fragment {
             Log.i(LOG_TAG, webSource);
             mWebView.loadDataWithBaseURL("about:blank", webSource, "text/html",
                     "utf-8", null);
-            mAnswerIndex++;
         } else {
             Utilis.showToast(getActivity(), "No more answers", Toast.LENGTH_SHORT);
         }
     }
 
+    private void checkNextPrev() {
+        if (mAnswerIndex == 0) {
+            action_prev.setEnabled(false);
+        } else {
+            action_prev.setEnabled(true);
+        }
+        if (mAnswerIndex == mAnswers.size()-1) {
+            action_next.setEnabled(false);
+        } else {
+            action_next.setEnabled(true);
+        }
+    }
+
     private void showPreviousAnswer() {
         mAnswerIndex--;
+        Log.i(LOG_TAG, "showPreviousAnswer"+mAnswerIndex);
+        checkNextPrev();
         if (mAnswers != null && mAnswerIndex >= 0) {
             Answer answer = mAnswers.get(mAnswerIndex);
             String webSource = answerWebsourceMap.get(Integer.toString(answer.getPostId()));
@@ -179,6 +201,21 @@ public class AnswerFragment extends Fragment {
         template.assign("FONTSIZE", "1em");
         template.parse("main");
         return template.out();
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.action_next:
+                showNextAnswer();
+                break;
+            case R.id.action_previous:
+                showPreviousAnswer();
+                break;
+            case R.id.btn_back:
+                getActivity().onBackPressed();
+                break;
+        }
     }
 
     public interface onAnswerLoaded {

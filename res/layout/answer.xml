@@ -3,14 +3,32 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
-
-    <include android:id="@+id/title_bar" layout="@layout/title_bar" android:layout_width="fill_parent"
-             android:layout_height="wrap_content"/>
+    <RelativeLayout android:id="@+id/title_bar" style="@style/title_bar_style" android:background="#7aa411">
+        <ImageView android:id="@+id/btn_back" android:background="@drawable/btn_common" android:padding="0.0dip"
+                   android:layout_width="wrap_content" android:layout_height="fill_parent"
+                   android:src="@drawable/btn_back_normal"/>
+        <RelativeLayout android:id="@+id/title_click_layout" android:paddingLeft="13.0dip"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+            <FrameLayout android:id="@+id/title_parent" android:layout_width="wrap_content"
+                         android:layout_height="wrap_content" android:layout_centerVertical="true">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Answers"
+                        android:id="@+id/textView" android:layout_gravity="center" android:textColor="#FFFFFFFF"
+                        android:textStyle="bold"/>
+            </FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
     <WebView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/webView" android:layout_gravity="center" android:layout_weight="8"/>
+            android:id="@+id/webView" android:layout_gravity="center"
+            android:layout_marginLeft="3dp" android:layout_marginRight="3dp" android:layout_weight="8"/>
     <include android:id="@+id/tool_bar" layout="@layout/tool_bar" android:layout_width="fill_parent"
-             android:layout_height="wrap_content"/>
+             android:layout_height="wrap_content" android:layout_marginLeft="15dp"
+            />
 
 </LinearLayout>

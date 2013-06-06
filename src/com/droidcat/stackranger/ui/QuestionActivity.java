@@ -19,7 +19,6 @@ public class QuestionActivity extends SlidingFragmentActivity implements AnswerF
         setBehindContentView(R.layout.menu_frame);
         setContentView(R.layout.content_frame);
         // Show the Up button in the action bar.
-        getActionBar().setDisplayHomeAsUpEnabled(true);
 
         // savedInstanceState is non-null when there is fragment state
         // saved from previous configurations of this activity
@@ -46,7 +45,7 @@ public class QuestionActivity extends SlidingFragmentActivity implements AnswerF
         sm = getSlidingMenu();
         sm.setMode(SlidingMenu.RIGHT);
         sm.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
-        sm.setTouchModeBehind(SlidingMenu.TOUCHMODE_FULLSCREEN);
+        sm.setTouchModeBehind(SlidingMenu.TOUCHMODE_MARGIN);
         sm.setShadowWidthRes(R.dimen.shadow_width);
         sm.setShadowDrawable(R.drawable.shadowright);
         sm.setBehindOffsetRes(R.dimen.answer_slidingmenu_offset);

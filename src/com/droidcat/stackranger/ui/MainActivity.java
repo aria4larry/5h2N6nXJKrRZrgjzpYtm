@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 import com.droidcat.stackranger.R;
 import com.droidcat.stackranger.cache.SitesCache;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
@@ -32,7 +34,7 @@ import net.sf.stackwrap4j.stackauth.entities.Site;
  * {@link SitesListFragment.Callbacks} interface to listen for item selections.
  */
 public class MainActivity extends SlidingFragmentActivity implements
-        SitesListFragment.Callbacks, QuestionsFragment.Callbacks {
+        SitesListFragment.Callbacks, QuestionsFragment.Callbacks, View.OnClickListener {
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
     DisplayImageOptions defaultDisplayImageOptions;
     SlidingMenu sm;
@@ -42,6 +44,7 @@ public class MainActivity extends SlidingFragmentActivity implements
      */
     private boolean mTwoPane;
     private String mEndPoint = "stackoverflow";
+    private ImageView mBtnSites;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,7 +60,6 @@ public class MainActivity extends SlidingFragmentActivity implements
         ImageLoader.getInstance().init(configuration);
         setBehindContentView(R.layout.menu_frame);
         setContentView(R.layout.activity_main_single);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Bundle arguments = new Bundle();
         arguments.putString(QuestionsFragment.ARG_SITE, "stackoverflow");
         arguments.putInt(QuestionsFragment.TAG_BACKGROUND, Color.parseColor("#E0EAF1"));
@@ -79,6 +81,8 @@ public class MainActivity extends SlidingFragmentActivity implements
             // In two-pane mode, list items should be given the
             // 'activated' state when touched.
         }
+        mBtnSites = (ImageView) findViewById(R.id.btn_category);
+        mBtnSites.setOnClickListener(this);
         setupSlidingMenu();
         // TODO: If exposing deep links into your app, handle intents here.
     }
@@ -114,7 +118,7 @@ public class MainActivity extends SlidingFragmentActivity implements
         // In two-pane mode, show the detail view in this activity by
         // adding or replacing the detail fragment using a
         // fragment transaction.
-        setTitle(site.getName());
+//        setTitle(site.getName());
         mEndPoint = site.getApi_site_parameter();
         Bundle arguments = new Bundle();
         arguments.putString(QuestionsFragment.ARG_SITE, mEndPoint);
@@ -142,6 +146,15 @@ public class MainActivity extends SlidingFragmentActivity implements
                     question.getPostId());
             questionIntent.putExtra(QuestionsFragment.ARG_SITE, mEndPoint);
             startActivity(questionIntent);
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btn_category:
+                sm.showMenu();
+                break;
         }
     }
 }

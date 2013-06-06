@@ -1,4 +1,4 @@
-5h2N6nXJKrRZrgjzpYtm
+StackRange
 ====================
 ##StackRanger
 StackRanger is a Android App to view all the Stackchange sites.

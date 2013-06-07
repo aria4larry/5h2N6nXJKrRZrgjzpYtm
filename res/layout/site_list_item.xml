@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
         android:layout_margin="2dp"
-        android:contentDescription="site_icon"
+        android:contentDescription="@string/site_icon"
         android:src="@drawable/loading" />
 
     <TextView
@@ -23,7 +23,6 @@
         android:layout_marginTop="2dp"
         android:layout_toRightOf="@+id/site_icon"
         android:lines="1"
-        android:text="Medium Text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -35,7 +34,6 @@
         android:layout_marginLeft="3dp"
         android:layout_marginTop="2dp"
         android:lines="2"
-        android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
 </RelativeLayout>

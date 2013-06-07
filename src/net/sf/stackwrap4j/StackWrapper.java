@@ -24,6 +24,8 @@
 
 package net.sf.stackwrap4j;
 
+import android.util.SparseArray;
+
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -1321,12 +1323,13 @@ public class StackWrapper implements Serializable {
      * @throws ParameterNotSetException
      *             if no ids are set in the query.
      */
-    public Map<Integer, List<Tag>> getTagMapByUserId(int... ids)
+    public SparseArray<List<Tag>> getTagMapByUserId(int... ids)
             throws IOException, JSONException {
         String vectorizedList = buildVectorizedList(ids);
         String json = userClient.sendGetRequest(site, VERSION, "users/"
                 + vectorizedList + "/tags", soApiKey);
-        Map<Integer, List<Tag>> rc = new HashMap<Integer, List<Tag>>();
+        
+        SparseArray<List<Tag>> rc = new SparseArray<List<Tag>>();
         List<Tag> allTags = Tag.fromJSONString(json, this);
         for (Tag t : allTags) {
             final Integer userId = t.getUserId();
@@ -1352,17 +1355,18 @@ public class StackWrapper implements Serializable {
      * @throws ParameterNotSetException
      *             if no ids are set in the query.
      */
-    public Map<Integer, List<Tag>> getTagMapByUserId(TagQuery q)
+    public SparseArray<List<Tag>> getTagMapByUserId(TagQuery q)
             throws IOException, JSONException, ParameterNotSetException {
         String json = userClient.sendGetRequest(site, VERSION,
                 "users/" + q.getIds() + "/tags", soApiKey);
-        Map<Integer, List<Tag>> rc = new HashMap<Integer, List<Tag>>();
+        SparseArray<List<Tag>> rc = new SparseArray<List<Tag>>();
         List<Tag> allTags = Tag.fromJSONString(json, this);
         for (Tag t : allTags) {
             final Integer userId = t.getUserId();
             List<Tag> userTags = rc.get(userId);
             if (userTags == null) {
-                userTags = rc.put(userId, new ArrayList<Tag>());
+                userTags =  new ArrayList<Tag>();
+                rc.put(userId,userTags);
             }
             userTags.add(t);
         }

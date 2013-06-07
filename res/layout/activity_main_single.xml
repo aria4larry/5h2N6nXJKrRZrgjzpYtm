@@ -28,17 +28,28 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Stack Ranger"
-                        android:id="@+id/textView" android:layout_gravity="center" android:textColor="#FFFFFFFF"
+                        android:id="@+id/textTitle" android:layout_gravity="center" android:textColor="#FFFFFFFF"
                         android:textStyle="bold"/>
             </FrameLayout>
             <ImageView android:id="@+id/top_refresh" android:padding="3.0dip" android:layout_width="wrap_content"
                        android:layout_height="wrap_content" android:src="@drawable/refreshicon_titlebar"
-                       android:layout_toRightOf="@id/title_parent" android:layout_centerVertical="true"/>
+                       android:layout_toRightOf="@id/title_parent"
+                       android:layout_alignBaseline="@+id/title_parent"
+                       android:layout_alignParentBottom="false"
+                       android:layout_alignParentLeft="false"
+                       android:layout_alignParentRight="false"
+                       android:layout_centerVertical="true"
+                       android:layout_marginTop="3dp"
+                       android:layout_marginLeft="3dp"
+                       android:layout_margin="3dp"
+                       android:layout_marginRight="3dp"
+                       android:layout_marginBottom="3dp"/>
             <ProgressBar android:id="@+id/top_progress" android:visibility="invisible"
                          android:layout_width="wrap_content" android:layout_height="wrap_content"
                          android:indeterminateOnly="true" android:minWidth="13.0dip" android:minHeight="13.0dip"
                          android:layout_toRightOf="@id/title_parent" android:layout_centerVertical="true"
-                         style="?android:attr/progressBarStyleSmall"/>
+                         style="@android:style/Widget.Holo.Light.ProgressBar.Small"
+                         android:layout_margin="3dp"/>
         </RelativeLayout>
     </RelativeLayout>
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"

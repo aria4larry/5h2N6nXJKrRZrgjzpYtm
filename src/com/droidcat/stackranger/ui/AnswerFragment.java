@@ -213,7 +213,7 @@ public class AnswerFragment extends Fragment implements View.OnClickListener {
                 showPreviousAnswer();
                 break;
             case R.id.btn_back:
-                getActivity().onBackPressed();
+                ((QuestionActivity)getActivity()).toggle();
                 break;
         }
     }

@@ -1,9 +1,11 @@
 package com.droidcat.stackranger.ui;
 
 import android.os.Bundle;
+
 import com.droidcat.stackranger.R;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
+
 import net.sf.stackwrap4j.entities.Answer;
 
 import java.util.List;

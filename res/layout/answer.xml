@@ -28,7 +28,7 @@
             android:id="@+id/webView" android:layout_gravity="center"
             android:layout_marginLeft="3dp" android:layout_marginRight="3dp" android:layout_weight="8"/>
     <include android:id="@+id/tool_bar" layout="@layout/tool_bar" android:layout_width="fill_parent"
-             android:layout_height="wrap_content" android:layout_marginLeft="15dp"
+             android:layout_height="wrap_content" android:layout_marginLeft="3dp"
             />
 
 </LinearLayout>

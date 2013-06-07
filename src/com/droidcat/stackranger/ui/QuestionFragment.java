@@ -16,8 +16,10 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
 import com.droidcat.stackranger.R;
 import com.droidcat.stackranger.newwork.AsyncTaskGetQuestion;
+
 import net.sf.jtpl.Template;
 import net.sf.stackwrap4j.entities.Comment;
 import net.sf.stackwrap4j.entities.Question;
@@ -42,7 +44,6 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
     private TextView mAnswerCount;
     private Question mQuestion;
     private int mQuestionId;
-    private ImageView mRefresh;
     private String mEndPoint;
     private ImageView btn_back;
     private boolean mHaveComment = false;
@@ -52,7 +53,6 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
             switch (msg.what) {
                 case AsyncTaskGetQuestion.MSG_LOADING:
                     mProgressBar.setVisibility(View.VISIBLE);
-                    mRefresh.setVisibility(View.GONE);
                     break;
                 default:
                     Log.d(LOG_TAG, "handleMessage question~~~");
@@ -120,9 +120,9 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mRefresh = (ImageView) getActivity().findViewById(R.id.top_refresh);
         mProgressBar = (ProgressBar) getActivity().findViewById(R.id.top_progress);
         mAnswerCount = (TextView) getActivity().findViewById(R.id.top_message_count);
+        mAnswerCount.setOnClickListener(this);
         mWebView = (WebView) getActivity().findViewById(R.id.webView);
         mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new SampleWebViewClient());
@@ -155,7 +155,6 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
         mWebView.loadDataWithBaseURL("about:blank", questinWebSource, "text/html",
                 "utf-8", null);
         mProgressBar.setVisibility(View.GONE);
-        mRefresh.setVisibility(View.VISIBLE);
     }
 
     private String loadQuestion(Question question) {
@@ -221,6 +220,9 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
         switch (view.getId()) {
             case R.id.btn_back:
                 getActivity().onBackPressed();
+                break;
+            case R.id.top_message_count:
+                ((QuestionActivity)getActivity()).toggle();
                 break;
         }
     }

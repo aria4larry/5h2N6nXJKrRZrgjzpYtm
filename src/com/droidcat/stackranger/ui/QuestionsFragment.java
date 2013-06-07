@@ -12,12 +12,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.Toast;
+
 import com.droidcat.stackranger.R;
 import com.droidcat.stackranger.adapter.QuestionsAdapter;
 import com.droidcat.stackranger.newwork.AsyncTaskGetQuestions;
 import com.droidcat.stackranger.util.Utilis;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
+
 import net.sf.stackwrap4j.entities.Question;
 import net.sf.stackwrap4j.query.QuestionQuery;
 
@@ -27,8 +29,7 @@ import java.util.List;
 public class QuestionsFragment extends ListFragment
         implements PullToRefreshBase.OnRefreshListener, PullToRefreshBase.OnLastItemVisibleListener {
 
-    public static final String TAG_BACKGROUND = "TAG_BG";
-    public static final String TAG_FOREGROUND = "TAG_FG";
+
     /**
      * The fragment argument representing the item ID that this fragment
      * represents.
@@ -44,6 +45,11 @@ public class QuestionsFragment extends ListFragment
         public void onQuestionSelected(Question question) {
             // TODO Auto-generated method stub
         }
+
+        @Override
+        public void onLoadingStatusChanged(boolean loading) {
+
+        }
     };
     String mSite = null;
     Handler mHandler;
@@ -53,6 +59,8 @@ public class QuestionsFragment extends ListFragment
     private PullToRefreshListView mPullToRefreshListView;
     private QuestionQuery mQuestionQuery;
     private List<Question> mQuestions;
+    private int mBg;
+    private int mFg;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -66,47 +74,56 @@ public class QuestionsFragment extends ListFragment
         super.onCreate(savedInstanceState);
         Bundle bundle = getArguments();
         mQuestions = new ArrayList<Question>();
-        if (bundle != null && bundle.containsKey(ARG_SITE)) {
-            // Load the dummy content specified by the fragment
-            // arguments. In a real-world scenario, use a Loader
-            // to load content from a content provider.
-            mSite = getArguments().getString(ARG_SITE);
-            mHandler = new Handler() {
-                @SuppressWarnings("unchecked")
-                @Override
-                public void handleMessage(Message msg) {
-                    switch (msg.what) {
-                        case AsyncTaskGetQuestions.MSG_LOADING:
-                            mIsLoading = true;
-                            break;
-                        case AsyncTaskGetQuestions.MSG_LOADING_COMPLETE:
-                            mIsLoading = false;
-                        default:
-                            List<Question> questions = (List<Question>) msg.obj;
-                            if (questions != null && questions.size() > 0) {
-                                mQuestions.addAll(questions);
-                                mQuestionAdapter.setData(mQuestions);
-                                mQuestionAdapter.notifyDataSetChanged();
-                            } else {
-                                Utilis.showToast(getActivity(), R.string.toast_no_data_fenched, Toast.LENGTH_LONG);
-                            }
-                            mPullToRefreshListView.onRefreshComplete();
-                    }
+        // Load the dummy content specified by the fragment
+        // arguments. In a real-world scenario, use a Loader
+        // to load content from a content provider.
+        mHandler = new Handler() {
+            @SuppressWarnings("unchecked")
+            @Override
+            public void handleMessage(Message msg) {
+                switch (msg.what) {
+                    case AsyncTaskGetQuestions.MSG_LOADING:
+                        mIsLoading = true;
+                        break;
+                    case AsyncTaskGetQuestions.MSG_LOADING_COMPLETE:
+                        mIsLoading = false;
+                    default:
+                        List<Question> questions = (List<Question>) msg.obj;
+                        if (questions != null && questions.size() > 0) {
+                            mQuestions.addAll(questions);
+                            mQuestionAdapter.setData(mQuestions);
+                            mQuestionAdapter.notifyDataSetChanged();
+                        } else {
+                            Utilis.showToast(getActivity(), R.string.toast_no_data_fenched, Toast.LENGTH_LONG);
+                        }
+                        mPullToRefreshListView.onRefreshComplete();
                 }
-            };
-            mQuestionQuery = new QuestionQuery();
-            mQuestionQuery.setPage(1);
-            mQuestionQuery.setPageSize(25);
-            mQuestionAdapter = new QuestionsAdapter(getActivity(), getActivity().getLayoutInflater());
-            mQuestionAdapter.setBgandFg(bundle.getInt(TAG_BACKGROUND), bundle.getInt(TAG_FOREGROUND));
-            setListAdapter(mQuestionAdapter);
+                mCallbacks.onLoadingStatusChanged(mIsLoading);
+            }
+        };
+        mQuestionQuery = new QuestionQuery();
+        mQuestionQuery.setPage(1);
+        mQuestionQuery.setPageSize(25);
+        mQuestionAdapter = new QuestionsAdapter(getActivity(), getActivity().getLayoutInflater());
+        mQuestionAdapter.setBgandFg(mBg, mFg);
+        setListAdapter(mQuestionAdapter);
+    }
+
+    public void refresh() {
+        if (!mIsLoading) {
+            mQuestionQuery.restoreDefaults();
+            mQuestions.clear();
+            new AsyncTaskGetQuestions(mHandler, mSite, mQuestionQuery).execute();
         }
     }
 
-    private void refresh() {
-        mQuestionQuery.restoreDefaults();
-        mQuestions.clear();
-        new AsyncTaskGetQuestions(mHandler, mSite, mQuestionQuery).execute();
+    public void setArgSite(String site) {
+        mSite = site;
+    }
+
+    public void setBgandFg(int bg, int fg) {
+        mBg = bg;
+        mFg = fg;
     }
 
     @Override
@@ -117,7 +134,6 @@ public class QuestionsFragment extends ListFragment
             throw new IllegalStateException(
                     "Activity must implement fragment's callbacks.");
         }
-
         mCallbacks = (Callbacks) activity;
     }
 
@@ -139,7 +155,6 @@ public class QuestionsFragment extends ListFragment
         mPullToRefreshListView.setOnRefreshListener(this);
         mPullToRefreshListView.setOnLastItemVisibleListener(this);
         parent.addView(mPullToRefreshListView, lvIndex, lv.getLayoutParams());
-        mPullToRefreshListView.setScrollEmptyView(true);
         mQuestionAdapter.setColors(getResources().getColor(R.color.color_has_ans),
                 getResources().getColor(R.color.color_0ans));
         return rootView;
@@ -154,28 +169,23 @@ public class QuestionsFragment extends ListFragment
     }
 
     void loadMore() {
-        mQuestionQuery.incrementPage();
-        Log.i(LOG_TAG, "loadMore" + mQuestionQuery.getPage());
-        new AsyncTaskGetQuestions(mHandler, mSite, mQuestionQuery).execute();
+        if (!mIsLoading) {
+
+            mQuestionQuery.incrementPage();
+            Log.i(LOG_TAG, "loadMore" + mQuestionQuery.getPage());
+            new AsyncTaskGetQuestions(mHandler, mSite, mQuestionQuery).execute();
+        }
     }
 
     @Override
     public void onLastItemVisible() {
-        if (!mIsLoading) {
-
-            Log.i(LOG_TAG, "onLastItemVisible");
-            loadMore();
-        }
-
+        Log.i(LOG_TAG, "onLastItemVisible");
+        loadMore();
     }
 
     @Override
     public void onRefresh(PullToRefreshBase refreshView) {
-        if (!mIsLoading) {
-
-            refresh();
-        }
-
+        refresh();
     }
 
     @SuppressLint("NewApi")
@@ -197,6 +207,8 @@ public class QuestionsFragment extends ListFragment
          * Callback for when an item has been selected.
          */
         public void onQuestionSelected(Question question);
+
+        public void onLoadingStatusChanged(boolean loading);
     }
 
 }

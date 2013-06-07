@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
 import com.droidcat.stackranger.R;
 import com.droidcat.stackranger.cache.SitesCache;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
@@ -15,6 +19,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
+
 import net.sf.stackwrap4j.entities.Question;
 import net.sf.stackwrap4j.stackauth.entities.Site;
 
@@ -38,6 +43,8 @@ public class MainActivity extends SlidingFragmentActivity implements
     private static final String LOG_TAG = MainActivity.class.getSimpleName();
     DisplayImageOptions defaultDisplayImageOptions;
     SlidingMenu sm;
+    QuestionsFragment questionsFragment;
+    TextView mTitle;
     /**
      * Whether or not the activity is in two-pane mode, i.e. running on a tablet
      * device.
@@ -45,6 +52,9 @@ public class MainActivity extends SlidingFragmentActivity implements
     private boolean mTwoPane;
     private String mEndPoint = "stackoverflow";
     private ImageView mBtnSites;
+    private ProgressBar mProgressBar;
+    private RelativeLayout mRefresh;
+    private ImageView mRefreshView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,14 +70,9 @@ public class MainActivity extends SlidingFragmentActivity implements
         ImageLoader.getInstance().init(configuration);
         setBehindContentView(R.layout.menu_frame);
         setContentView(R.layout.activity_main_single);
-        Bundle arguments = new Bundle();
-        arguments.putString(QuestionsFragment.ARG_SITE, "stackoverflow");
-        arguments.putInt(QuestionsFragment.TAG_BACKGROUND, Color.parseColor("#E0EAF1"));
-        arguments.putInt(QuestionsFragment.TAG_FOREGROUND, Color.parseColor("#3E6D8E"));
-        QuestionsFragment fragment = new QuestionsFragment();
-        fragment.setArguments(arguments);
-        QuestionsFragment questionsFragment = new QuestionsFragment();
-        questionsFragment.setArguments(arguments);
+        questionsFragment = new QuestionsFragment();
+        questionsFragment.setArgSite("stackoverflow");
+        questionsFragment.setBgandFg(Color.parseColor("#E0EAF1"),Color.parseColor("#3E6D8E"));
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.questions, questionsFragment).commit();
         if (findViewById(R.id.question) != null) {
@@ -83,6 +88,11 @@ public class MainActivity extends SlidingFragmentActivity implements
         }
         mBtnSites = (ImageView) findViewById(R.id.btn_category);
         mBtnSites.setOnClickListener(this);
+        mProgressBar = (ProgressBar) findViewById(R.id.top_progress);
+        mRefresh = (RelativeLayout) findViewById(R.id.title_click_layout);
+        mRefresh.setOnClickListener(this);
+        mRefreshView = (ImageView) findViewById(R.id.top_refresh);
+        mTitle = (TextView) findViewById(R.id.textTitle);
         setupSlidingMenu();
         // TODO: If exposing deep links into your app, handle intents here.
     }
@@ -118,16 +128,11 @@ public class MainActivity extends SlidingFragmentActivity implements
         // In two-pane mode, show the detail view in this activity by
         // adding or replacing the detail fragment using a
         // fragment transaction.
-//        setTitle(site.getName());
+        setTitle(site.getName());
         mEndPoint = site.getApi_site_parameter();
-        Bundle arguments = new Bundle();
-        arguments.putString(QuestionsFragment.ARG_SITE, mEndPoint);
-        arguments.putInt(QuestionsFragment.TAG_BACKGROUND, site.getStyling().getTagBackgroundColor());
-        arguments.putInt(QuestionsFragment.TAG_FOREGROUND, site.getStyling().getTagForegroundColor());
-        QuestionsFragment fragment = new QuestionsFragment();
-        fragment.setArguments(arguments);
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.questions, fragment).commit();
+        questionsFragment.setArgSite(mEndPoint);
+        questionsFragment.setBgandFg(site.getStyling().getTagBackgroundColor(), site.getStyling().getTagForegroundColor());
+        questionsFragment.refresh();
         sm.toggle();
         if (mTwoPane) {
             //TODO: update the two panel mode.
@@ -150,10 +155,29 @@ public class MainActivity extends SlidingFragmentActivity implements
     }
 
     @Override
+    public void setTitle(CharSequence title) {
+        mTitle.setText(title);
+    }
+
+    @Override
+    public void onLoadingStatusChanged(boolean loading) {
+        if (loading) {
+            mRefreshView.setVisibility(View.GONE);
+            mProgressBar.setVisibility(View.VISIBLE);
+        } else {
+            mRefreshView.setVisibility(View.VISIBLE);
+            mProgressBar.setVisibility(View.GONE);
+        }
+    }
+
+    @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_category:
                 sm.showMenu();
+                break;
+            case R.id.title_click_layout:
+                questionsFragment.refresh();
                 break;
         }
     }

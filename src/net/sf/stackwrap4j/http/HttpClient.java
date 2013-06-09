@@ -37,6 +37,8 @@ import java.util.zip.InflaterInputStream;
 
 import android.util.Log;
 
+import com.droidcat.stackranger.util.Utilis;
+
 /**
  * A tiny HTTP client that does only what we need to interact with the Stack
  * Exchange API.
@@ -216,6 +218,10 @@ public class HttpClient {
             urlStr = combineUrlParts(urlStr, extendedURL);
             // if no key, start with ? otherwise &
             urlStr += (apiKey == null) ? "?" : "?key=" + apiKey + "&";
+            //chuan.li added access_token if avaliable~
+            if (Utilis.access_token!=null && !Utilis.access_token.equals("")){
+                urlStr+="access_token"+Utilis.access_token+"&";
+            }
             if (requestParams != null && requestParams.length() > 0) {
                 if (requestParams.startsWith("&")) {
                     // if the &amp; was on the beginning of the string, remove

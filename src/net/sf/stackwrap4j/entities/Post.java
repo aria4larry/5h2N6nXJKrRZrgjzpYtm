@@ -184,7 +184,7 @@ public class Post extends StackObjBase {
      * @param in the string to decode.
      * @return a string with HTML entities decoded.
      */
-	private static String decodeHtml(final String in) {
+	protected static String decodeHtml(final String in) {
 		String[] baad = { "&amp;", "&lsquo;", "&rsquo;", "&ldquo;", "&rdquo;",
 		                  "&gt;", "&lt;", "&mdash;", "&hellip;", "&quot;", "&#39;" };
 		String[] good = { "&", "‘", "’", "“", "”", ">", "<", "—", "…", "\"", "'"};

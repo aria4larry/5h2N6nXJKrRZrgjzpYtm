@@ -187,7 +187,7 @@ public class Question extends MajorPost {
         creation_date = jQp.tryGetLong("creation_date", -1);
         post_id = jQ.getInt("question_id"); // inherited member
         answer_count = jQ.getInt("answer_count");
-        title = jQ.getString("title");
+        title = decodeHtml(jQ.getString("title"));
         view_count = jQp.tryGetInt("view_count", 0);
         is_answered = jQp.tryGetBoolean("is_answered", false);
         JSONArray answersArray = jQp.tryGetJSONArray("answers");

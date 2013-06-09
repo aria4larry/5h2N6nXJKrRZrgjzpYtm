@@ -74,9 +74,8 @@ public class User extends StackObjBase {
     
     /** The user's display name. */
     private String displayName = "";
-    
-    /** The hash value of the user's email address. */
-    private String emailHash = "";
+    /** The user's profile_image url */
+    private String profile_image="http://www.gravatar.com/avatar/?s=36&d=identicon&r=PG";
     
     /** The user's age (calculated from their birth date). */
     private int age;
@@ -172,8 +171,7 @@ public class User extends StackObjBase {
         
         id = jUp.tryGetInt("user_id",-1);
         reputation = jUp.tryGetInt("reputation",0);
-        // 2.1 disable
-        // emailHash = jU.getString("email_hash");
+        profile_image = jUp.tryGetString("profile_image");
     }
 
     /**
@@ -233,8 +231,8 @@ public class User extends StackObjBase {
     /**
      * @return - returns the MD5 hash of the User's email address.
      */
-    public String getEmailHash() {
-        return emailHash;
+    public String getprofile_image() {
+        return profile_image;
     }
 
     /**
@@ -463,7 +461,7 @@ public class User extends StackObjBase {
         int result = 1;
         result = prime * result + (int) (creationDate ^ (creationDate >>> 32));
         result = prime * result + ((displayName == null) ? 0 : displayName.hashCode());
-        result = prime * result + ((emailHash == null) ? 0 : emailHash.hashCode());
+        result = prime * result + ((profile_image == null) ? 0 : profile_image.hashCode());
         result = prime * result + id;
         result = prime * result + ((websiteUrl == null) ? 0 : websiteUrl.hashCode());
         return result;
@@ -496,11 +494,11 @@ public class User extends StackObjBase {
         } else if (!displayName.equals(other.displayName)) {
             return false;
         }
-        if (emailHash == null) {
-            if (other.emailHash != null) {
+        if (profile_image == null) {
+            if (other.profile_image != null) {
                 return false;
             }
-        } else if (!emailHash.equals(other.emailHash)) {
+        } else if (!profile_image.equals(other.profile_image)) {
             return false;
         }
         if (id != other.id) {

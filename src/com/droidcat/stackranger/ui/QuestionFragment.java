@@ -124,9 +124,9 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
         mAnswerCount = (TextView) getActivity().findViewById(R.id.top_message_count);
         mAnswerCount.setOnClickListener(this);
         mWebView = (WebView) getActivity().findViewById(R.id.webView);
-        mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new SampleWebViewClient());
         WebSettings webSettings = mWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
         btn_back = (ImageView) getActivity().findViewById(R.id.btn_back);
         btn_back.setOnClickListener(this);
         webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
@@ -150,6 +150,7 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
         getActivity().setTitle(mQuestion.getTitle());
         if (questinWebSource == null) {
             questinWebSource = loadQuestion(mQuestion);
+            questinWebSource = questinWebSource.replace("<pre", "<pre class=\"prettyprint\"");
         }
         Log.i(LOG_TAG, questinWebSource);
         mWebView.loadDataWithBaseURL("about:blank", questinWebSource, "text/html",
@@ -172,7 +173,7 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
         }
         User user = question.getOwner();
         template.assign("QSCORE", String.valueOf(question.getScore()));
-        template.assign("QAHASH", String.valueOf(user.getEmailHash()));
+        template.assign("QUAVATAR", String.valueOf(user.getprofile_image()));
         template.assign("QANAME", user.getDisplayName());
         template.assign("QAREP", StackUtils.formatRep(user.getReputation()));
         template.assign("QAID", String.valueOf(user.getId()));
@@ -222,7 +223,7 @@ public class QuestionFragment extends Fragment implements View.OnClickListener {
                 getActivity().onBackPressed();
                 break;
             case R.id.top_message_count:
-                ((QuestionActivity)getActivity()).toggle();
+                ((QuestionActivity) getActivity()).toggle();
                 break;
         }
     }

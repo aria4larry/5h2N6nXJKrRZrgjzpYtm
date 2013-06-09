@@ -78,7 +78,6 @@ public class AnswerFragment extends Fragment implements View.OnClickListener {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mWebView = (WebView) getActivity().findViewById(R.id.webView);
-        mWebView.getSettings().setJavaScriptEnabled(true);
         mWebView.setWebViewClient(new SampleWebViewClient());
         action_next = (ImageView) getActivity().findViewById(R.id.action_next);
         action_next.setOnClickListener(this);
@@ -87,6 +86,7 @@ public class AnswerFragment extends Fragment implements View.OnClickListener {
         btn_back = (ImageView) getActivity().findViewById(R.id.btn_back);
         btn_back.setOnClickListener(this);
         WebSettings webSettings = mWebView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
         webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         if (getArguments() != null && getArguments().containsKey(QuestionsFragment.ARG_SITE)) {
             mEndPoint = getArguments().getString(QuestionsFragment.ARG_SITE);
@@ -166,7 +166,7 @@ public class AnswerFragment extends Fragment implements View.OnClickListener {
         }
         User user = answer.getOwner();
         template.assign("QSCORE", String.valueOf(answer.getScore()));
-        template.assign("QAHASH", String.valueOf(user.getEmailHash()));
+        template.assign("QUAVATAR", String.valueOf(user.getprofile_image()));
         template.assign("QANAME", user.getDisplayName());
         template.assign("QAREP", StackUtils.formatRep(user.getReputation()));
         template.assign("QAID", String.valueOf(user.getId()));

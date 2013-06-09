@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="file:///android_asset/run_prettify.js"></script>
+    <link href="file:///android_asset/prettify.css" type="text/css" rel="stylesheet" />
     <style type="text/css">
         * { margin: 0; padding: 0; }
         body {
@@ -9,8 +11,7 @@
         word-wrap: break-word;
         }
         img {
-        width: 98%;
-        height:98%;
+            width: 98%;
         }
         p {
         margin: 10px 0;
@@ -137,7 +138,7 @@
     </div>
     <!-- END: tags -->
     <div class="author"
-         style="background-image: url('http://www.gravatar.com/avatar/{QAHASH}?s=36&d=identicon&r=PG')"
+         style="background-image: url('{QUAVATAR}');background-size: 32px;"
          onclick="window.location.replace('stackranger://user?endpoint={ENDPOINT}&uid={QAID}')">
         <div class="name">{QANAME}</div>
         <div class="rep">{QAREP}</div>
